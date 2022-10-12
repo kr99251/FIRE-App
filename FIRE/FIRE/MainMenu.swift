@@ -8,7 +8,6 @@
 import UIKit
 
 class MainMenu: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,3 +16,23 @@ class MainMenu: UIViewController {
 
 }
 
+@IBDesignable extension UIView {
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            guard let cgColor = layer.borderColor else {
+                return nil
+            }
+            return UIColor(cgColor: cgColor)
+        }
+        set { layer.borderColor = newValue?.cgColor }
+    }
+
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+}

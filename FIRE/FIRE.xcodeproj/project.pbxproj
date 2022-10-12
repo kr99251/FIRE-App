@@ -106,7 +106,7 @@
 				0AD663E228F5B25A00FD1496 /* AppDelegate.swift */,
 				0AD663E428F5B25A00FD1496 /* SceneDelegate.swift */,
 				0AD663E628F5B25A00FD1496 /* MainMenu.swift */,
-				0AD663E828F5B25A00FD1496 /* Main.storyboard */,
+				823BFA0B28F7524300D3E52D /* New Group */,
 				0AD663EB28F5B25C00FD1496 /* Assets.xcassets */,
 				0AD663ED28F5B25C00FD1496 /* LaunchScreen.storyboard */,
 				0AD663F028F5B25C00FD1496 /* Info.plist */,
@@ -131,6 +131,14 @@
 				0AD6640528F5B25C00FD1496 /* FIREUITestsLaunchTests.swift */,
 			);
 			path = FIREUITests;
+			sourceTree = "<group>";
+		};
+		823BFA0B28F7524300D3E52D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				0AD663E828F5B25A00FD1496 /* Main.storyboard */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
