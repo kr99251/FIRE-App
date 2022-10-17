@@ -3,7 +3,6 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,53 +16,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2e-1t-PrZ">
-                                <rect key="frame" x="42" y="209" width="149" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Modules">
-                                    <color key="baseForegroundColor" name="AccentColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-fs-SmI">
-                                <rect key="frame" x="25" y="407" width="166" height="172"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2e-1t-PrZ">
+                                <rect key="frame" x="25" y="209" width="157.66666666666666" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Journal">
-                                    <color key="titleColor" name="AccentColor"/>
+                                <state key="normal" title="Modules">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="systemPinkColor"/>
+                                        <color key="value" systemColor="systemIndigoColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="6"/>
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIa-mo-e8j">
-                                <rect key="frame" x="216" y="407" width="149" height="172"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="8XY-ac-saE"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="149" id="9GM-vc-OlQ"/>
-                                    <constraint firstAttribute="width" constant="149" id="aIE-Je-AX7"/>
-                                    <constraint firstAttribute="height" constant="172" id="dE6-dW-I1N"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Checklists">
-                                    <color key="baseForegroundColor" name="AccentColor"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-fs-SmI">
+                                <rect key="frame" x="25" y="407" width="157.66666666666666" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Journal">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemIndigoColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ1-WC-ECG">
-                                <rect key="frame" x="199" y="209" width="149" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Quizzes">
-                                    <color key="baseForegroundColor" name="AccentColor"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIa-mo-e8j">
+                                <rect key="frame" x="207.66666666666663" y="407" width="157.33333333333337" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Checklists">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemIndigoColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FIRE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9K6-Wj-qwZ">
-                                <rect key="frame" x="142" y="118" width="34" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ1-WC-ECG">
+                                <rect key="frame" x="207.66666666666663" y="209" width="157.33333333333337" height="172"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Quizzes">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemIndigoColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9K6-Wj-qwZ">
+                                <rect key="frame" x="178" y="118" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,10 +102,30 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FIa-mo-e8j" secondAttribute="trailing" constant="25" id="6gu-Kw-ZnM"/>
-                            <constraint firstItem="FIa-mo-e8j" firstAttribute="leading" secondItem="Bwc-fs-SmI" secondAttribute="trailing" constant="25" id="B8P-i5-Za0"/>
-                            <constraint firstItem="Bwc-fs-SmI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="clO-dF-ObW"/>
-                            <constraint firstItem="FIa-mo-e8j" firstAttribute="leading" secondItem="Bwc-fs-SmI" secondAttribute="trailing" constant="25" id="l3L-Qz-Axg"/>
+                            <constraint firstItem="EJ1-WC-ECG" firstAttribute="top" secondItem="9K6-Wj-qwZ" secondAttribute="bottom" constant="70" id="3JG-Tp-Ivc"/>
+                            <constraint firstItem="FIa-mo-e8j" firstAttribute="top" secondItem="EJ1-WC-ECG" secondAttribute="bottom" constant="26" id="8AH-tH-23N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bwc-fs-SmI" secondAttribute="bottom" constant="231" id="9b2-3A-0zI"/>
+                            <constraint firstItem="EJ1-WC-ECG" firstAttribute="leading" secondItem="u2e-1t-PrZ" secondAttribute="trailing" constant="24.999999999999972" id="AmO-hm-Teg"/>
+                            <constraint firstItem="FIa-mo-e8j" firstAttribute="leading" secondItem="Bwc-fs-SmI" secondAttribute="trailing" constant="24.999999999999972" id="COd-ln-c3E"/>
+                            <constraint firstItem="FIa-mo-e8j" firstAttribute="width" secondItem="u2e-1t-PrZ" secondAttribute="width" id="HRI-MV-Mc9"/>
+                            <constraint firstItem="u2e-1t-PrZ" firstAttribute="top" secondItem="9K6-Wj-qwZ" secondAttribute="bottom" constant="70" id="K4w-So-Isc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FIa-mo-e8j" secondAttribute="trailing" constant="25" id="KU6-Dt-KeQ"/>
+                            <constraint firstItem="u2e-1t-PrZ" firstAttribute="top" secondItem="9K6-Wj-qwZ" secondAttribute="bottom" constant="70" id="Plt-8l-5wh"/>
+                            <constraint firstItem="9K6-Wj-qwZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="Rlc-jf-A0V"/>
+                            <constraint firstItem="Bwc-fs-SmI" firstAttribute="width" secondItem="u2e-1t-PrZ" secondAttribute="width" id="SfH-eP-8XD"/>
+                            <constraint firstItem="FIa-mo-e8j" firstAttribute="height" secondItem="u2e-1t-PrZ" secondAttribute="height" id="Th1-9c-TKc"/>
+                            <constraint firstItem="9K6-Wj-qwZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XUm-pM-aGS"/>
+                            <constraint firstItem="Bwc-fs-SmI" firstAttribute="top" secondItem="u2e-1t-PrZ" secondAttribute="bottom" constant="26" id="ZDJ-tb-dJF"/>
+                            <constraint firstItem="EJ1-WC-ECG" firstAttribute="top" secondItem="9K6-Wj-qwZ" secondAttribute="bottom" constant="70" id="aS9-dN-qw6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EJ1-WC-ECG" secondAttribute="trailing" constant="25" id="bP2-LC-pUm"/>
+                            <constraint firstItem="FIa-mo-e8j" firstAttribute="top" secondItem="EJ1-WC-ECG" secondAttribute="bottom" constant="26" id="bQA-KR-b63"/>
+                            <constraint firstItem="Bwc-fs-SmI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="c3Y-bZ-JJQ"/>
+                            <constraint firstItem="EJ1-WC-ECG" firstAttribute="height" secondItem="u2e-1t-PrZ" secondAttribute="height" id="cff-cj-Yf9"/>
+                            <constraint firstItem="u2e-1t-PrZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dcw-ca-dyV"/>
+                            <constraint firstItem="Bwc-fs-SmI" firstAttribute="top" secondItem="u2e-1t-PrZ" secondAttribute="bottom" constant="26" id="ujK-vv-4tc"/>
+                            <constraint firstItem="EJ1-WC-ECG" firstAttribute="width" secondItem="u2e-1t-PrZ" secondAttribute="width" id="vrY-LM-yic"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FIa-mo-e8j" secondAttribute="bottom" constant="231" id="zdF-91-idV"/>
+                            <constraint firstItem="Bwc-fs-SmI" firstAttribute="height" secondItem="u2e-1t-PrZ" secondAttribute="height" id="zmP-SD-T3w"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -100,14 +150,11 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
