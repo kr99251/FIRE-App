@@ -34,6 +34,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="PFS-dE-uJP" kind="show" id="tlF-UK-C8F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwc-fs-SmI">
                                 <rect key="frame" x="25" y="407" width="157.66666666666666" height="172"/>
@@ -138,11 +141,11 @@
             <objects>
                 <viewController id="PFS-dE-uJP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xf3-s9-kRe">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-YP-doY">
-                                <rect key="frame" x="125.66666666666667" y="252" width="138.66666666666663" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-YP-doY">
+                                <rect key="frame" x="125.66666666666667" y="219.66666666666666" width="138.66666666666663" height="42.999999999999972"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,14 +162,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Modules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG2-it-jgw">
-                                <rect key="frame" x="128.33333333333331" y="82" width="133.33333333333331" height="64"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG2-it-jgw">
+                                <rect key="frame" x="128.33333333333331" y="82" width="133.33333333333331" height="43"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="36"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVV-uI-r9Y">
-                                <rect key="frame" x="16" y="170" width="163" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVV-uI-r9Y">
+                                <rect key="frame" x="15" y="149" width="155" height="41.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Aoi-T2-Zie"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
                                     <attributedString key="attributedTitle">
@@ -179,23 +185,8 @@
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-x4-V0C">
-                                <rect key="frame" x="203" y="169" width="163" height="53"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Font Size">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzH-VM-Vc3">
-                                <rect key="frame" x="30.666666666666657" y="355" width="329" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzH-VM-Vc3">
+                                <rect key="frame" x="30.666666666666657" y="303.66666666666669" width="329" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="tAc-OM-YXL"/>
                                     <constraint firstAttribute="width" constant="329" id="yRF-Al-cEW"/>
@@ -212,8 +203,8 @@
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-Sf-cb1">
-                                <rect key="frame" x="30.666666666666657" y="423" width="329" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-Sf-cb1">
+                                <rect key="frame" x="30.666666666666657" y="371.66666666666669" width="329" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="41M-FO-tne"/>
                                     <constraint firstAttribute="width" constant="329" id="Iw1-sH-uvq"/>
@@ -230,26 +221,8 @@
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftP-jN-du4">
-                                <rect key="frame" x="66" y="437" width="24" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=""/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTY-m9-SCS">
-                                <rect key="frame" x="30.666666666666657" y="488" width="329" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTY-m9-SCS">
+                                <rect key="frame" x="30.666666666666657" y="436.66666666666669" width="329" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="GaG-0f-8xx"/>
                                     <constraint firstAttribute="height" constant="42" id="JY0-ps-p98"/>
@@ -266,26 +239,8 @@
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-Dk-HhF">
-                                <rect key="frame" x="66" y="503" width="24" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=""/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-cR-v3O">
-                                <rect key="frame" x="30.666666666666657" y="555" width="329" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-cR-v3O">
+                                <rect key="frame" x="30.666666666666657" y="503.66666666666674" width="329" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Ax1-wz-Oec"/>
                                     <constraint firstAttribute="width" constant="329" id="dQl-2J-F9u"/>
@@ -302,26 +257,8 @@
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCN-2S-dhy">
-                                <rect key="frame" x="66" y="569" width="24" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=""/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MM-Ek-vBk">
-                                <rect key="frame" x="30.666666666666657" y="624" width="329" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MM-Ek-vBk">
+                                <rect key="frame" x="30.666666666666657" y="572.66666666666663" width="329" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="EYc-Ph-5Sk"/>
                                     <constraint firstAttribute="height" constant="42" id="sKE-AN-zex"/>
@@ -338,26 +275,8 @@
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvm-IA-l31">
-                                <rect key="frame" x="66" y="638" width="24" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=""/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBP-E1-rcp">
-                                <rect key="frame" x="30.666666666666657" y="699" width="329" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBP-E1-rcp">
+                                <rect key="frame" x="30.666666666666657" y="647.66666666666663" width="329" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="Pci-Mq-ZZx"/>
                                     <constraint firstAttribute="height" constant="42" id="kDs-Og-ksD"/>
@@ -374,60 +293,53 @@
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkL-uJ-4nh">
-                                <rect key="frame" x="66" y="370" width="24" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=""/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idN-ox-nus">
-                                <rect key="frame" x="66" y="711" width="24" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title=""/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-x4-V0C">
+                                <rect key="frame" x="219" y="149" width="155" height="41.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="7q3-xG-fGo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Font Size">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k2G-JZ-aF3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xTY-m9-SCS" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="3rV-Cm-qm2"/>
-                            <constraint firstItem="9n7-cR-v3O" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="5xd-vB-rzT"/>
-                            <constraint firstItem="GVV-uI-r9Y" firstAttribute="top" secondItem="CG2-it-jgw" secondAttribute="bottom" constant="24" id="Hcz-1W-4Jv"/>
-                            <constraint firstItem="3NG-Sf-cb1" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="Jc8-je-myS"/>
-                            <constraint firstItem="VGG-YP-doY" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="Plk-bM-2OW"/>
-                            <constraint firstItem="TzH-VM-Vc3" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="cTl-jD-fKb"/>
-                            <constraint firstItem="VGG-YP-doY" firstAttribute="top" secondItem="GVV-uI-r9Y" secondAttribute="bottom" constant="29" id="e1j-vY-Rdy"/>
-                            <constraint firstItem="d8p-x4-V0C" firstAttribute="top" secondItem="CG2-it-jgw" secondAttribute="bottom" constant="23" id="hsE-TX-Pwg"/>
-                            <constraint firstItem="OBP-E1-rcp" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="mst-ZM-xux"/>
-                            <constraint firstItem="CG2-it-jgw" firstAttribute="centerX" secondItem="xf3-s9-kRe" secondAttribute="centerX" id="nn0-Ia-Uds"/>
-                            <constraint firstItem="4MM-Ek-vBk" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="oce-gZ-IBK"/>
-                            <constraint firstItem="VGG-YP-doY" firstAttribute="top" secondItem="d8p-x4-V0C" secondAttribute="bottom" constant="30" id="pvc-pZ-E1J"/>
+                            <constraint firstItem="d8p-x4-V0C" firstAttribute="centerY" secondItem="GVV-uI-r9Y" secondAttribute="centerY" id="30Y-5T-SXd"/>
+                            <constraint firstItem="GVV-uI-r9Y" firstAttribute="top" secondItem="CG2-it-jgw" secondAttribute="bottom" constant="24" id="3BZ-sx-vsb"/>
+                            <constraint firstItem="OBP-E1-rcp" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="3zV-gN-gif"/>
+                            <constraint firstItem="VGG-YP-doY" firstAttribute="top" secondItem="GVV-uI-r9Y" secondAttribute="bottom" constant="29" id="4RS-BX-j5b"/>
+                            <constraint firstItem="CG2-it-jgw" firstAttribute="top" secondItem="k2G-JZ-aF3" secondAttribute="top" constant="38" id="5Bm-Fv-mb2"/>
+                            <constraint firstItem="d8p-x4-V0C" firstAttribute="leading" secondItem="GVV-uI-r9Y" secondAttribute="trailing" constant="49" id="7ih-AQ-1J8"/>
+                            <constraint firstItem="9n7-cR-v3O" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="JLq-ai-GRg"/>
+                            <constraint firstItem="CG2-it-jgw" firstAttribute="centerX" secondItem="xf3-s9-kRe" secondAttribute="centerX" id="K1J-tV-hRv"/>
+                            <constraint firstItem="TzH-VM-Vc3" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="NTY-jA-eIR"/>
+                            <constraint firstItem="GVV-uI-r9Y" firstAttribute="leading" secondItem="k2G-JZ-aF3" secondAttribute="leading" constant="15" id="SH2-7f-lrJ"/>
+                            <constraint firstItem="d8p-x4-V0C" firstAttribute="top" secondItem="CG2-it-jgw" secondAttribute="bottom" constant="24" id="SKP-AP-S0n"/>
+                            <constraint firstItem="xTY-m9-SCS" firstAttribute="top" secondItem="3NG-Sf-cb1" secondAttribute="bottom" constant="23" id="TY1-Xj-BFo"/>
+                            <constraint firstItem="TzH-VM-Vc3" firstAttribute="top" secondItem="VGG-YP-doY" secondAttribute="bottom" constant="41" id="VUO-hb-2Jg"/>
+                            <constraint firstItem="OBP-E1-rcp" firstAttribute="top" secondItem="4MM-Ek-vBk" secondAttribute="bottom" constant="33" id="Zmn-oh-gmF"/>
+                            <constraint firstItem="9n7-cR-v3O" firstAttribute="top" secondItem="xTY-m9-SCS" secondAttribute="bottom" constant="25" id="a92-OY-2gg"/>
+                            <constraint firstItem="k2G-JZ-aF3" firstAttribute="trailing" secondItem="d8p-x4-V0C" secondAttribute="trailing" constant="16" id="bMc-ut-Iqn"/>
+                            <constraint firstItem="3NG-Sf-cb1" firstAttribute="top" secondItem="TzH-VM-Vc3" secondAttribute="bottom" constant="26" id="bpr-qu-jiE"/>
+                            <constraint firstItem="4MM-Ek-vBk" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="dlR-em-fVn"/>
+                            <constraint firstItem="4MM-Ek-vBk" firstAttribute="top" secondItem="9n7-cR-v3O" secondAttribute="bottom" constant="27" id="icG-5o-0Y6"/>
+                            <constraint firstItem="3NG-Sf-cb1" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="ml0-ge-FMR"/>
+                            <constraint firstItem="VGG-YP-doY" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="tub-2p-a86"/>
+                            <constraint firstItem="xTY-m9-SCS" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="vhT-Ba-GcO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SGx-fG-WIm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6D0-6R-eGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
