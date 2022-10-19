@@ -9,7 +9,7 @@ import UIKit
 struct Module : Codable{
     var modId : Int
     var modName : String
-    var pages : Array<String>
+    //var pages : Array<String>
 }
 //Parse Json idea from https://stackoverflow.com/questions/24410881/reading-in-a-json-file-using-swift
 func loadJson(filename: String) -> Module?{
@@ -33,7 +33,7 @@ class Modules: UIViewController{
         var currentModule = loadJson(filename:"TestModule")
         //Unwrap optional module
         if let currentModule = currentModule{
-            textOutlet.text = currentModule.pages[0]
+            //textOutlet.text = currentModule.pages[0]
             titleOutlet.text = currentModule.modName
         }
     }

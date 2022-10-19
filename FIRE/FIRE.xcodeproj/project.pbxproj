@@ -16,6 +16,7 @@
 		0AD6640428F5B25C00FD1496 /* FIREUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6640328F5B25C00FD1496 /* FIREUITests.swift */; };
 		0AD6640628F5B25C00FD1496 /* FIREUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6640528F5B25C00FD1496 /* FIREUITestsLaunchTests.swift */; };
 		4FD793C82900902F006C94D7 /* TextModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD793C72900902F006C94D7 /* TextModule.storyboard */; };
+		4FD793CB29009864006C94D7 /* TestModule.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FD793CA29009864006C94D7 /* TestModule.json */; };
 		727C1F7A28F74E4B00A8A3CF /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C1F7928F74E4A00A8A3CF /* Modules.swift */; };
 		727C1F7C28F74E8F00A8A3CF /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		0AD6640328F5B25C00FD1496 /* FIREUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIREUITests.swift; sourceTree = "<group>"; };
 		0AD6640528F5B25C00FD1496 /* FIREUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIREUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4FD793C72900902F006C94D7 /* TextModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextModule.storyboard; sourceTree = "<group>"; };
+		4FD793CA29009864006C94D7 /* TestModule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestModule.json; sourceTree = "<group>"; };
 		727C1F7928F74E4A00A8A3CF /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				0AD663F028F5B25C00FD1496 /* Info.plist */,
 				727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */,
 				727C1F7928F74E4A00A8A3CF /* Modules.swift */,
+				4FD793C929009847006C94D7 /* Modules */,
 			);
 			path = FIRE;
 			sourceTree = "<group>";
@@ -130,6 +133,14 @@
 				0AD6640528F5B25C00FD1496 /* FIREUITestsLaunchTests.swift */,
 			);
 			path = FIREUITests;
+			sourceTree = "<group>";
+		};
+		4FD793C929009847006C94D7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4FD793CA29009864006C94D7 /* TestModule.json */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		823BFA0B28F7524300D3E52D /* New Group */ = {
@@ -246,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD663EC28F5B25C00FD1496 /* Assets.xcassets in Resources */,
+				4FD793CB29009864006C94D7 /* TestModule.json in Resources */,
 				0AD663EA28F5B25A00FD1496 /* Main.storyboard in Resources */,
 				4FD793C82900902F006C94D7 /* TextModule.storyboard in Resources */,
 			);
