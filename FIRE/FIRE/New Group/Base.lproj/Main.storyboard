@@ -203,9 +203,6 @@
                                     </attributedString>
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Hm9-fk-Bea" kind="show" id="32S-95-Oss"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-Sf-cb1">
                                 <rect key="frame" x="30.666666666666657" y="374.66666666666669" width="329" height="42"/>
@@ -348,16 +345,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6D0-6R-eGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704.61538461538464" y="-2.1327014218009479"/>
-        </scene>
-        <!--TextModule-->
-        <scene sceneID="jxZ-Kf-opr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TextModule" id="Hm9-fk-Bea" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="QIb-Qi-4yh"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w8n-Cn-dJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1295" y="141"/>
         </scene>
     </scenes>
     <resources>
