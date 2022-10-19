@@ -7,8 +7,9 @@
 
 import UIKit
 struct Module : Codable{
-    let title : String
-    let text : String
+    var modId : Int
+    var modName : String
+    var pages : Array<String>
 }
 //Parse Json idea from https://stackoverflow.com/questions/24410881/reading-in-a-json-file-using-swift
 func loadJson(filename: String) -> Module?{
@@ -23,11 +24,24 @@ func loadJson(filename: String) -> Module?{
     }
     return module
 }
-class Modules: UIViewController {
+class Modules: UIViewController{
+    @IBOutlet weak var titleOutlet: UILabel!
+    @IBOutlet weak var textOutlet: UITextView!
+    @IBOutlet weak var mainMenuButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        var currentModule = loadJson(filename:"TestModule")
+        //Unwrap optional module
+        if let currentModule = currentModule{
+            textOutlet.text = currentModule.pages[0]
+            titleOutlet.text = currentModule.modName
+        }
     }
-
-
+    //Handles Main Menu botton press
+    @IBAction func returnToMenu(_ send: UIButton){
+        
+    }
 }
+
+
 

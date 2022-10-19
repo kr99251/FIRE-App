@@ -15,10 +15,9 @@
 		0AD663FA28F5B25C00FD1496 /* FIRETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD663F928F5B25C00FD1496 /* FIRETests.swift */; };
 		0AD6640428F5B25C00FD1496 /* FIREUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6640328F5B25C00FD1496 /* FIREUITests.swift */; };
 		0AD6640628F5B25C00FD1496 /* FIREUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6640528F5B25C00FD1496 /* FIREUITestsLaunchTests.swift */; };
+		4FD793C82900902F006C94D7 /* TextModule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD793C72900902F006C94D7 /* TextModule.storyboard */; };
 		727C1F7A28F74E4B00A8A3CF /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C1F7928F74E4A00A8A3CF /* Modules.swift */; };
 		727C1F7C28F74E8F00A8A3CF /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */; };
-		728094982900190100FAD7F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728094972900190100FAD7F0 /* LaunchScreen.storyboard */; };
-		7280949A29003C8D00FAD7F0 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280949929003C8D00FAD7F0 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +50,9 @@
 		0AD663FF28F5B25C00FD1496 /* FIREUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIREUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD6640328F5B25C00FD1496 /* FIREUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIREUITests.swift; sourceTree = "<group>"; };
 		0AD6640528F5B25C00FD1496 /* FIREUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIREUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4FD793C72900902F006C94D7 /* TextModule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextModule.storyboard; sourceTree = "<group>"; };
 		727C1F7928F74E4A00A8A3CF /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
-		728094972900190100FAD7F0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		7280949929003C8D00FAD7F0 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +109,6 @@
 				823BFA0B28F7524300D3E52D /* New Group */,
 				0AD663EB28F5B25C00FD1496 /* Assets.xcassets */,
 				0AD663F028F5B25C00FD1496 /* Info.plist */,
-				728094972900190100FAD7F0 /* LaunchScreen.storyboard */,
-				7280949929003C8D00FAD7F0 /* Photo.swift */,
 				727C1F7928F74E4A00A8A3CF /* Modules.swift */,
 				727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */,
 			);
@@ -140,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				0AD663E828F5B25A00FD1496 /* Main.storyboard */,
+				4FD793C72900902F006C94D7 /* TextModule.storyboard */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -248,9 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				728094982900190100FAD7F0 /* LaunchScreen.storyboard in Resources */,
 				0AD663EC28F5B25C00FD1496 /* Assets.xcassets in Resources */,
 				0AD663EA28F5B25A00FD1496 /* Main.storyboard in Resources */,
+				4FD793C82900902F006C94D7 /* TextModule.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +275,6 @@
 				0AD663E728F5B25A00FD1496 /* MainMenu.swift in Sources */,
 				727C1F7C28F74E8F00A8A3CF /* ModuleList.swift in Sources */,
 				727C1F7A28F74E4B00A8A3CF /* Modules.swift in Sources */,
-				7280949A29003C8D00FAD7F0 /* Photo.swift in Sources */,
 				0AD663E328F5B25A00FD1496 /* AppDelegate.swift in Sources */,
 				0AD663E528F5B25A00FD1496 /* SceneDelegate.swift in Sources */,
 			);
