@@ -109,8 +109,8 @@
 				823BFA0B28F7524300D3E52D /* New Group */,
 				0AD663EB28F5B25C00FD1496 /* Assets.xcassets */,
 				0AD663F028F5B25C00FD1496 /* Info.plist */,
-				727C1F7928F74E4A00A8A3CF /* Modules.swift */,
 				727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */,
+				727C1F7928F74E4A00A8A3CF /* Modules.swift */,
 			);
 			path = FIRE;
 			sourceTree = "<group>";
