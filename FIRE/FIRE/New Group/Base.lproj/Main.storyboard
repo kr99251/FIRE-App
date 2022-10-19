@@ -202,9 +202,6 @@
                                     </attributedString>
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Qcl-Ft-m4M" kind="show" id="Lub-mV-bIA"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-Sf-cb1">
                                 <rect key="frame" x="30.666666666666657" y="371.66666666666669" width="329" height="42"/>
@@ -347,16 +344,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6D0-6R-eGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704.61538461538464" y="-2.1327014218009479"/>
-        </scene>
-        <!--LaunchScreen-->
-        <scene sceneID="hvG-vW-P11">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LaunchScreen" id="Qcl-Ft-m4M" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="19j-oO-NES"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fGP-nk-jpu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1246" y="57"/>
         </scene>
     </scenes>
     <resources>
