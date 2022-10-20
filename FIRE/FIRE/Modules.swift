@@ -26,8 +26,9 @@ func loadJson(filename: String) -> Module?{
 }
 class Modules: UIViewController{
     @IBOutlet weak var titleOutlet: UILabel!
-    @IBOutlet weak var textOutlet: UITextView!
+    @IBOutlet weak var textOutlet: UILabel!
     @IBOutlet weak var mainMenuButton: UIButton!
+    @IBOutlet weak var mainMenuTab: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         var currentModule = loadJson(filename:"TestModule")
@@ -38,8 +39,12 @@ class Modules: UIViewController{
         }
     }
     //Handles Main Menu botton press
-    @IBAction func returnToMenu(_ send: UIButton){
-        
+    @IBAction func returnToMenu(_ send: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(identifier: "Menu")
+
+        show(secondVC, sender: self)
+
     }
 }
 
