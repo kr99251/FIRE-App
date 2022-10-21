@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="Cl8-rh-eSP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="UjX-GJ-UrO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfn-hY-CPK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511" y="57"/>
+        </scene>
         <!--Modules-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -66,6 +73,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="next:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="o5m-8G-EVF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Module" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsQ-xR-4yi">
                                 <rect key="frame" x="130.66666666666669" y="114.66666666666669" width="128.66666666666669" height="55"/>
@@ -107,9 +117,13 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" imagePadding="15">
-                                    <imageReference key="image" image="house.fill" catalog="system" symbolScale="large" variableValue="0.0"/>
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Menu"/>
+                                        <fragment content="Menu">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
                                     </attributedString>
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
@@ -123,7 +137,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="returnToMenu:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KoL-VA-yOi"/>
+                                    <action selector="mainMenuButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qqw-aa-gqp"/>
                                 </connections>
                             </button>
                             <button contentMode="center" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82N-Gi-4e5">
@@ -136,7 +150,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" imagePadding="15">
-                                    <imageReference key="image" image="arrowshape.turn.up.backward" catalog="system" symbolScale="large" variableValue="0.0"/>
+                                    <imageReference key="image" image="arrowshape.turn.up.backward" catalog="system" symbolScale="large"/>
                                     <attributedString key="attributedTitle">
                                         <fragment content="Back"/>
                                     </attributedString>
@@ -148,6 +162,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="prev:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lf4-4f-2Ku"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -168,22 +185,21 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mainMenuButton" destination="TXD-xm-CCT" id="tVB-bL-X2t"/>
-                        <outlet property="mainMenuTab" destination="TXD-xm-CCT" id="AKf-cv-xlX"/>
-                        <outlet property="textOutlet" destination="gDX-9d-b6U" id="Mfj-rt-QdC"/>
-                        <outlet property="titleOutlet" destination="nsQ-xR-4yi" id="8uc-0k-eqZ"/>
+                        <outlet property="textOutlet" destination="gDX-9d-b6U" id="cMo-Kh-IhW"/>
+                        <outlet property="titleOutlet" destination="nsQ-xR-4yi" id="nb7-oL-aGs"/>
+                        <segue destination="JfI-O9-fs2" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="sdI-Wa-0G7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="JfI-O9-fs2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="87.692307692307693" y="3.5545023696682461"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
-        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="104"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="text.magnifyingglass.rtl" catalog="system" width="128" height="117"/>
+        <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <image name="text.magnifyingglass.rtl" catalog="system" width="128" height="115"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

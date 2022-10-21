@@ -1,4 +1,11 @@
-"Module" :{
-    "modId" : 1
-    "modName" : "Test Module"
+{
+    "modId" : 1,
+    "modName" : "Test Module",
+    "pageMax" : 4,
+    "pages" : [
+        "THIS IS PAGE 1",
+        "THIS IS PAGE 2",
+        "THIS IS PAGE 3",
+        "THIS IS PAGE 4"
+    ]
 }

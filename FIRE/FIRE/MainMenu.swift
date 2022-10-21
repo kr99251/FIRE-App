@@ -12,6 +12,8 @@ class MainMenu: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    // Function to facilitate unwinding back to main menu
+    @IBAction func unwindToMain(_ segue : UIStoryboardSegue){}
 
 
 }
