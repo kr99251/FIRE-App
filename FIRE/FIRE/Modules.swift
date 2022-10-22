@@ -6,24 +6,26 @@
 //
 
 import UIKit
+
 struct Module : Codable{
     var modId : Int
+    var available: Bool
     var modName : String
     var pageMax : Int
     var pages : Array<String>
 }
 //Parse Json idea from https://stackoverflow.com/questions/24410881/reading-in-a-json-file-using-swift
-func loadJson(filename: String) -> Module?{
+func loadJson(filename: String) -> [Module]?{
     let decoder = JSONDecoder()
     guard
         let json = Bundle.main.url(forResource: filename, withExtension: "json"),
         let data = try? Data(contentsOf: json),
-        let module = try? decoder.decode(Module.self, from: data)
+        let modules = try? decoder.decode([Module].self, from: data)
     else {
         print("Error, JSON File failed to parse")
         return nil
     }
-    return module
+    return modules
 }
 class Modules: UIViewController{
     @IBOutlet weak var titleOutlet: UILabel!
@@ -37,17 +39,17 @@ class Modules: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let currentModule = loadJson(filename:"TestModule")
-        //Unwrap optional module
-        if let currentModule = currentModule{
+        if let currentModule = loadJson(filename:"TestModule")?[0]{//TODO: this is not right it should be passed the specified modId - change for next deliverable
             textOutlet.text = currentModule.pages[pageNum]
             titleOutlet.text = currentModule.modName
             pageMax = currentModule.pageMax
         }
+        //Unwrap optional module
+        
     }
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
-        let currentModule = loadJson(filename:"TestModule")
+        let currentModule = loadJson(filename:"TestModule")?[0]//TODO: fix this too
         //Unwrap optional module
         if let currentModule = currentModule{
             textOutlet.text = currentModule.pages[pageNum]

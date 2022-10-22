@@ -19,6 +19,7 @@
 		4FD793CB29009864006C94D7 /* TestModule.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FD793CA29009864006C94D7 /* TestModule.json */; };
 		727C1F7A28F74E4B00A8A3CF /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C1F7928F74E4A00A8A3CF /* Modules.swift */; };
 		727C1F7C28F74E8F00A8A3CF /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */; };
+		82848AB729033EF000B909EC /* ModulesScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82848AB629033EF000B909EC /* ModulesScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4FD793CA29009864006C94D7 /* TestModule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestModule.json; sourceTree = "<group>"; };
 		727C1F7928F74E4A00A8A3CF /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
+		82848AB629033EF000B909EC /* ModulesScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				727C1F7B28F74E8F00A8A3CF /* ModuleList.swift */,
 				727C1F7928F74E4A00A8A3CF /* Modules.swift */,
 				4FD793C929009847006C94D7 /* Modules */,
+				82848AB629033EF000B909EC /* ModulesScroll.swift */,
 			);
 			path = FIRE;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82848AB729033EF000B909EC /* ModulesScroll.swift in Sources */,
 				0AD663E728F5B25A00FD1496 /* MainMenu.swift in Sources */,
 				727C1F7C28F74E8F00A8A3CF /* ModuleList.swift in Sources */,
 				727C1F7A28F74E4B00A8A3CF /* Modules.swift in Sources */,
