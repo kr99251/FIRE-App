@@ -31,7 +31,7 @@ class Modules: UIViewController{
     @IBOutlet weak var titleOutlet: UILabel!
     @IBOutlet weak var textOutlet: UILabel!
     //Handles Main Menu botton press
-    @IBAction func unwindToMain(unwindSegue seg: UIStoryboardSegue){}
+//    @IBAction  func unwindToMain(unwindSegue seg: UIStoryboardSegue){}
     var pageNum : Int = 0
     var pageMax : Int = -1
     @IBAction func mainMenuButton(_ sender: Any) {

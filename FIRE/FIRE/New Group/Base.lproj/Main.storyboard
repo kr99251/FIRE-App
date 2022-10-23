@@ -16,14 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-uv-rZY">
-                                <rect key="frame" x="128" y="89" width="133.33333333333331" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-uv-rZY">
+                                <rect key="frame" x="128" y="89" width="133.33333333333337" height="43"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="36"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfc-G9-wit">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfc-G9-wit">
                                 <rect key="frame" x="15" y="156" width="155" height="41.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="QqH-JV-hQ3"/>
@@ -40,7 +39,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0l-FX-m35">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0l-FX-m35">
                                 <rect key="frame" x="219" y="156" width="155" height="41.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="9Je-IE-LFw"/>
@@ -65,6 +64,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iHL-xC-wON"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K0l-FX-m35" firstAttribute="top" secondItem="hYh-uv-rZY" secondAttribute="bottom" constant="24" id="CVE-MC-woL"/>
+                            <constraint firstItem="iHL-xC-wON" firstAttribute="trailing" secondItem="hYh-uv-rZY" secondAttribute="trailing" constant="128.66999999999999" id="Waj-oo-3Qb"/>
+                            <constraint firstItem="hYh-uv-rZY" firstAttribute="top" secondItem="iHL-xC-wON" secondAttribute="top" constant="45" id="Wp9-E3-PP2"/>
+                            <constraint firstItem="hYh-uv-rZY" firstAttribute="leading" secondItem="iHL-xC-wON" secondAttribute="leading" constant="128" id="ZOV-Fy-RyK"/>
+                            <constraint firstItem="Bfc-G9-wit" firstAttribute="leading" secondItem="iHL-xC-wON" secondAttribute="leading" constant="15" id="cu9-Ic-h0H"/>
+                            <constraint firstItem="iHL-xC-wON" firstAttribute="trailing" secondItem="K0l-FX-m35" secondAttribute="trailing" constant="16" id="xgl-Ao-BzC"/>
+                            <constraint firstItem="Bfc-G9-wit" firstAttribute="top" secondItem="hYh-uv-rZY" secondAttribute="bottom" constant="24" id="yKe-L4-doa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="rct-Jq-fuX" id="bkp-PY-GGw"/>
@@ -202,214 +210,10 @@
             </objects>
             <point key="canvasLocation" x="47.692307692307693" y="-2.1327014218009479"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="jaJ-rX-hwC">
-            <objects>
-                <viewController id="PFS-dE-uJP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xf3-s9-kRe">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG2-it-jgw">
-                                <rect key="frame" x="128.33333333333331" y="82" width="133.33333333333331" height="43"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="36"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVV-uI-r9Y">
-                                <rect key="frame" x="15" y="149" width="155" height="41.666666666666657"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="Aoi-T2-Zie"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Main Menu">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzH-VM-Vc3">
-                                <rect key="frame" x="30.666666666666657" y="303.66666666666669" width="329" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="tAc-OM-YXL"/>
-                                    <constraint firstAttribute="width" constant="329" id="yRF-Al-cEW"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Module 1">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="crs-fK-lhc" kind="show" id="qdZ-2a-sEw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-Sf-cb1">
-                                <rect key="frame" x="30.666666666666657" y="371.66666666666669" width="329" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="41M-FO-tne"/>
-                                    <constraint firstAttribute="width" constant="329" id="Iw1-sH-uvq"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Module 2">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTY-m9-SCS">
-                                <rect key="frame" x="30.666666666666657" y="436.66666666666669" width="329" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="329" id="GaG-0f-8xx"/>
-                                    <constraint firstAttribute="height" constant="42" id="JY0-ps-p98"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Module 3">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-cR-v3O">
-                                <rect key="frame" x="30.666666666666657" y="503.66666666666674" width="329" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="Ax1-wz-Oec"/>
-                                    <constraint firstAttribute="width" constant="329" id="dQl-2J-F9u"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Module 4">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MM-Ek-vBk">
-                                <rect key="frame" x="30.666666666666657" y="572.66666666666663" width="329" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="329" id="EYc-Ph-5Sk"/>
-                                    <constraint firstAttribute="height" constant="42" id="sKE-AN-zex"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Module 5">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBP-E1-rcp">
-                                <rect key="frame" x="30.666666666666657" y="647.66666666666663" width="329" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="329" id="Pci-Mq-ZZx"/>
-                                    <constraint firstAttribute="height" constant="42" id="kDs-Og-ksD"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Module 6">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8p-x4-V0C">
-                                <rect key="frame" x="219" y="149" width="155" height="41.666666666666657"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="7q3-xG-fGo"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Font Size">
-                                            <attributes>
-                                                <font key="NSFont" size="24" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="k2G-JZ-aF3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="d8p-x4-V0C" firstAttribute="centerY" secondItem="GVV-uI-r9Y" secondAttribute="centerY" id="30Y-5T-SXd"/>
-                            <constraint firstItem="GVV-uI-r9Y" firstAttribute="top" secondItem="CG2-it-jgw" secondAttribute="bottom" constant="24" id="3BZ-sx-vsb"/>
-                            <constraint firstItem="OBP-E1-rcp" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="3zV-gN-gif"/>
-                            <constraint firstItem="CG2-it-jgw" firstAttribute="top" secondItem="k2G-JZ-aF3" secondAttribute="top" constant="38" id="5Bm-Fv-mb2"/>
-                            <constraint firstItem="d8p-x4-V0C" firstAttribute="leading" secondItem="GVV-uI-r9Y" secondAttribute="trailing" constant="49" id="7ih-AQ-1J8"/>
-                            <constraint firstItem="9n7-cR-v3O" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="JLq-ai-GRg"/>
-                            <constraint firstItem="CG2-it-jgw" firstAttribute="centerX" secondItem="xf3-s9-kRe" secondAttribute="centerX" id="K1J-tV-hRv"/>
-                            <constraint firstItem="TzH-VM-Vc3" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="NTY-jA-eIR"/>
-                            <constraint firstItem="GVV-uI-r9Y" firstAttribute="leading" secondItem="k2G-JZ-aF3" secondAttribute="leading" constant="15" id="SH2-7f-lrJ"/>
-                            <constraint firstItem="d8p-x4-V0C" firstAttribute="top" secondItem="CG2-it-jgw" secondAttribute="bottom" constant="24" id="SKP-AP-S0n"/>
-                            <constraint firstItem="xTY-m9-SCS" firstAttribute="top" secondItem="3NG-Sf-cb1" secondAttribute="bottom" constant="23" id="TY1-Xj-BFo"/>
-                            <constraint firstItem="OBP-E1-rcp" firstAttribute="top" secondItem="4MM-Ek-vBk" secondAttribute="bottom" constant="33" id="Zmn-oh-gmF"/>
-                            <constraint firstItem="9n7-cR-v3O" firstAttribute="top" secondItem="xTY-m9-SCS" secondAttribute="bottom" constant="25" id="a92-OY-2gg"/>
-                            <constraint firstItem="k2G-JZ-aF3" firstAttribute="trailing" secondItem="d8p-x4-V0C" secondAttribute="trailing" constant="16" id="bMc-ut-Iqn"/>
-                            <constraint firstItem="3NG-Sf-cb1" firstAttribute="top" secondItem="TzH-VM-Vc3" secondAttribute="bottom" constant="26" id="bpr-qu-jiE"/>
-                            <constraint firstItem="4MM-Ek-vBk" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="dlR-em-fVn"/>
-                            <constraint firstItem="4MM-Ek-vBk" firstAttribute="top" secondItem="9n7-cR-v3O" secondAttribute="bottom" constant="27" id="icG-5o-0Y6"/>
-                            <constraint firstItem="3NG-Sf-cb1" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="ml0-ge-FMR"/>
-                            <constraint firstItem="xTY-m9-SCS" firstAttribute="centerX" secondItem="CG2-it-jgw" secondAttribute="centerX" id="vhT-Ba-GcO"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="SGx-fG-WIm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6D0-6R-eGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1435" y="-2"/>
-        </scene>
-        <!--TextModule-->
-        <scene sceneID="mb5-sL-O5f">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="textMod" storyboardName="TextModule" id="crs-fK-lhc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="wft-8R-ra2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iC1-qe-QEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1313" y="-20"/>
-        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
