@@ -9,7 +9,7 @@ import UIKit
 
 struct Module : Codable{
     var modId : Int
-    var available: Bool
+    var available: Bool?
     var modName : String
     var pageMax : Int
     var pages : Array<String>
@@ -31,7 +31,7 @@ class Modules: UIViewController{
     @IBOutlet weak var titleOutlet: UILabel!
     @IBOutlet weak var textOutlet: UILabel!
     //Handles Main Menu botton press
-    @IBAction func unwindToMain(unwindSegue seg: UIStoryboardSegue){}
+//    @IBAction  func unwindToMain(unwindSegue seg: UIStoryboardSegue){}
     var pageNum : Int = 0
     var pageMax : Int = -1
     @IBAction func mainMenuButton(_ sender: Any) {
@@ -39,23 +39,31 @@ class Modules: UIViewController{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let currentModule = loadJson(filename:"TestModule")?[0]{//TODO: this is not right it should be passed the specified modId - change for next deliverable
-            textOutlet.text = currentModule.pages[pageNum]
-            titleOutlet.text = currentModule.modName
-            pageMax = currentModule.pageMax
+        if let currentModule = loadJson(filename:"TestModule")?[0] {//TODO: this is not right it should be passed the specified modId - change for next deliverable
+            if let _ = textOutlet {
+                textOutlet.text = currentModule.pages[0]
+            }
+
+            if let _ = titleOutlet {
+                titleOutlet.text = currentModule.modName
+            }
         }
-        //Unwrap optional module
-        
     }
+    
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
         let currentModule = loadJson(filename:"TestModule")?[0]//TODO: fix this too
         //Unwrap optional module
         if let currentModule = currentModule{
-            textOutlet.text = currentModule.pages[pageNum]
-            titleOutlet.text = currentModule.modName
+            if let _ = textOutlet {
+                textOutlet.text = currentModule.pages[pageNum]
+            }
+            if let _ = titleOutlet {
+                titleOutlet.text = currentModule.modName
+            }
         }
     }
+    
     @IBAction func prev(_ send:Any){
         if pageNum > 0{
             pageNum = pageNum - 1

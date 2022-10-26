@@ -83,8 +83,7 @@ class ModuleScroll: UIViewController {
         }
     }
     @objc func openModule(moduleId: Int){
-        let myView = Modules()
-        present(myView, animated: true, completion: nil)
+        present(Modules(), animated: false)
     }
 
 }
