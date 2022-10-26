@@ -26,7 +26,6 @@ func loadJson(filename: String) -> ModuleDataSet?{
         if let data = try?Data(contentsOf: json){
             if let modules = try?decoder.decode(ModuleDataSet.self, from: data){
                 return modules
-                }
             }
         }
     }
