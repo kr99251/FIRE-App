@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */; };
-		0ACF22642909C49F00FCE8FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22632909C49F00FCE8FB /* ContentView.swift */; };
+		0ACF22642909C49F00FCE8FB /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22632909C49F00FCE8FB /* Module.swift */; };
 		0ACF22662909C4A000FCE8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF22652909C4A000FCE8FB /* Assets.xcassets */; };
 		0ACF22692909C4A000FCE8FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF22682909C4A000FCE8FB /* Preview Assets.xcassets */; };
 		0ACF22732909C4A000FCE8FB /* Swift_FIRETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22722909C4A000FCE8FB /* Swift_FIRETests.swift */; };
 		0ACF227D2909C4A000FCE8FB /* Swift_FIREUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF227C2909C4A000FCE8FB /* Swift_FIREUITests.swift */; };
 		0ACF227F2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF227E2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift */; };
+		7233DE932909C60200F87E41 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE922909C60200F87E41 /* Main.swift */; };
+		7233DE952909C61700F87E41 /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE942909C61700F87E41 /* ModuleList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		0ACF225E2909C49F00FCE8FB /* Swift FIRE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift FIRE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREApp.swift; sourceTree = "<group>"; };
-		0ACF22632909C49F00FCE8FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0ACF22632909C49F00FCE8FB /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		0ACF22652909C4A000FCE8FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ACF22682909C4A000FCE8FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0ACF226E2909C4A000FCE8FB /* Swift FIRETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift FIRETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		0ACF22782909C4A000FCE8FB /* Swift FIREUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift FIREUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACF227C2909C4A000FCE8FB /* Swift_FIREUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREUITests.swift; sourceTree = "<group>"; };
 		0ACF227E2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7233DE922909C60200F87E41 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		7233DE942909C61700F87E41 /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */,
-				0ACF22632909C49F00FCE8FB /* ContentView.swift */,
+				7233DE942909C61700F87E41 /* ModuleList.swift */,
+				0ACF22632909C49F00FCE8FB /* Module.swift */,
+				7233DE922909C60200F87E41 /* Main.swift */,
 				0ACF22652909C4A000FCE8FB /* Assets.xcassets */,
 				0ACF22672909C4A000FCE8FB /* Preview Content */,
 			);
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ACF22642909C49F00FCE8FB /* ContentView.swift in Sources */,
+				7233DE932909C60200F87E41 /* Main.swift in Sources */,
+				7233DE952909C61700F87E41 /* ModuleList.swift in Sources */,
+				0ACF22642909C49F00FCE8FB /* Module.swift in Sources */,
 				0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
