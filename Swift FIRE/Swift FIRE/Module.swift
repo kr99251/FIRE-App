@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+var modules = getModules()
 struct ContentView: View {
     @State var currentValue = 0
     var body: some View {
@@ -16,7 +16,8 @@ struct ContentView: View {
             // can also put the action closure outside
             Button("Decrement") {currentValue -= 1 }
             
-            Button("Menu") {  }
+            Button (modules.modules[currentValue].modName, action:{})
+                .offset(x:50)
         }
     }
 }

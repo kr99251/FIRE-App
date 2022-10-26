@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 struct ModuleData : Codable{
     var modId : Int
     var modName : String
@@ -29,4 +29,11 @@ func loadJson(filename: String) -> ModuleDataSet?{
             }
         }
     }
+    return nil
+}
+func getModules() -> ModuleDataSet{
+    if let modules = loadJson(filename:"TestModule"){
+        return modules
+    }
+    return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax:-1, pages:[])])
 }
