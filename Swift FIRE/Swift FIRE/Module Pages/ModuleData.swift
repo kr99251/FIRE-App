@@ -1,32 +1,32 @@
+////
+////  ModuleData.swift
+////  Swift FIRETests
+////
+////  Created by Kelly Robinett on 10/26/22.
+////
 //
-//  ModuleData.swift
-//  Swift FIRETests
+//import Foundation
 //
-//  Created by Kelly Robinett on 10/26/22.
+//var modules: [ModuleObj] = load("TestModuleCopy.json")
 //
-
-import Foundation
-
-var modules: [ModuleObj] = load("TestModule.json")
-
-func load<T: Decodable> (_ filename: String) -> T {
-    let data: Data
-    
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
-    }
-    
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
-    
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-    }
-}
+//func load<T: Decodable> (_ filename: String) -> T {
+//    let data: Data
+//
+//    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
+//    else {
+//        fatalError("Couldn't find \(filename) in main bundle.")
+//    }
+//
+//    do {
+//        data = try Data(contentsOf: file)
+//    } catch {
+//        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+//    }
+//
+//    do {
+//        let decoder = JSONDecoder()
+//        return try decoder.decode(T.self, from: data)
+//    } catch {
+//        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+//    }
+//}

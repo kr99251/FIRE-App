@@ -1,17 +1,17 @@
+////
+////  ModuleObj.swift
+////  Swift FIRETests
+////
+////  Created by Kelly Robinett on 10/26/22.
+////
 //
-//  ModuleObj.swift
-//  Swift FIRETests
+//import Foundation
+//import SwiftUI
+//import CoreLocation
 //
-//  Created by Kelly Robinett on 10/26/22.
-//
-
-import Foundation
-import SwiftUI
-import CoreLocation
-
-struct ModuleObj: Hashable, Codable, Identifiable {
-    var id: Int
-    var modName: String
-    var pageMax: Int
-    var pages: [String]
-}
+//struct ModuleObj: Hashable, Codable, Identifiable {
+//    var id: Int
+//    var modName: String
+//    var pageMax: Int
+//    var pages: [String]
+//}

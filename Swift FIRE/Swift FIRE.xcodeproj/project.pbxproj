@@ -15,13 +15,13 @@
 		0ACF227D2909C4A000FCE8FB /* Swift_FIREUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF227C2909C4A000FCE8FB /* Swift_FIREUITests.swift */; };
 		0ACF227F2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF227E2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift */; };
 		0ACF228C290A0F2D00FCE8FB /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF228B290A0F2D00FCE8FB /* NavView.swift */; };
-		0ACF22A0290A363200FCE8FB /* ModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF229C290A35BA00FCE8FB /* ModuleData.swift */; };
-		0ACF22A1290A363600FCE8FB /* ModuleObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF229E290A362500FCE8FB /* ModuleObj.swift */; };
 		0ACF22A3290A38C200FCE8FB /* ModuleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22A2290A38C200FCE8FB /* ModuleRow.swift */; };
-		0ACF22A5290A3D2600FCE8FB /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22A4290A3D2600FCE8FB /* ModuleList.swift */; };
+		0ACF22A5290A3D2600FCE8FB /* ModuleList_UNUSED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22A4290A3D2600FCE8FB /* ModuleList_UNUSED.swift */; };
+		0ACF22AE290AB4CC00FCE8FB /* ModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22AD290AB4CC00FCE8FB /* ModuleData.swift */; };
+		0ACF22B0290AB4E200FCE8FB /* ModuleObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22AF290AB4E200FCE8FB /* ModuleObj.swift */; };
 		4F4AEA402909CFA600F2FD63 /* TestModule.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AEA3F2909CFA600F2FD63 /* TestModule.json */; };
 		7233DE932909C60200F87E41 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE922909C60200F87E41 /* Main.swift */; };
-		7233DE952909C61700F87E41 /* ModuleList_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE942909C61700F87E41 /* ModuleList_Old.swift */; };
+		7233DE952909C61700F87E41 /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE942909C61700F87E41 /* ModuleList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +53,13 @@
 		0ACF227C2909C4A000FCE8FB /* Swift_FIREUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREUITests.swift; sourceTree = "<group>"; };
 		0ACF227E2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0ACF228B290A0F2D00FCE8FB /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
-		0ACF229C290A35BA00FCE8FB /* ModuleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModuleData.swift; path = "Swift FIRE/New Group/ModuleData.swift"; sourceTree = SOURCE_ROOT; };
-		0ACF229E290A362500FCE8FB /* ModuleObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModuleObj.swift; path = "Swift FIRE/New Group/ModuleObj.swift"; sourceTree = SOURCE_ROOT; };
 		0ACF22A2290A38C200FCE8FB /* ModuleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleRow.swift; sourceTree = "<group>"; };
-		0ACF22A4290A3D2600FCE8FB /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
+		0ACF22A4290A3D2600FCE8FB /* ModuleList_UNUSED.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList_UNUSED.swift; sourceTree = "<group>"; };
+		0ACF22AD290AB4CC00FCE8FB /* ModuleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleData.swift; sourceTree = "<group>"; };
+		0ACF22AF290AB4E200FCE8FB /* ModuleObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleObj.swift; sourceTree = "<group>"; };
 		4F4AEA3F2909CFA600F2FD63 /* TestModule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestModule.json; sourceTree = "<group>"; };
 		7233DE922909C60200F87E41 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		7233DE942909C61700F87E41 /* ModuleList_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList_Old.swift; sourceTree = "<group>"; };
+		7233DE942909C61700F87E41 /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 			children = (
 				0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */,
 				0ACF22A6290AAEAA00FCE8FB /* Module Pages */,
-				7233DE942909C61700F87E41 /* ModuleList_Old.swift */,
+				7233DE942909C61700F87E41 /* ModuleList.swift */,
 				0ACF22632909C49F00FCE8FB /* Module.swift */,
 				7233DE922909C60200F87E41 /* Main.swift */,
 				0ACF228B290A0F2D00FCE8FB /* NavView.swift */,
@@ -151,10 +151,10 @@
 		0ACF22A6290AAEAA00FCE8FB /* Module Pages */ = {
 			isa = PBXGroup;
 			children = (
-				0ACF229C290A35BA00FCE8FB /* ModuleData.swift */,
+				0ACF22AD290AB4CC00FCE8FB /* ModuleData.swift */,
 				0ACF22A2290A38C200FCE8FB /* ModuleRow.swift */,
-				0ACF22A4290A3D2600FCE8FB /* ModuleList.swift */,
-				0ACF229E290A362500FCE8FB /* ModuleObj.swift */,
+				0ACF22A4290A3D2600FCE8FB /* ModuleList_UNUSED.swift */,
+				0ACF22AF290AB4E200FCE8FB /* ModuleObj.swift */,
 			);
 			path = "Module Pages";
 			sourceTree = "<group>";
@@ -291,14 +291,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACF22A3290A38C200FCE8FB /* ModuleRow.swift in Sources */,
-				0ACF22A1290A363600FCE8FB /* ModuleObj.swift in Sources */,
+				0ACF22AE290AB4CC00FCE8FB /* ModuleData.swift in Sources */,
 				7233DE932909C60200F87E41 /* Main.swift in Sources */,
-				0ACF22A0290A363200FCE8FB /* ModuleData.swift in Sources */,
-				7233DE952909C61700F87E41 /* ModuleList_Old.swift in Sources */,
+				7233DE952909C61700F87E41 /* ModuleList.swift in Sources */,
 				0ACF22642909C49F00FCE8FB /* Module.swift in Sources */,
 				0ACF228C290A0F2D00FCE8FB /* NavView.swift in Sources */,
 				0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */,
-				0ACF22A5290A3D2600FCE8FB /* ModuleList.swift in Sources */,
+				0ACF22A5290A3D2600FCE8FB /* ModuleList_UNUSED.swift in Sources */,
+				0ACF22B0290AB4E200FCE8FB /* ModuleObj.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
