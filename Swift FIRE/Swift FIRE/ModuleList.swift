@@ -33,11 +33,13 @@ func getModules() -> ModuleDataSet{
 }
 
 struct ModuleListView: View {
-    var modules = getModules()
-    var navy = Color(red: 0, green: 0, blue: 128/255)
+    let modules = getModules()
+    let navy = Color(red: 0, green: 0, blue: 128/255)
     @State var currentValue = 1
-        var body: some View {
-            let v = modules.modules
+    var body: some View {
+        let v = modules.modules
+        
+        NavigationView {
             VStack(alignment: .center) {
                 HStack {
                     Button(action: {}) {
@@ -70,17 +72,16 @@ struct ModuleListView: View {
                 List(0..<v.count, id: \.self) { num in
                     NavigationLink(v[num].modName, destination: ContentView())
                         .padding(30)
-                        }
-                        .font(.largeTitle)
-                        .foregroundColor(navy)
-                        .navigationBarHidden(true)
-                    }.foregroundColor(navy)
-                
-                .offset(y: -50)
+                }
+                .listStyle(.insetGrouped)
+                .background(navy)
+                .font(.largeTitle)
+                .foregroundColor(navy)
             }
+            
+        }
     }
 }
-
 
 
 struct ModuleListView_Previews: PreviewProvider {
