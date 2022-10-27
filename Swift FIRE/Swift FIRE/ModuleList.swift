@@ -39,11 +39,32 @@ struct ModuleListView: View {
         var body: some View {
             let v = modules.modules
             VStack(alignment: .center) {
+                HStack {
+                    Button(action: {}) {
+                        Text("Home")
+                            .frame(width: 80.0, height: 50)
+                    }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(navy, lineWidth: 3)
+                    )
+                    Spacer()
+                    Button(action: {}) {
+                        Text("Font Size")
+                            .frame(width: 80.0, height: 50)
+                    }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(navy, lineWidth: 3)
+                    )
+                }
+                .padding()
                 Text("Modules")
                     .font(.largeTitle .bold())
                     .padding(20)
                     .foregroundColor(navy)
-  
+                    .offset(y: -50)
+                
             NavigationView {
                 List(0..<v.count, id: \.self) { num in
                     NavigationLink(v[num].modName, destination: ContentView())
@@ -51,8 +72,10 @@ struct ModuleListView: View {
                         }
                         .font(.largeTitle)
                         .foregroundColor(navy)
-                        
+                        .navigationBarHidden(true)
                     }.foregroundColor(navy)
+                
+                .offset(y: -50)
             }
     }
 }

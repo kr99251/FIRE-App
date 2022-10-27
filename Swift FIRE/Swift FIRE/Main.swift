@@ -18,7 +18,7 @@ struct Main: View {
                     .foregroundColor(.red)
                     .ignoresSafeArea(edges: .top)
                 Spacer()
-                NavigationLink(destination: ModuleListView(), isActive: $goToModuleView) {
+                NavigationLink(destination: ModuleListView().navigationBarHidden(true), isActive: $goToModuleView) {
                     EmptyView()
                 }
                 HStack {
