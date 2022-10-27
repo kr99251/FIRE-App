@@ -58,6 +58,7 @@ struct ModuleListView: View {
                             .stroke(navy, lineWidth: 3)
                     )
                 }
+                .foregroundColor(navy)
                 .padding()
                 Text("Modules")
                     .font(.largeTitle .bold())
