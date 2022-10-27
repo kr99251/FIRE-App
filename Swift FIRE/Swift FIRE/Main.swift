@@ -24,7 +24,7 @@ struct Main: View {
                 HStack {
                     Button(action: {self.goToModuleView = true}) {
                         Text("Modules")
-                            .frame(width: 150.0, height: 100)
+                            .frame(width: 150.0, height: 150)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -32,7 +32,7 @@ struct Main: View {
                     )
                     Button(action: {}) {
                         Text("Quizzes")
-                            .frame(width: 150.0, height: 100)
+                            .frame(width: 150.0, height: 150)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -42,7 +42,7 @@ struct Main: View {
                 HStack {
                     Button(action: {}) {
                         Text("Journal")
-                            .frame(width: 150.0, height: 100)
+                            .frame(width: 150.0, height: 150)
                     }
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
@@ -50,7 +50,7 @@ struct Main: View {
                             )
                     Button(action: {}) {
                         Text("Checklists")
-                            .frame(width: 150.0, height: 100)
+                            .frame(width: 150.0, height: 150)
                     }
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
