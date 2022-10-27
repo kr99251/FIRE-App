@@ -1,5 +1,6 @@
 import Foundation
 import SwiftUI
+
 struct ModuleData : Codable{
     var modId : Int
     var modName : String
@@ -31,8 +32,15 @@ func getModules() -> ModuleDataSet{
     return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax:-1, pages:[])])
 }
 
+struct ModuleList: View {
+    var body: some View {
+        Text("Hello")
+    }
+}
+
+
 struct Previews_ModuleList_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        ModuleList()
     }
 }
