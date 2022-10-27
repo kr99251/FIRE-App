@@ -8,58 +8,66 @@
 import SwiftUI
 
 struct Main: View {
+    @State var goToModuleView: Bool = false //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
     var navy = Color(red: 0, green: 0, blue: 128/255)
     
     var body: some View {
-        VStack {
-            Text("F.I.R.E.")
-                .foregroundColor(.red)
-                .ignoresSafeArea(edges: .top)
-            Spacer()
-            HStack {
-                Button(action: {}) {
-                    Text("Modules")
-                        .frame(width: 150.0, height: 100)
+        NavigationView {
+            VStack {
+                Text("F.I.R.E.")
+                    .foregroundColor(.red)
+                    .ignoresSafeArea(edges: .top)
+                Spacer()
+                NavigationLink(destination: ModuleListView(), isActive: $goToModuleView) {
+                    EmptyView()
                 }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(navy, lineWidth: 5)
-                )
-                Button(action: {}) {
-                    Text("Quizzes")
-                        .frame(width: 150.0, height: 100)
+                HStack {
+                    Button(action: {self.goToModuleView = true}) {
+                        Text("Modules")
+                            .frame(width: 150.0, height: 100)
+                    }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(navy, lineWidth: 5)
+                    )
+                    Button(action: {}) {
+                        Text("Quizzes")
+                            .frame(width: 150.0, height: 100)
+                    }
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(navy, lineWidth: 5)
+                    )
                 }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(navy, lineWidth: 5)
-                )
+                HStack {
+                    Button(action: {}) {
+                        Text("Journal")
+                            .frame(width: 150.0, height: 100)
+                    }
+                    .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(navy, lineWidth: 5)
+                            )
+                    Button(action: {}) {
+                        Text("Checklists")
+                            .frame(width: 150.0, height: 100)
+                    }
+                    .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(navy, lineWidth: 5)
+                            )
+                }
+                
+                Spacer()
             }
-            HStack {
-                Button(action: {}) {
-                    Text("Journal")
-                        .frame(width: 150.0, height: 100)
-                }
-                .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(navy, lineWidth: 5)
-                        )
-                Button(action: {}) {
-                    Text("Checklists")
-                        .frame(width: 150.0, height: 100)
-                }
-                .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(navy, lineWidth: 5)
-                        )
-            }
-            Spacer()
+            .buttonStyle(.bordered)
+            .font(.title)
+            .foregroundColor(navy)
+            .background(Color.white)
+            .padding()
+            .tint(.white)
+            .navigationBarHidden(true)
         }
-        .buttonStyle(.bordered)
-        .font(.title)
-        .foregroundColor(navy)
-        .background(Color.white)
-        .padding()
-        .tint(.white)
     }
 }
 
