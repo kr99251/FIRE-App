@@ -30,3 +30,9 @@ func getModules() -> ModuleDataSet{
     }
     return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax:-1, pages:[])])
 }
+
+struct Previews_ModuleList_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}

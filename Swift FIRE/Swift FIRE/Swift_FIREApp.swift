@@ -11,7 +11,7 @@ import SwiftUI
 struct Swift_FIREApp: App {
     var body: some Scene {
         WindowGroup {
-            Main()
+            NavView()
         }
     }
 }
