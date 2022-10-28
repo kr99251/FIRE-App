@@ -36,13 +36,18 @@ struct ModuleListView: View {
     let modules = getModules()
     let navy = Color(red: 0, green: 0, blue: 128/255)
     @State var currentValue = 1
+    @State var goToHomeView: Bool = false
+    
     var body: some View {
         let v = modules.modules
         
         NavigationView {
             VStack(alignment: .center) {
+                NavigationLink(destination: Main().navigationBarHidden(true), isActive: $goToHomeView) {
+                    EmptyView()
+                }
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {self.goToHomeView = true}) {
                         Text("Home")
                             .frame(width: 80.0, height: 50)
                     }
@@ -68,21 +73,21 @@ struct ModuleListView: View {
                     .foregroundColor(navy)
                     .offset(y: -50)
                 
-            NavigationView {
-                List(0..<v.count, id: \.self) { num in
-                    NavigationLink(v[num].modName, destination: ContentView())
-                        .padding(30)
+                NavigationView {
+                    List(0..<v.count, id: \.self) { num in
+                        NavigationLink(v[num].modName, destination: ContentView())
+                            .padding(30)
+                    }
+                    .listStyle(.insetGrouped)
+                    .background(navy)
+                    .font(.largeTitle)
+                    .foregroundColor(navy)
                 }
-                .listStyle(.insetGrouped)
-                .background(navy)
-                .font(.largeTitle)
-                .foregroundColor(navy)
             }
-            
+            .navigationBarHidden(true)
         }
     }
 }
-
 
 struct ModuleListView_Previews: PreviewProvider {
     static var previews: some View {
