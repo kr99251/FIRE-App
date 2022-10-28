@@ -35,6 +35,7 @@ func getModules() -> ModuleDataSet{
 struct ModuleListView: View {
     let modules = getModules()
     let navy = Color(red: 0, green: 0, blue: 128/255)
+    let blue = Color(red: 0, green: 0, blue: 255/255)
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
     
@@ -50,33 +51,35 @@ struct ModuleListView: View {
                     Button(action: {self.goToHomeView = true}) {
                         Text("Home")
                             .frame(width: 80.0, height: 50)
+                            .background(navy)
+                            .foregroundColor(Color.white)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(navy, lineWidth: 3)
+                            .stroke(Color.white, lineWidth: 3)
                     )
                     Spacer()
                     Button(action: {}) {
                         Text("Font Size")
                             .frame(width: 80.0, height: 50)
+                            .foregroundColor(Color.white)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(navy, lineWidth: 3)
+                            .stroke(Color.white, lineWidth: 3)
                     )
                 }
                 .foregroundColor(navy)
-                .padding()
+                .padding(20)
                 Text("Modules")
                     .font(.largeTitle .bold())
-                    .padding(20)
-                    .foregroundColor(navy)
-                    .offset(y: -50)
-                
+                    .padding([.leading, .trailing, .top], 10)
+                    .foregroundColor(Color.white)
+                    .offset(y: -10)
                 NavigationView {
                     List(0..<v.count, id: \.self) { num in
                         NavigationLink(v[num].modName, destination: ContentView())
-                            .padding(30)
+                            .padding(25)
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)
@@ -84,6 +87,7 @@ struct ModuleListView: View {
                     .foregroundColor(navy)
                 }
             }
+            .background(navy)
             .navigationBarHidden(true)
         }
     }
