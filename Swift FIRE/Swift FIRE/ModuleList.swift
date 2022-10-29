@@ -36,11 +36,13 @@ struct ModuleListView: View {
     let modules = getModules()
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 0, green: 0, blue: 255/255)
+    @State var increaseAmount: Int = 0
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
     
     var body: some View {
         let v = modules.modules
+        let startFont: CGFloat = 35
         
         NavigationView {
             VStack(alignment: .center) {
@@ -59,7 +61,7 @@ struct ModuleListView: View {
                             .stroke(Color.white, lineWidth: 3)
                     )
                     Spacer()
-                    Button(action: {}) {
+                    Button(action: {increaseAmount += 5}) {
                         Text("Font Size")
                             .frame(width: 80.0, height: 50)
                             .foregroundColor(Color.white)
@@ -83,7 +85,7 @@ struct ModuleListView: View {
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)
-                    .font(.largeTitle)
+                    .font(.system(size: startFont + CGFloat(increaseAmount)))
                     .foregroundColor(navy)
                 }
             }
