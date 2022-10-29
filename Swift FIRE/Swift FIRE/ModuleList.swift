@@ -35,7 +35,7 @@ func getModules() -> ModuleDataSet{
 struct ModuleListView: View {
     let modules = getModules()
     let navy = Color(red: 0, green: 0, blue: 128/255)
-    let blue = Color(red: 0, green: 0, blue: 255/255)
+    let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     @State var increaseAmount: Int = 0
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
@@ -43,7 +43,6 @@ struct ModuleListView: View {
     var body: some View {
         let v = modules.modules
         let startFont: CGFloat = 35
-        
         NavigationView {
             VStack(alignment: .center) {
                 NavigationLink(destination: Main().navigationBarHidden(true), isActive: $goToHomeView) {
@@ -53,7 +52,6 @@ struct ModuleListView: View {
                     Button(action: {self.goToHomeView = true}) {
                         Text("Home")
                             .frame(width: 80.0, height: 50)
-                            .background(navy)
                             .foregroundColor(Color.white)
                     }
                     .overlay(
@@ -71,7 +69,7 @@ struct ModuleListView: View {
                             .stroke(Color.white, lineWidth: 3)
                     )
                 }
-                .foregroundColor(navy)
+                .foregroundColor(Color.white)
                 .padding(20)
                 Text("Modules")
                     .font(.largeTitle .bold())
@@ -81,7 +79,7 @@ struct ModuleListView: View {
                 NavigationView {
                     List(0..<v.count, id: \.self) { num in
                         NavigationLink(v[num].modName, destination: ContentView())
-                            .padding(25)
+                            .padding([.top, .bottom], 20)
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)
@@ -89,7 +87,7 @@ struct ModuleListView: View {
                     .foregroundColor(navy)
                 }
             }
-            .background(navy)
+            .background(blue)
             .navigationBarHidden(true)
         }
     }

@@ -2,21 +2,19 @@
 "modules" : [
         {
             "modId" : 1,
-            "modName" : "Test One",
-            "pageMax" : 4,
+            "modName" : "What are Falls?",
+            "pageMax" : 2,
             "pages" : [
-                "THIS IS PAGE 1",
-                "THIS IS PAGE 2",
-                "THIS IS PAGE 3",
-                "THIS IS PAGE 4"
+                "A fall can be tripping or slipping on something on the ground, on the stairs, or even from a height. While most falls may seem minor, resulting in only scrapes or bruises, they can also be serious. A ground level fall can cause traumatic brain injuries, damage to organs and soft tissue, and broken bones that may require intensive medical treatment and rehabilitation.",
+                "While falls are often seen as a concern as you age, unintentional falls are a common cause of injury across all age groups. In fact, approximately 2.8 million children are treated in emergency departments for fall-related injuries annually in the US!"
             ]
         },
         {
             "modId" : 2,
-            "modName" : "Test Two",
+            "modName" : "Personal Fall Risks",
             "pageMax" : 4,
             "pages" : [
-                "THIS IS PAGE 1",
+                "Everyone’s health and lifestyle is different, which means your risk factors for a fall are also unique to you. Risk factors are often talked about as being intrinsic (internal to you) or extrinsic (environmental factors). We will do a quick review of some of these factors now and a deeper dive in later modules.",
                 "THIS IS PAGE 2",
                 "THIS IS PAGE 3",
                 "THIS IS PAGE 4"
@@ -24,18 +22,18 @@
         },
         {
             "modId" : 3,
-            "modName" : "Test Three",
+            "modName" : "Home Hazards",
             "pageMax" : 4,
             "pages" : [
-                "THIS IS PAGE 1",
-                "THIS IS PAGE 2",
-                "THIS IS PAGE 3",
+                "Over half of falls occur at home, unsurprising when you consider how much time is spent at home. While workplaces have OSHA (Occupation Safety and Health Administration) to create safe environments, your home has you!",
+                "What is a Peter Pan house? The term was coined by Jon Pyoons, Ph.D., Professor at USC Davis School of Gerontology for housing for people who think they are never going to grow up (or grow old). These houses are filled with potential fall risks or set in an environment that isolates the residents from resources.",
+                "Home modification for falls reduction can be as simple as adding a nightlight to the route between bedrooms and the bathroom or as complicated as a remodel.",
                 "THIS IS PAGE 4"
             ]
         },
         {
             "modId" : 4,
-            "modName" : "Test Four",
+            "modName" : "Polypharmacy",
             "pageMax" : 4,
             "pages" : [
                 "THIS IS PAGE 1",
@@ -46,7 +44,7 @@
         },
         {
             "modId" : 5,
-            "modName" : "Test Five",
+            "modName" : "Seeing Eye to Eye",
             "pageMax" : 4,
             "pages" : [
                 "THIS IS PAGE 1",
@@ -57,7 +55,7 @@
         },
         {
             "modId" : 6,
-            "modName" : "Test Six",
+            "modName" : "Feet and Footwear",
             "pageMax" : 4,
             "pages" : [
                 "THIS IS PAGE 1",
@@ -68,7 +66,7 @@
         },
         {
             "modId" : 7,
-            "modName" : "Test Seven",
+            "modName" : "Staying Healthy and Active",
             "pageMax" : 4,
             "pages" : [
                 "THIS IS PAGE 1",
