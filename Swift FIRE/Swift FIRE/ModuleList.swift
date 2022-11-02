@@ -39,7 +39,6 @@ struct ModuleListView: View {
     @State var increaseAmount: Int = 0
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
-    
     var body: some View {
         let v = modules.modules
         let startFont: CGFloat = 35
@@ -59,7 +58,7 @@ struct ModuleListView: View {
                             .stroke(Color.white, lineWidth: 3)
                     )
                     Spacer()
-                    Button(action: {increaseAmount += 5}) {
+                    Button(action: {increaseAmount += 5; if increaseAmount > 50{ increaseAmount = 0}}) {
                         Text("Font Size")
                             .frame(width: 80.0, height: 50)
                             .foregroundColor(Color.white)
@@ -88,6 +87,7 @@ struct ModuleListView: View {
                 }
             }
             .background(blue)
+            .navigationTitle("")
             .navigationBarHidden(true)
         }
     }

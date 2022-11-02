@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct Swift_FIREApp: App {
     var body: some Scene {

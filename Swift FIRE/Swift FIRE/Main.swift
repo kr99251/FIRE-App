@@ -66,6 +66,7 @@ struct Main: View {
             .background(Color.white)
             .padding()
             .tint(.white)
+            .navigationTitle("")
             .navigationBarHidden(true)
         }
     }
