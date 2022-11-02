@@ -9,21 +9,34 @@ import SwiftUI
 var modules = getModules()
 var currentModule = modules.modules[0]
 struct ContentView: View {
-    @State var currentValue = 0
+    @State var pageNum = 0
+    //@Binding var increaseAmount : Int
+    var increaseAmount = 10
     var body: some View {
-        VStack(spacing: 20) {
-            Text("value is \(currentValue)")
-            Button("Increment", action: { currentValue += 1 } )
-            // can also put the action closure outside
-            Button("Decrement") {currentValue -= 1 }
-            
-            Button ("Main Menu", action:{})
-                .offset(x:-115)
-                .offset(y:200)
+        VStack{
+            HStack{
+                Button("Next", action:{nextPage()})
+                    .offset(x:110)
+                    .offset(y:240)
+                Button("Prev", action:{prevPage()})
+                    .offset(x:-110)
+                    .offset(y:240)
+            }
+            Text(currentModule.pages[pageNum])
+                .font(.system(size : CGFloat(25 + increaseAmount)))
+        }
+    }
+    func nextPage(){
+        if pageNum < currentModule.pageMax - 1{
+            pageNum += 1
+        }
+    }
+    func prevPage(){
+        if pageNum > 0{
+            pageNum -= 1
         }
     }
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {
