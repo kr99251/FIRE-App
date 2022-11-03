@@ -14,9 +14,11 @@ struct Main: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("F.I.R.E.")
-                    .foregroundColor(.red)
-                    .ignoresSafeArea(edges: .top)
+                Spacer()
+                Image("FIRE-Logo-Medium")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
                 Spacer()
                 NavigationLink(destination: ModuleListView().navigationBarHidden(true), isActive: $goToModuleView) {
                     EmptyView()
@@ -24,33 +26,38 @@ struct Main: View {
                 HStack {
                     Button(action: {self.goToModuleView = true}) {
                         Text("Modules")
-                            .frame(width: 150.0, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: 150)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(navy, lineWidth: 5)
                     )
+                    Spacer()
+                        .frame(width: UIScreen.screenWidth/24, height: 1)
                     Button(action: {}) {
                         Text("Quizzes")
-                            .frame(width: 150.0, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: 150)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(navy, lineWidth: 5)
                     )
                 }
+                Spacer()
                 HStack {
                     Button(action: {}) {
                         Text("Journal")
-                            .frame(width: 150.0, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: 150)
                     }
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(navy, lineWidth: 5)
                             )
+                    Spacer()
+                        .frame(width: UIScreen.screenWidth/24, height: 1)
                     Button(action: {}) {
                         Text("Checklists")
-                            .frame(width: 150.0, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: 150)
                     }
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
