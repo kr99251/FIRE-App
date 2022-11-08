@@ -39,6 +39,7 @@ struct ModuleListView: View {
     @Binding var currentState : appState
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
+    @State var goToContentView: Bool = false
     var body: some View {
         let v = modules.modules
         let startFont: CGFloat = 35
@@ -76,9 +77,16 @@ struct ModuleListView: View {
                     .foregroundColor(Color.white)
                     .offset(y: -10)
                 NavigationView {
-                    List(0..<v.count, id: \.self) { num in
-                        NavigationLink(v[num].modName, destination: ContentView(currentState:$currentState))
-                            .padding([.top, .bottom], 20)
+                    NavigationLink(destination: ContentView(currentState: $currentState).navigationBarHidden(false), isActive: $goToContentView) {
+                        List(0..<v.count, id: \.self) { num in
+                            Button(action: {
+                                currentState.setModule(modNum: num);
+                                self.goToContentView = true}) {
+                                    Text("\(v[num].modName)")
+                                        .foregroundColor(navy)
+                                }
+                                .padding([.top, .bottom], 20)
+                        }
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)
