@@ -36,7 +36,7 @@ struct ModuleListView: View {
     let modules = getModules()
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
-    @State var increaseAmount: Int = 0
+    @Binding var currentState : appState
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
     var body: some View {
@@ -58,7 +58,7 @@ struct ModuleListView: View {
                             .stroke(Color.white, lineWidth: 3)
                     )
                     Spacer()
-                    Button(action: {increaseAmount += 5; if increaseAmount > 50{ increaseAmount = 0}}) {
+                    Button(action: {currentState.increaseAmount += 5; if currentState.increaseAmount > 50{ currentState.increaseAmount = 0}}) {
                         Text("Font Size")
                             .frame(width: 80.0, height: 50)
                             .foregroundColor(Color.white)
@@ -77,12 +77,12 @@ struct ModuleListView: View {
                     .offset(y: -10)
                 NavigationView {
                     List(0..<v.count, id: \.self) { num in
-                        NavigationLink(v[num].modName, destination: ContentView())
+                        NavigationLink(v[num].modName, destination: ContentView(currentState:$currentState))
                             .padding([.top, .bottom], 20)
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)
-                    .font(.system(size: startFont + CGFloat(increaseAmount)))
+                    .font(.system(size: startFont + CGFloat(currentState.increaseAmount)))
                     .foregroundColor(navy)
                 }
             }
@@ -95,6 +95,7 @@ struct ModuleListView: View {
 
 struct ModuleListView_Previews: PreviewProvider {
     static var previews: some View {
-        ModuleListView()
+        let cState = appState(modNum:0, pageNum:0)
+        ModuleListView(currentState: .constant(cState))
     }
 }
