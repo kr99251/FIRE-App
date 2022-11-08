@@ -113,4 +113,10 @@ struct appState{
             currentPage = currentModule.pages[pageNum]
         }
     }
+    mutating func setModule(modNum : Int){
+        self.modNum = modNum
+        self.currentModule = modules.modules[modNum]
+        self.pageNum = 0
+        self.currentPage = currentModule.pages[pageNum]
+    }
 }
