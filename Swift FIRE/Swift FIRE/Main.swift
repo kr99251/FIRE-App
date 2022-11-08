@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Main: View {
     @State var goToModuleView: Bool = false //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
+    @State var currentState = appState(modNum:0, pageNum:0)
     var navy = Color(red: 0, green: 0, blue: 128/255)
     
     var body: some View {
@@ -20,7 +21,7 @@ struct Main: View {
                     .scaledToFit()
                     .padding()
                 Spacer()
-                NavigationLink(destination: ModuleListView().navigationBarHidden(true), isActive: $goToModuleView) {
+                NavigationLink(destination: ModuleListView(currentState:$currentState).navigationBarHidden(true), isActive: $goToModuleView) {
                     EmptyView()
                 }
                 HStack {
@@ -82,5 +83,34 @@ struct Main: View {
 struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {
         Main()
+    }
+}
+
+struct appState{
+    var modNum : Int
+    var pageNum : Int
+    var increaseAmount : Int
+    var modules = getModules()
+    var currentModule : ModuleData
+    var currentPage : String
+    init(modNum : Int, pageNum : Int){
+        self.modNum = modNum
+        self.pageNum = pageNum
+        self.increaseAmount = 10
+        self.modules = getModules()
+        self.currentModule = modules.modules[modNum]
+        self.currentPage = currentModule.pages[pageNum]
+    }
+    mutating func nextPage(){
+        if pageNum < currentModule.pageMax - 1{
+            pageNum += 1
+            currentPage = currentModule.pages[pageNum]
+        }
+    }
+    mutating func prevPage(){
+        if pageNum > 0{
+            pageNum -= 1
+            currentPage = currentModule.pages[pageNum]
+        }
     }
 }
