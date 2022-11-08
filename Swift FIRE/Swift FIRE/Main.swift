@@ -68,7 +68,7 @@ struct Main: View {
                 Spacer()
             }
             .buttonStyle(.bordered)
-            .font(.title)
+            .font(.title2 .bold())
             .foregroundColor(navy)
             .background(Color.white)
             .padding()
@@ -81,6 +81,10 @@ struct Main: View {
 
 struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {
-        Main()
+        ForEach(["iPhone SE (2nd generation)", "iPhone 11"], id: \.self) { deviceName in
+            Main()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
 }
