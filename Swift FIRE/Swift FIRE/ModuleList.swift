@@ -77,7 +77,7 @@ struct ModuleListView: View {
                     .offset(y: -10)
                 NavigationView {
                     List(0..<v.count, id: \.self) { num in
-                        NavigationLink(v[num].modName, destination: ContentView(currentState:$currentState))
+                        NavigationLink(v[num].modName, destination: ContentView(module: v[num]))
                             .padding([.top, .bottom], 20)
                     }
                     .listStyle(.insetGrouped)

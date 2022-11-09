@@ -57,12 +57,10 @@ struct ChecklistList: View {
                         } label: {
                             HStack {
                                 Text("\(checklist.checklistName)")
-//                                    .font(.title2)
-//                                    .frame(height: 100)
-//                                    .foregroundColor(navy)
                             }
                         }
                         .padding([.top, .bottom], 20)
+                        .navigationTitle("")
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)

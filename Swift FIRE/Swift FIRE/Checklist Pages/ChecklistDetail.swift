@@ -8,40 +8,16 @@
 import SwiftUI
 
 struct ChecklistDetail: View {
-    var checklist: Checklist
+    @State var checklist: Checklist
     
     var body: some View {
-        ScrollView {
-//            MapView(coordinate: landmark.locationCoordinate)
-//                .ignoresSafeArea(edges: .top)
-//                .frame(height: 300)
-            
-//            CircleImage(image: landmark.image)
-//                .offset(y: -130)
-//                .padding(.bottom, -130)
-            
-            VStack(alignment: .leading) {
-                Text(checklist.checklistName)
-                    .font(.title)
-//                HStack {
-//                    Text(landmark.park)
-//                    Spacer()
-//                    Text(landmark.state)
-//                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-                
-                Divider()
-                
-                Text("About \(checklist.checklistName)")
-                    .font(.title2)
-                
-//                Text(landmark.description)
+        NavigationView {
+            List(0..<checklist.items.count, id: \.self) { num in
+                ChecklistRow(checklist: checklist, num: num)
+//                .onTapGesture(count: 1, perform: {checklist.isChecked[num] = !checklist.isChecked[num]})
             }
-            .padding()
+            .navigationBarTitle("\(checklist.checklistName)")
         }
-        .navigationTitle(checklist.checklistName)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -50,3 +26,5 @@ struct ChecklistDetail_Previews: PreviewProvider {
         ChecklistDetail(checklist: checklists[0])
     }
 }
+
+
