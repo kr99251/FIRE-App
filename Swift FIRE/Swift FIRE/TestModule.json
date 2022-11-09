@@ -67,12 +67,16 @@
         {
             "modId" : 7,
             "modName" : "Staying Healthy and Active",
-            "pageMax" : 4,
+            "pageMax" : 8,
             "pages" : [
-                "THIS IS PAGE 1",
-                "THIS IS PAGE 2",
-                "THIS IS PAGE 3",
-                "THIS IS PAGE 4"
+                "Physical Health",
+                "Schedule an annual checkup with your primary care provider. \n \nKeeping on top of your physical health is important. Your doctor can help you manage chronic conditions that may impact your risk for falling as well as any new health concerns that may arise, like balance problems or muscle weakness.",
+                "Keep active or develop a plan to become active. \n \nWhen starting any new exercise or activity, be sure to talk to your primary care provider if you have any concerns.",
+                "Taking part in strength and balance activities at least 3 times a week has been found to reduce risk of falling. \n \nExercise may also be associated with slowing bone loss from osteoporosis. ",
+                "If you struggle to be self-motivated when it comes to being active or exercising, consider finding a class in your area. Some types of tai chi and yoga have been associated with lowering personal fall risks.",
+                "Stay Hydrated",
+                "Dehydration is a common cause of falls as it can lead to dizziness or a drop in blood pressure.",
+                "It’s important to drink 6-8 glasses of fluids without caffeine or alcohol each day. Try to drink a glass of water before drinking your morning cup of coffee, as many people wake up dehydrated in the morning. "
             ]
         }
 ]

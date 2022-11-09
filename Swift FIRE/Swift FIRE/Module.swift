@@ -35,8 +35,8 @@ struct ContentView: View {
         var prev = hasPrev(current: currentPage) ? "Prev": ""
         VStack{
             Text(module.pages[currentPage])
-                .font(.title)
-                .frame(height: 4*UIScreen.screenHeight / 9)
+                .font(.title2)
+                .frame(height: 4*UIScreen.screenHeight / 9).padding(10)
             HStack{
                 Button("\(next)", action:{
                     prev = "Prev"
