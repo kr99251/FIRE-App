@@ -1,12 +1,13 @@
 import Foundation
 import SwiftUI
 
-struct ModuleData : Codable{
+struct ModuleData : Codable {
     var modId : Int
     var modName : String
     var pageMax : Int
-    var pages : Array<String>
+    var section : [[String]]
 }
+
 struct ModuleDataSet : Codable{
     var modules : Array<ModuleData>
 }
@@ -29,7 +30,7 @@ func getModules() -> ModuleDataSet{
     if let modules = loadJson(filename:"TestModule"){
         return modules
     }
-    return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax:-1, pages:[])])
+    return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax: -1, section:[])])
 }
 
 struct ModuleListView: View {
@@ -70,20 +71,22 @@ struct ModuleListView: View {
                 }
                 .foregroundColor(Color.white)
                 .padding(20)
-                Text("Modules")
-                    .font(.largeTitle .bold())
-                    .padding([.leading, .trailing, .top], 10)
-                    .foregroundColor(Color.white)
-                    .offset(y: -10)
                 NavigationView {
-                    List(0..<v.count, id: \.self) { num in
-                        NavigationLink(v[num].modName, destination: ContentView(module: v[num]))
-                            .padding([.top, .bottom], 20)
-                    }
-                    .listStyle(.insetGrouped)
-                    .background(navy)
-                    .font(.system(size: startFont + CGFloat(currentState.increaseAmount)))
-                    .foregroundColor(navy)
+                    VStack {
+                        Text("Modules")
+                            .font(.largeTitle .bold())
+                            .padding([.leading, .trailing, .top], 10)
+                            .foregroundColor(Color.white)
+                            .offset(y: -10)
+                        List(0..<v.count, id: \.self) { num in
+                            NavigationLink(v[num].modName, destination: ContentView(module: v[num]))
+                                .padding([.top, .bottom], 20)
+                        }
+                        .listStyle(.insetGrouped)
+                        .background(navy)
+                        .font(.system(size: startFont + CGFloat(currentState.increaseAmount)))
+                        .foregroundColor(navy)
+                    }.background(blue)
                 }
             }
             .background(blue)

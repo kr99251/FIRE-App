@@ -100,31 +100,31 @@ struct appState{
     var increaseAmount : Int
     var modules = getModules()
     var currentModule : ModuleData
-    var currentPage : String
+    var currentSection :  [String]
     init(modNum : Int, pageNum : Int){
         self.modNum = modNum
         self.pageNum = pageNum
         self.increaseAmount = 10
         self.modules = getModules()
         self.currentModule = modules.modules[modNum]
-        self.currentPage = currentModule.pages[pageNum]
+        self.currentSection = currentModule.section[pageNum]
     }
     mutating func nextPage(){
         if pageNum < currentModule.pageMax - 1{
             pageNum += 1
-            currentPage = currentModule.pages[pageNum]
+            currentSection = currentModule.section[pageNum]
         }
     }
     mutating func prevPage(){
         if pageNum > 0{
             pageNum -= 1
-            currentPage = currentModule.pages[pageNum]
+            currentSection = currentModule.section[pageNum]
         }
     }
     mutating func setModule(modNum : Int){
         self.modNum = modNum
         self.currentModule = modules.modules[modNum]
         self.pageNum = 0
-        self.currentPage = currentModule.pages[pageNum]
+        self.currentSection = currentModule.section[pageNum]
     }
 }
