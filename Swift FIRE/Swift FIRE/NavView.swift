@@ -9,12 +9,7 @@ import SwiftUI
 
 struct NavView: View {
     var body: some View {
-        TabView {
-            Main()
-                .tabItem {
-                    Label("Main Menu", systemImage: "list.dash")
-                }
-        }
+        Main()
     }
 }
 
