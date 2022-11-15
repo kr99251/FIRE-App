@@ -48,14 +48,15 @@ struct ContentView: View {
                 Text("\(module.section[surPage][0])")
                     .multilineTextAlignment(.center)
                     .font(.title .bold())
-                    .frame(height: 4*UIScreen.screenHeight / 30)
+                    .frame(height: 4*UIScreen.screenHeight / 15)
                     .padding([.leading, .trailing, .top], 5)
                     .foregroundColor(navy)
-                    .offset(y: -10)
-                Text("\(module.section[surPage][subPage])")
-                    .font(.title2)
-                    .frame(height: 7*UIScreen.screenHeight / 15)
-                    .padding([.leading, .trailing, .bottom], 20)
+                    .offset(y: -5)
+                ScrollView(showsIndicators: true) {
+                    Text("\(module.section[surPage][subPage])")
+                        .font(.title2)
+                    
+                }.frame(height: 4*UIScreen.main.bounds.height / 10).padding([.leading, .trailing, .bottom], 20)
                 HStack{
                     NavigationLink(destination: ModuleListView(currentState:$currentState).navigationBarHidden(true), isActive: $goToModuleView) {
                         EmptyView()
@@ -103,7 +104,9 @@ struct ContentView: View {
                         }
                     })
                     .offset(x: -12*UIScreen.screenWidth/32)
-                }
+                }.offset(y: -3*UIScreen.screenHeight/60)
+                    .frame(height: 4*UIScreen.screenHeight/30)
+                    .padding(10)
             }
         }
     }
