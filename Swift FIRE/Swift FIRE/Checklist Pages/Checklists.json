@@ -1,110 +1,50 @@
 [
     {
         "id" : 1,
-        "checklistName" : "Checklist 1",
-        "items" : [
-            "Item 1",
-            "Item 2"
+        "checklistName" : "Talking to my care team",
+        "sections" : [
+            ["Preventative medicine can help you avoid a fall or another fall. When talking with your doctor, remember that their goal is to keep you in the best health possible. Talking to your doctor about falls is about empowering you with the tools and education to keep you safe!"],
+            ["What to ask?", "Do any of my pre-existing health conditions increase my risk for falls?", "Can we review my medications to see if they put me at an increased risk for falls? If so, are there alternative options?", "Are there any limitations I should be aware of when it comes to activities or exercise? Are there any activities or exercises you would recommend?"]
         ],
         "isChecked" : [
-            true,
-            false
+            [],
+            [false, false, false]
         ]
     },
     {
         "id" : 2,
-        "checklistName" : "Checklist 2",
-        "items" : [
-            "Everyone’s health and lifestyle is different, which means your risk factors for a fall are also unique to you. Risk factors are often talked about as being intrinsic (internal to you) or extrinsic (environmental factors). We will do a quick review of some of these factors now and a deeper dive in later modules.",
-            "THIS IS PAGE 2",
-            "THIS IS PAGE 3",
-            "THIS IS PAGE 4"
-        ], 
+        "checklistName" : "Home Safety",
+        "sections" : [
+            ["Living Room", "Is your furniture arranged in a way that gives you clear paths when you walk through your living room?", "Do you have to walk over or around wires or cords? Consider running them along the wall or rearranging placement"],
+            ["Kitchen", "Are your most often used items kept on the most easy to reach shelves? ", "Are cleaning rags in an easy to grab spot for quick cleanup of spills?", "Do you have a study step stool for reaching high shelves or cabinets?"],
+            ["Bedroom", "Can you turn a light on without getting out of bed?", "Do you have a nightlight to light the path between the bed and door at night?", "Do you have a hamper or other storage option to keep clothes off the floor?", "Are the rugs taped down or have a non-slip baking?", "Do you have to walk over or around wires or cords? Consider running them along the wall or rearranging placement"],
+            ["Bathroom", "Do you have a non-slip mat or stickers in your tub or shower?", "Do you have towel bars or hooks to keep towels off the floor?", "Do you have grab bars by the tub or toilet?"],
+            ["Stairs and Hallways", "Do you have a system to keeping objects off the stairs, like papers, shoes, or other objects?", "Are any of the steps or railings loose?", "Do you have carpet or non-slip treads firmly attached to each step?", "Do you have light switches at the top and bottom?", "Is the entire stairwell lit?", "Do you have nightlights near bathroom doors?"],
+            ["Porches and Stoops", "Do you have motion sensor lights for outdoor steps and entries?", "If you have steps, do you have a secure railing?", "Do you keep a deicer, like salt or ash, by your entries to treat winter ice?"]
+        ],
         "isChecked" : [
-            false,
-            false,
-            false,
-            false
+            [false, false],
+            [false, false, false],
+            [false, false, false, false, false],
+            [false, false, false],
+            [false, false, false, false, false, false],
+            [false, false, false]
         ]
     },
     {
         "id" : 3,
-        "checklistName" : "Checklist 3",
-        "items" : [
-            "Over half of falls occur at home, unsurprising when you consider how much time is spent at home. While workplaces have OSHA (Occupation Safety and Health Administration) to create safe environments, your home has you!",
-            "What is a Peter Pan house? The term was coined by Jon Pyoons, Ph.D., Professor at USC Davis School of Gerontology for housing for people who think they are never going to grow up (or grow old). These houses are filled with potential fall risks or set in an environment that isolates the residents from resources.",
-            "Home modification for falls reduction can be as simple as adding a nightlight to the route between bedrooms and the bathroom or as complicated as a remodel.",
-            "THIS IS PAGE 4"
+        "checklistName" : "Pediatric Falls Prevention",
+        "sections" : [
+            ["Windows", "Do you have window locks or install window blocks that prevent them from opening more than 4 inches?", "Do you keep climbable furniture (like couches) away from windows?"],
+            ["Furniture", "Do you keep carriers and bouncers on the floor at all times, especially when baby is in them?", "Do you always keep one hand on the child when they are on a raised surface? Examples include beds, couches, and changing tables.", "If there is a bunkbed, are the safety rails properly installed and meeting current guidance for height and spacing?"],
+            ["Toys", "Are toys put away after play or at the end of the day?", "Are toys kept off of the stairs and out of other high traffic areas?"],
+            ["Stairs", "Do you have gates installed at the top and bottom of the staircase?", "Is the gate at the top of the stairs hardware mounted?"]
         ],
         "isChecked" : [
-            false,
-            false,
-            false,
-            false
-        ]
-    },
-    {
-        "id" : 4,
-        "checklistName" : "Checklist 4",
-        "items" : [
-            "THIS IS PAGE 1",
-            "THIS IS PAGE 2",
-            "THIS IS PAGE 3",
-            "THIS IS PAGE 4"
-        ],
-        "isChecked" : [
-            false,
-            false,
-            false,
-            false
-        ]
-    },
-    {
-        "id" : 5,
-        "checklistName" : "Checklist 5",
-        "items" : [
-            "THIS IS PAGE 1",
-            "THIS IS PAGE 2",
-            "THIS IS PAGE 3",
-            "THIS IS PAGE 4"
-        ],
-        "isChecked" : [
-            false,
-            false,
-            false,
-            false
-        ]
-    },
-    {
-        "id" : 6,
-        "checklistName" : "Checklist 6",
-        "items" : [
-            "THIS IS PAGE 1",
-            "THIS IS PAGE 2",
-            "THIS IS PAGE 3",
-            "THIS IS PAGE 4"
-        ],
-        "isChecked" : [
-            false,
-            false,
-            false,
-            false
-        ]
-    },
-    {
-        "id" : 7,
-        "checklistName" : "Checklist 7",
-        "items" : [
-            "THIS IS PAGE 1",
-            "THIS IS PAGE 2",
-            "THIS IS PAGE 3",
-            "THIS IS PAGE 4"
-        ],
-        "isChecked" : [
-            false,
-            false,
-            false,
-            false
+            [false, false],
+            [false, false, false],
+            [false, false],
+            [false, false]
         ]
     }
 ]

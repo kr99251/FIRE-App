@@ -12,11 +12,11 @@ import Combine
 
 final class ModelData: ObservableObject{
     @Published var journals: [Journal] = load("JournalContent.json")
+    @Published var checklists: [Checklist] = load("Checklists.json")
 }
 
 var journals: [Journal] = load("JournalContent.json")
 
-var checklists: [Checklist] = load("Checklists.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

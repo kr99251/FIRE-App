@@ -9,7 +9,9 @@ import SwiftUI
 
 struct Main: View {
     @State var goToModuleView: Bool = false
-    @State var goToChecklistView: Bool = false//https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
+    @State var goToJournalView: Bool = false
+    @State var goToChecklistView: Bool = false
+    //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
     @State var currentState = appState(modNum:0, pageNum:0)
     var navy = Color(red: 0, green: 0, blue: 128/255)
     
@@ -23,6 +25,9 @@ struct Main: View {
                     .padding()
                 Spacer()
                 NavigationLink(destination: ModuleListView(currentState:$currentState).navigationBarHidden(true), isActive: $goToModuleView) {
+                    EmptyView()
+                }
+                NavigationLink(destination: JournalList().navigationBarHidden(true), isActive: $goToJournalView) {
                     EmptyView()
                 }
                 NavigationLink(destination: ChecklistList().navigationBarHidden(true), isActive: $goToChecklistView) {
@@ -50,7 +55,7 @@ struct Main: View {
                 }
                 Spacer()
                 HStack {
-                    Button(action: {}) {
+                    Button(action: {self.goToJournalView = true}) {
                         Text("Journal")
                             .frame(width: UIScreen.screenWidth / 3, height: 150)
                     }
@@ -86,11 +91,8 @@ struct Main: View {
 
 struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE (2nd generation)", "iPhone 11"], id: \.self) { deviceName in
-            Main()
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-        }
+        Main()
+            .environmentObject(ModelData())
     }
 }
 

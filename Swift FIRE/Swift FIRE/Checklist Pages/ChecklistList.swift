@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ChecklistList: View {
+    @EnvironmentObject var checklistData: ModelData
+    
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     @State var increaseAmount: Int = 0
@@ -51,7 +53,7 @@ struct ChecklistList: View {
                     .foregroundColor(Color.white)
                     .offset(y: -10)
                 NavigationView {
-                    List(checklists) { checklist in
+                    List(checklistData.checklists) { checklist in
                         NavigationLink {
                             ChecklistDetail(checklist: checklist)
                         } label: {
@@ -76,10 +78,7 @@ struct ChecklistList: View {
 
 struct ChecklistList_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE (2nd generation)", "iPhone 11"], id: \.self) { deviceName in
-            ChecklistList()
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-        }
+        ChecklistList()
+            .environmentObject(ModelData())
     }
 }

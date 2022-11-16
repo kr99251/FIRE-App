@@ -12,7 +12,7 @@ import CoreLocation
 struct Checklist: Hashable, Codable, Identifiable {
     var id: Int
     var checklistName: String
-    var items: [String]
-    var isChecked: [Bool]
+    var sections: [[String]]
+    var isChecked: [[Bool]]
 }
 

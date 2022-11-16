@@ -12,18 +12,23 @@ struct ChecklistDetail: View {
     
     var body: some View {
         NavigationView {
-            List(0..<checklist.items.count, id: \.self) { num in
-                ChecklistRow(checklist: checklist, num: num)
-//                .onTapGesture(count: 1, perform: {checklist.isChecked[num] = !checklist.isChecked[num]})
+            List(0..<checklist.sections.count, id: \.self) { sectionNum in
+                Text("\(checklist.sections[sectionNum][0])")
+                if (checklist.sections[sectionNum].count > 1) {
+                    ForEach(1..<checklist.sections[sectionNum].count-1) { rowNum in
+                        ChecklistRow(checklist: checklist, sectionNum: sectionNum, rowNum: rowNum)
+                    }
+                }
+                
             }
-            .navigationBarTitle("\(checklist.checklistName)")
+//            .navigationBarTitle("\(checklist.checklistcName)")
         }
     }
 }
 
 struct ChecklistDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ChecklistDetail(checklist: checklists[0])
+        ChecklistDetail(checklist: ModelData().checklists[1])
     }
 }
 

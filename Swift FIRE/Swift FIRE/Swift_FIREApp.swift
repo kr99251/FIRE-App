@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+
 @main
 struct Swift_FIREApp: App {
+    @StateObject private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
-            NavView()
+            Main()
+                .environmentObject(modelData)
         }
     }
 }
