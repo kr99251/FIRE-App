@@ -21,7 +21,7 @@ struct ChecklistDetail: View {
                 }
                 
             }
-//            .navigationBarTitle("\(checklist.checklistcName)")
+            .navigationBarTitle("\(checklist.checklistName)")
         }
     }
 }
@@ -29,6 +29,7 @@ struct ChecklistDetail: View {
 struct ChecklistDetail_Previews: PreviewProvider {
     static var previews: some View {
         ChecklistDetail(checklist: ModelData().checklists[1])
+            .environmentObject(ModelData())
     }
 }
 

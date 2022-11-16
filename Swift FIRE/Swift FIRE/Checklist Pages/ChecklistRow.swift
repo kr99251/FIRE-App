@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ChecklistRow: View {
+    @EnvironmentObject var modelData: ModelData
+    
+    var checklistIndex: Int {
+        modelData.checklists.firstIndex(where: { $0.id == checklist.id })!
+    }
+    
     @State var checklist: Checklist
     var sectionNum: Int
     var rowNum: Int
@@ -18,24 +24,18 @@ struct ChecklistRow: View {
         HStack {
             Text(checklist.sections[sectionNum][rowNum])
             Spacer()
-            if checklist.isChecked[sectionNum][rowNum] {
-              Text("✅")
-            } else {
-              Text("🔲")
-            }
+            CheckmarkButton(isChecked: $modelData.checklists[checklistIndex].isChecked[sectionNum][rowNum])
         }
         .padding()
-        .onTapGesture(count: 1, perform: {checklist.isChecked[sectionNum][rowNum] = !checklist.isChecked[sectionNum][rowNum]})
     }
 }
 
 struct ChecklistRow_Previews: PreviewProvider {
-    static var checklists = ModelData().checklists
+    static let modelData = ModelData()
+    
+    static var checklists = modelData.checklists
     static var previews: some View {
-        Group {
-            ChecklistRow(checklist: checklists[0], sectionNum: 1, rowNum: 1)
-            ChecklistRow(checklist: checklists[1], sectionNum: 0, rowNum: 1)
-        }
-        .previewLayout(.fixed(width: 300, height: 70))
+        ChecklistRow(checklist: checklists[0], sectionNum: 1, rowNum: 1)
+            .environmentObject(modelData)
     }
 }

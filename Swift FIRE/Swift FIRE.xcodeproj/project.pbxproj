@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A11D10A2925611F0096C5B5 /* CheckmarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D1092925611F0096C5B5 /* CheckmarkButton.swift */; };
 		0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */; };
 		0ACF22642909C49F00FCE8FB /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22632909C49F00FCE8FB /* Module.swift */; };
 		0ACF22662909C4A000FCE8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF22652909C4A000FCE8FB /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A11D1092925611F0096C5B5 /* CheckmarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkButton.swift; sourceTree = "<group>"; };
 		0ACF225E2909C49F00FCE8FB /* Swift FIRE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift FIRE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREApp.swift; sourceTree = "<group>"; };
 		0ACF22632909C49F00FCE8FB /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				0ACF22AD290AB4CC00FCE8FB /* ChecklistData.swift */,
 				0ACF22A2290A38C200FCE8FB /* ChecklistRow.swift */,
+				0A11D1092925611F0096C5B5 /* CheckmarkButton.swift */,
 				0ACF22A4290A3D2600FCE8FB /* ChecklistList.swift */,
 				0ACF22B3291AACCE00FCE8FB /* Checklists.json */,
 				0ACF22AF290AB4E200FCE8FB /* Checklist.swift */,
@@ -330,6 +333,7 @@
 				0AFFDF7D291EC79D00C737EA /* JournalRow.swift in Sources */,
 				0ACF22AE290AB4CC00FCE8FB /* ChecklistData.swift in Sources */,
 				7233DE932909C60200F87E41 /* Main.swift in Sources */,
+				0A11D10A2925611F0096C5B5 /* CheckmarkButton.swift in Sources */,
 				7233DE952909C61700F87E41 /* ModuleList.swift in Sources */,
 				0AFFDF7F291EC7E500C737EA /* JournalDetail.swift in Sources */,
 				0AFFDF79291EC70600C737EA /* ModelData.swift in Sources */,
