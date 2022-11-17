@@ -6,6 +6,7 @@ struct ModuleData : Codable {
     var modName : String
     var pageMax : Int
     var section : [[String]]
+    var imageName : String?
 }
 
 struct ModuleDataSet : Codable{

@@ -103,6 +103,7 @@ struct appState{
     var modules = getModules()
     var currentModule : ModuleData
     var currentSection :  [String]
+    var imageName : String?
     init(modNum : Int, pageNum : Int){
         self.modNum = modNum
         self.pageNum = pageNum
@@ -110,6 +111,7 @@ struct appState{
         self.modules = getModules()
         self.currentModule = modules.modules[modNum]
         self.currentSection = currentModule.section[pageNum]
+        self.imageName = currentModule.imageName
     }
     mutating func nextPage(){
         if pageNum < currentModule.pageMax - 1{

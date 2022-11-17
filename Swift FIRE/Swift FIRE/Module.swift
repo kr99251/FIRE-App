@@ -24,25 +24,12 @@ struct ContentView: View {
     @State var currentState = appState(modNum:0, pageNum:0)
     @State var goToModuleView: Bool = false
     @Environment(\.presentationMode) var presentationMode
-    // @Binding var currentState : appState
-    //    var body: some View {
-    //        VStack{
-    //            Text(currentState.currentPage)
-    //                .font(.system(size : CGFloat(5 + currentState.increaseAmount)))
-    //                .frame(height: 4*UIScreen.screenHeight / 9)
-    //            HStack{
-    //                Button("Next", action:{currentState.nextPage()})
-    //                    .offset(x: 15*UIScreen.screenWidth/32)
-    //                Button("Prev", action:{currentState.prevPage()})
-    //                    .offset(x: -15*UIScreen.screenWidth/32)
-    //            }
-    //        }
-    //    }
     var body: some View {
         let max = getMax(pg: module.section)
         var next = hasNext(max: max, current: currentPage) ? "Next": ""
         var prev = hasPrev(current: currentPage) ? "Prev": ""
         var done = isDone(max: max, current: currentPage) ? "Done": ""
+        //var vertOffset = 0
         NavigationView {
             VStack{
                 Text("\(module.section[surPage][0])")
@@ -52,9 +39,12 @@ struct ContentView: View {
                     .padding([.leading, .trailing, .top], 5)
                     .foregroundColor(navy)
                     .offset(y: -5)
+                if let imageName = currentState.imageName{
+                    Image(imageName)
+                }
                 ScrollView(showsIndicators: true) {
                     Text("\(module.section[surPage][subPage])")
-                        .font(.title2)
+                        .font(.system(size : CGFloat(5 + currentState.increaseAmount)))
                     
                 }.frame(height: 4*UIScreen.main.bounds.height / 10).padding([.leading, .trailing, .bottom], 20)
                 HStack{
