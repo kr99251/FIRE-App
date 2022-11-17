@@ -7,12 +7,6 @@
 
 import SwiftUI
 var modules = getModules()
-// Idea from https://stackoverflow.com/questions/57727107/how-to-get-the-iphones-screen-width-in-swiftui
-extension UIScreen{
-    static let screenWidth = UIScreen.main.bounds.size.width
-    static let screenHeight = UIScreen.main.bounds.size.height
-    static let screenSize = UIScreen.main.bounds.size
-}
 
 struct ContentView: View {
     var module: ModuleData
@@ -53,6 +47,7 @@ struct ContentView: View {
                     }
                     
                     Button("\(done)", action:{
+                        saveData(appData:currentState)
                         done = "Done"
                         presentationMode.wrappedValue.dismiss()
                         self.goToModuleView = true
@@ -60,6 +55,7 @@ struct ContentView: View {
                     .offset(x: 12*UIScreen.screenWidth/32)
                     
                     Button("\(next)", action:{
+                        saveData(appData:currentState)
                         prev = "Prev"
                         if (surPage < max) {
                             currentPage += 1
@@ -78,6 +74,7 @@ struct ContentView: View {
                     .offset(x: 12*UIScreen.screenWidth/32)
                     
                     Button("\(prev)", action:{
+                        saveData(appData:currentState)
                         next = "Next"
                         currentPage -= 1
                         if (surPage > 0) {

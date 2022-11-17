@@ -1,38 +1,7 @@
 import Foundation
 import SwiftUI
 
-struct ModuleData : Codable {
-    var modId : Int
-    var modName : String
-    var pageMax : Int
-    var section : [[String]]
-    var imageName : String?
-}
-
-struct ModuleDataSet : Codable{
-    var modules : Array<ModuleData>
-}
-
 var modNumber = 0
-
-//Parse Json idea from https://stackoverflow.com/questions/24410881/reading-in-a-json-file-using-swift
-func loadJson(filename: String) -> ModuleDataSet?{
-    let decoder = JSONDecoder()
-    if let json = Bundle.main.url(forResource: filename, withExtension: "json"){
-        if let data = try?Data(contentsOf: json){
-            if let modules = try?decoder.decode(ModuleDataSet.self, from: data){
-                return modules
-            }
-        }
-    }
-    return nil
-}
-func getModules() -> ModuleDataSet{
-    if let modules = loadJson(filename:"TestModule"){
-        return modules
-    }
-    return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax: -1, section:[])])
-}
 
 struct ModuleListView: View {
     let modules = getModules()
@@ -60,7 +29,7 @@ struct ModuleListView: View {
                             .stroke(Color.white, lineWidth: 3)
                     )
                     Spacer()
-                    Button(action: {currentState.increaseAmount += 5; if currentState.increaseAmount > 50{ currentState.increaseAmount = 0}}) {
+                    Button(action: {currentState.increaseAmount += 5; saveData(appData:currentState); if currentState.increaseAmount > 50{ currentState.increaseAmount = 0}}) {
                         Text("Font Size")
                             .frame(width: 80.0, height: 50)
                             .foregroundColor(Color.white)

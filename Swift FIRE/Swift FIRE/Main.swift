@@ -12,7 +12,7 @@ struct Main: View {
     @State var goToJournalView: Bool = false
     @State var goToChecklistView: Bool = false
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
-    @State var currentState = appState(modNum:0, pageNum:0)
+    @State var currentState = getStartupData()
     var navy = Color(red: 0, green: 0, blue: 128/255)
     
     var body: some View {
@@ -93,42 +93,5 @@ struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {
         Main()
             .environmentObject(ModelData())
-    }
-}
-
-struct appState{
-    var modNum : Int
-    var pageNum : Int
-    var increaseAmount : Int
-    var modules = getModules()
-    var currentModule : ModuleData
-    var currentSection :  [String]
-    var imageName : String?
-    init(modNum : Int, pageNum : Int){
-        self.modNum = modNum
-        self.pageNum = pageNum
-        self.increaseAmount = 10
-        self.modules = getModules()
-        self.currentModule = modules.modules[modNum]
-        self.currentSection = currentModule.section[pageNum]
-        self.imageName = currentModule.imageName
-    }
-    mutating func nextPage(){
-        if pageNum < currentModule.pageMax - 1{
-            pageNum += 1
-            currentSection = currentModule.section[pageNum]
-        }
-    }
-    mutating func prevPage(){
-        if pageNum > 0{
-            pageNum -= 1
-            currentSection = currentModule.section[pageNum]
-        }
-    }
-    mutating func setModule(modNum : Int){
-        self.modNum = modNum
-        self.currentModule = modules.modules[modNum]
-        self.pageNum = 0
-        self.currentSection = currentModule.section[pageNum]
     }
 }
