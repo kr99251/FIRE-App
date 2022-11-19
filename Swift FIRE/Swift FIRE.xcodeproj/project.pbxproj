@@ -22,7 +22,6 @@
 		0ACF22B0290AB4E200FCE8FB /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22AF290AB4E200FCE8FB /* Checklist.swift */; };
 		0ACF22B4291AACCE00FCE8FB /* Checklists.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF22B3291AACCE00FCE8FB /* Checklists.json */; };
 		0ACF22B6291AC23000FCE8FB /* ChecklistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */; };
-		0AFFDF76291EC4DE00C737EA /* JournalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFDF75291EC4DE00C737EA /* JournalList.swift */; };
 		0AFFDF79291EC70600C737EA /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFDF78291EC70600C737EA /* ModelData.swift */; };
 		0AFFDF7B291EC75200C737EA /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFDF7A291EC75200C737EA /* Journal.swift */; };
 		0AFFDF7D291EC79D00C737EA /* JournalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFDF7C291EC79D00C737EA /* JournalRow.swift */; };
@@ -32,6 +31,7 @@
 		4FAD425F2925C80B00A8696F /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD425E2925C80B00A8696F /* AppData.swift */; };
 		7233DE932909C60200F87E41 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE922909C60200F87E41 /* Main.swift */; };
 		7233DE952909C61700F87E41 /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE942909C61700F87E41 /* ModuleList.swift */; };
+		82EE4DF829297D6800EF2FA6 /* JournalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EE4DF729297D6800EF2FA6 /* JournalList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,6 @@
 		0ACF22AF290AB4E200FCE8FB /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		0ACF22B3291AACCE00FCE8FB /* Checklists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Checklists.json; sourceTree = "<group>"; };
 		0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDetail.swift; sourceTree = "<group>"; };
-		0AFFDF75291EC4DE00C737EA /* JournalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalList.swift; sourceTree = "<group>"; };
 		0AFFDF78291EC70600C737EA /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		0AFFDF7A291EC75200C737EA /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		0AFFDF7C291EC79D00C737EA /* JournalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalRow.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		4FAD425E2925C80B00A8696F /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		7233DE922909C60200F87E41 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		7233DE942909C61700F87E41 /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
+		82EE4DF729297D6800EF2FA6 /* JournalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalList.swift; path = "Swift FIRE/Journal Pages/JournalList.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,16 +187,15 @@
 		0AFFDF77291EC5B800C737EA /* Journal Pages */ = {
 			isa = PBXGroup;
 			children = (
-				0AFFDF75291EC4DE00C737EA /* JournalList.swift */,
+				82EE4DF729297D6800EF2FA6 /* JournalList.swift */,
 				0AFFDF78291EC70600C737EA /* ModelData.swift */,
 				0AFFDF7A291EC75200C737EA /* Journal.swift */,
 				0AFFDF82291EC8AF00C737EA /* JournalContent.json */,
 				0AFFDF7C291EC79D00C737EA /* JournalRow.swift */,
 				0AFFDF7E291EC7E500C737EA /* JournalDetail.swift */,
 			);
-			name = "Journal Pages";
-			path = "/Users/noeldesmarais/Documents/FIRE-App-real/Swift FIRE/Swift FIRE/../Journal Pages";
-			sourceTree = "<absolute>";
+			path = "Journal Pages";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -332,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACF22A3290A38C200FCE8FB /* ChecklistRow.swift in Sources */,
-				0AFFDF76291EC4DE00C737EA /* JournalList.swift in Sources */,
 				0AFFDF7D291EC79D00C737EA /* JournalRow.swift in Sources */,
 				0ACF22AE290AB4CC00FCE8FB /* ChecklistData.swift in Sources */,
 				7233DE932909C60200F87E41 /* Main.swift in Sources */,
@@ -348,6 +346,7 @@
 				0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */,
 				0ACF22A5290A3D2600FCE8FB /* ChecklistList.swift in Sources */,
 				0ACF22B0290AB4E200FCE8FB /* Checklist.swift in Sources */,
+				82EE4DF829297D6800EF2FA6 /* JournalList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
