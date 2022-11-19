@@ -8,21 +8,28 @@
 import SwiftUI
 
 struct JournalRow: View {
-    var journal: Journal
+    @EnvironmentObject var modelData: ModelData
+    @State var journal: Journal
 
+    var index: Int {
+        modelData.journals.firstIndex(where: { $0.id == journal.id })!
+    }
+    
     var body: some View {
-        Text(journal.name)
+        Text(modelData.journals[index].name)
         Spacer()
-        Text(journal.date)
+        Text(modelData.journals[index].date)
             .foregroundColor(.secondary)
         }
 }
 
 struct JournalRow_Previews: PreviewProvider {
+    static let modelData = ModelData()
+
     static var previews: some View {
         Group {
-            JournalRow(journal: journals[0])
-            JournalRow(journal: journals[1])
+            JournalRow(journal: modelData.journals[0])
+            JournalRow(journal: modelData.journals[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

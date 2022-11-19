@@ -60,6 +60,7 @@ struct appState : Codable {
         self.currentSection = currentModule.section[pageNum]
     }
 }
+
 //Parse Json idea from https://stackoverflow.com/questions/24410881/reading-in-a-json-file-using-swift
 func loadJson(filename: String) -> ModuleDataSet?{
     let decoder = JSONDecoder()
@@ -72,12 +73,14 @@ func loadJson(filename: String) -> ModuleDataSet?{
     }
     return nil
 }
+
 func getModules() -> ModuleDataSet{
     if let modules = loadJson(filename:"TestModule"){
         return modules
     }
     return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax: -1, section:[])])
 }
+
 func saveData(appData : appState){
     //Codable JSON Idea from
     //https://stackoverflow.com/questions/33186051/swift-convert-struct-to-json
@@ -90,6 +93,7 @@ func saveData(appData : appState){
             }
     } catch { print(error) }
 }
+
 func getStartupData() -> appState{
     let decoder = JSONDecoder()
     if let json = Bundle.main.url(forResource: "appData", withExtension: "json"){

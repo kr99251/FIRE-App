@@ -9,17 +9,21 @@ import SwiftUI
 
 struct JournalDetail: View {
     @EnvironmentObject var modelData: ModelData
+//    @Binding var content: String
+//    @State private var data = Journal.Journal()
+    @State var journal: Journal
 
-    var journal: Journal
     
-    var journalIndex: Int {
+    var index: Int {
         modelData.journals.firstIndex(where: { $0.id == journal.id })!
     }
+
+    
     
     var body: some View {
         VStack {
             HStack{
-                Text(journal.name)
+                TextField(journal.name, text: $modelData.journals[index].name)
                     .font(.title)
                 Spacer()
                 Text(journal.date)
@@ -27,13 +31,13 @@ struct JournalDetail: View {
             }
             .padding()
             ScrollView{
-                Text(journal.content)
-                    .padding()
+                TextEditor(text: $modelData.journals[index].content)
+                    
             }
         }
-        
     }
 }
+
 
 
 struct JournalDetail_Previews: PreviewProvider {

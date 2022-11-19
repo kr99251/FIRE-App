@@ -1,7 +1,6 @@
 //
 //  JournalList.swift
 //  Swift FIRE
-//
 //  Created by Noel Desmarais on 11/9/22.
 //
 
@@ -9,7 +8,8 @@ import SwiftUI
 
 struct JournalList: View {
     @EnvironmentObject var modelData: ModelData
-
+//    @State var journals: [Journal]
+    
     
     var body: some View {
         NavigationView{
@@ -37,7 +37,7 @@ struct JournalList: View {
                 }
                 .padding()
                 .background(.blue)
-                List(journals) { journal in
+                List(modelData.journals) { journal in
                     NavigationLink {
                         JournalDetail(journal: journal)
                     } label: {
@@ -52,6 +52,8 @@ struct JournalList: View {
 }
 
 struct JournalList_Previews: PreviewProvider {
+    static let modelData = ModelData()
+
     static var previews: some View {
         JournalList()
     }
