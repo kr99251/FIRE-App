@@ -1,7 +1,6 @@
 //
 //  JournalList.swift
 //  Swift FIRE
-//
 //  Created by Noel Desmarais on 11/9/22.
 //
 
@@ -9,13 +8,14 @@ import SwiftUI
 
 struct JournalList: View {
     @EnvironmentObject var modelData: ModelData
-
+//    @State var journals: [Journal]
+    
     
     var body: some View {
         NavigationView{
             VStack{
                 HStack {
-                    NavigationLink(destination: Main()) {
+                    NavigationLink(destination: Main().navigationBarHidden(true)) {
                         Text("Home")
                             .frame(width: 80.0, height: 50)
                             .foregroundColor(Color.white)
@@ -37,20 +37,23 @@ struct JournalList: View {
                 }
                 .padding()
                 .background(.blue)
-                List(journals) { journal in
+                List(modelData.journals) { journal in
                     NavigationLink {
                         JournalDetail(journal: journal)
                     } label: {
                         JournalRow(journal: journal)
                     }
                 }
-                .navigationTitle("Journal Entries")
+                .navigationTitle("")
             }
+            .navigationBarHidden(true)
         }
     }
 }
 
 struct JournalList_Previews: PreviewProvider {
+    static let modelData = ModelData()
+
     static var previews: some View {
         JournalList()
     }
