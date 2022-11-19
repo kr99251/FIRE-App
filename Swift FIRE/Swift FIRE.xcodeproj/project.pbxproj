@@ -195,8 +195,8 @@
 				0AFFDF7E291EC7E500C737EA /* JournalDetail.swift */,
 			);
 			name = "Journal Pages";
-			path = "../Journal Pages";
-			sourceTree = "<group>";
+			path = "/Users/noeldesmarais/Documents/FIRE-App-real/Swift FIRE/Swift FIRE/../Journal Pages";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
