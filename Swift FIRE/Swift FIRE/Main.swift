@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Main: View {
     @State var goToModuleView: Bool = false
+    @State var goToQuizView: Bool = false
     @State var goToJournalView: Bool = false
     @State var goToChecklistView: Bool = false
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
@@ -25,6 +26,9 @@ struct Main: View {
                     .padding()
                 Spacer()
                 NavigationLink(destination: ModuleListView(currentState:$currentState).navigationBarHidden(true), isActive: $goToModuleView) {
+                    EmptyView()
+                }
+                NavigationLink(destination: QuizList().navigationBarHidden(true), isActive: $goToQuizView) {
                     EmptyView()
                 }
                 NavigationLink(destination: JournalList().navigationBarHidden(true), isActive: $goToJournalView) {
@@ -44,7 +48,7 @@ struct Main: View {
                     )
                     Spacer()
                         .frame(width: UIScreen.screenWidth/24, height: 1)
-                    Button(action: {}) {
+                    Button(action: {self.goToQuizView = true}) {
                         Text("Quizzes")
                             .frame(width: UIScreen.screenWidth / 3, height: 150)
                     }
