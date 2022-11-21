@@ -13,7 +13,20 @@ struct Quiz: Hashable, Codable, Identifiable {
     var id: Int
     var quizName: String
     var questions: [String]
-    var answers: [[String]]
-    var points: [[Int]]
-    var results: [[String]]
+//    var answers: [[String]]
+//    var points: [[Int]]
+//    var results: [[String]]
+    var answers: [[Answer]]
+    var results: [Result]
+}
+
+struct Answer: Hashable, Codable {
+    var answer: String
+    var points: Int
+}
+
+struct Result: Hashable, Codable {
+    var result: String
+    var description: String
+    var pointMin: Int
 }

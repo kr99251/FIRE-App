@@ -12,6 +12,8 @@
 		0A11D10F292A94C20096C5B5 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D10E292A94C20096C5B5 /* Quiz.swift */; };
 		0A11D111292A96310096C5B5 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D110292A96310096C5B5 /* QuizList.swift */; };
 		0A11D113292AAF920096C5B5 /* QuizDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D112292AAF920096C5B5 /* QuizDetail.swift */; };
+		0A11D115292ACB710096C5B5 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D114292ACB710096C5B5 /* QuizList.swift */; };
+		0A11D117292ACBA20096C5B5 /* Quizzes_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A11D116292ACBA20096C5B5 /* Quizzes_test.json */; };
 		0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */; };
 		0ACF22642909C49F00FCE8FB /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22632909C49F00FCE8FB /* Module.swift */; };
 		0ACF22662909C4A000FCE8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF22652909C4A000FCE8FB /* Assets.xcassets */; };
@@ -60,7 +62,9 @@
 		0A11D10B292A8A3A0096C5B5 /* Quizzes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quizzes.json; sourceTree = "<group>"; };
 		0A11D10E292A94C20096C5B5 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		0A11D110292A96310096C5B5 /* QuizList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
-		0A11D112292AAF920096C5B5 /* QuizDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuizDetail.swift; path = "Swift FIRE/Quiz Pages/QuizDetail.swift"; sourceTree = "<group>"; };
+		0A11D112292AAF920096C5B5 /* QuizDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetail.swift; sourceTree = "<group>"; };
+		0A11D114292ACB710096C5B5 /* QuizList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
+		0A11D116292ACBA20096C5B5 /* Quizzes_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Quizzes_test.json; sourceTree = "<group>"; };
 		0ACF225E2909C49F00FCE8FB /* Swift FIRE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift FIRE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREApp.swift; sourceTree = "<group>"; };
 		0ACF22632909C49F00FCE8FB /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
@@ -118,6 +122,9 @@
 		0A11D10D292A94900096C5B5 /* Quiz Pages */ = {
 			isa = PBXGroup;
 			children = (
+				0A11D112292AAF920096C5B5 /* QuizDetail.swift */,
+				0A11D114292ACB710096C5B5 /* QuizList.swift */,
+				0A11D116292ACBA20096C5B5 /* Quizzes_test.json */,
 				0A11D10B292A8A3A0096C5B5 /* Quizzes.json */,
 				0A11D10E292A94C20096C5B5 /* Quiz.swift */,
 			);
@@ -127,7 +134,6 @@
 		0ACF22552909C49F00FCE8FB = {
 			isa = PBXGroup;
 			children = (
-				0A11D112292AAF920096C5B5 /* QuizDetail.swift */,
 				0A11D110292A96310096C5B5 /* QuizList.swift */,
 				0ACF22602909C49F00FCE8FB /* Swift FIRE */,
 				0ACF22712909C4A000FCE8FB /* Swift FIRETests */,
@@ -155,9 +161,9 @@
 				7233DE942909C61700F87E41 /* ModuleList.swift */,
 				0ACF22632909C49F00FCE8FB /* Module.swift */,
 				7233DE922909C60200F87E41 /* Main.swift */,
+				0A11D10D292A94900096C5B5 /* Quiz Pages */,
 				0ACF228B290A0F2D00FCE8FB /* NavView.swift */,
 				0ACF22652909C4A000FCE8FB /* Assets.xcassets */,
-				0A11D10D292A94900096C5B5 /* Quiz Pages */,
 				0ACF22672909C4A000FCE8FB /* Preview Content */,
 				4F4AEA3F2909CFA600F2FD63 /* TestModule.json */,
 				4FAD425E2925C80B00A8696F /* AppData.swift */,
@@ -321,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A11D117292ACBA20096C5B5 /* Quizzes_test.json in Resources */,
 				0ACF22B4291AACCE00FCE8FB /* Checklists.json in Resources */,
 				4F4AEA402909CFA600F2FD63 /* TestModule.json in Resources */,
 				0ACF22692909C4A000FCE8FB /* Preview Assets.xcassets in Resources */,
@@ -368,6 +375,7 @@
 				0AFFDF7B291EC75200C737EA /* Journal.swift in Sources */,
 				4FAD425F2925C80B00A8696F /* AppData.swift in Sources */,
 				0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */,
+				0A11D115292ACB710096C5B5 /* QuizList.swift in Sources */,
 				0ACF22A5290A3D2600FCE8FB /* ChecklistList.swift in Sources */,
 				0ACF22B0290AB4E200FCE8FB /* Checklist.swift in Sources */,
 				82EE4DF829297D6800EF2FA6 /* JournalList.swift in Sources */,

@@ -1,0 +1,275 @@
+[
+    {
+        "id" : 1,
+        "quizName" : "Falls Risk Self-Assessment Quiz",
+        "questions" : [
+            "Have you fallen in the last 6 months",
+            "Do you use, or have you been advised to use, a cane or walker to get around safely?",
+            "Do you sometimes feel unsteady when you are walking?",
+            "Do you have to steady yourself by holding onto furniture when walking at home?",
+            "Do you worry about falling?",
+            "Do you need to push yourself up with your hands to stand up from a chair?",
+            "Do you have trouble stepping up onto a curb?",
+            "Do you often have to rush to the toilet?",
+            "Have you lost any feeling in your feet?",
+            "Do you take medication to help you sleep or improve your mood?",
+            "Do you take medication that sometimes makes you feel lightheaded or more tired than usual?",
+            "Do you often feel sad or depressed?",
+            "Do you have difficulty avoiding hazards in your path because you don’t see well?"
+        ],
+        "answers" : [
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 1},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            ],
+            [
+                {"yes", 2},
+                {"no", 0}
+            '],
+        ],
+        "results" : [
+            {"You may be at risk of falling", "Your risk of falling is higher than the safe level. You may want to consult a doctor or medical professional about ways to mitigate your risk.", 4}
+            {"Your risk of falling is relatively low", "You do not seem to have a very high risk of falling, but you should still be conscientous of the risks you do have. If you have concerns, consult a medical professional.", 0}
+        ]
+    },
+    {
+        "id" : 2,
+        "quizName" : "What shoe are you?",
+        "questions" : [
+            "What's your perfect vacation?",
+            "Which snack would you prefer?",
+            "Who from history would you want to meet?",
+            "What's your favorite season?",
+            "What's your favorite way to listen to music?"
+        ],
+        "answers" : [
+            [
+                {"Exploring a new city", 3},
+                {"Relaxing Stay-cation", 2},
+                {"Beach chill all the way", 1},
+                {"Alaskan cruise", 0}
+            ],
+            [
+                {"Trail mix", 3},
+                {"Cheese and Crackers", 0},
+                {"Fresh Fruit", 1},
+                {"Something Sweet", 2}
+            ],
+            [
+                {"Marie Curie", 3},
+                {"Wolfgang Amadeus", 2},
+                {"Cleopatra", 1},
+                {"Confucious", 0}
+            ],
+            [
+                {"Fall", 2},
+                {"Winter", 0},
+                {"Summer", 1},
+                {"Spring", 3}
+            ],
+            [
+                {"Digital Playlist", 3},
+                {"Records", 2},
+                {"Radio", 1},
+                {"Mixed Tapes/CDs", 0}
+            ]
+        ],
+        "results" : [
+            {"Sneakers", "You are on the move! As a sneaker, you have the traction and support to take on any adventure.", 12},
+            {"Slippers", "Cozy and comfy, you are up for anything as long as it can be done at home. Be sure you have rubber soles so you stay stable instead of slip sliding.", 8},
+            {"Flip flops/Sandals", "Summer fun is your middle name. Before hitting the lake or the beach, make sure your sandals strapped on well.", 4},
+            {"Winter Boots", "The snow and mountains call to you so strap on your boots and some extra traction and explore the winter wonderland that is Vermont.", 0}
+        ]
+    },
+    {
+        "id" : 3,
+        "quizName" : "What kind of walking stick are you?",
+        "questions" : [
+            "Which book would you prefer to read?",
+            "How do you relax after a long day?",
+            "If you were stranded on a desert island what would you want?",
+            "What mode of transportation would you prefer?",
+            "What fantasy animal would you want as a pet?"
+        ],
+        "answers" : [
+            [
+                {"Survival Stories", 3},
+                {"Biographies", 2},
+                {"High Fantasy", 1},
+                {"Murder Mysteries", 0}
+            ],
+            [
+                {"With your favorite television show", 1},
+                {"With a good meal", 2},
+                {"With a cold drink", 3},
+                {"With a long shower or bath", 0}
+            ],
+            [
+                {"A hammock and drink", 2},
+                {"Fishing or hunting gear", 3},
+                {"A tent", 0},
+                {"Flint and steel", 1}
+            ],
+            [
+                {"Hot air balloon", 1},
+                {"Submarine", 3},
+                {"Unicycle", 0},
+                {"Trolley", 2}
+            ],
+            [
+                {"Dragon", 0},
+                {"Unicorn", 1},
+                {"Sea Serpent", 3},
+                {"Ewok", 2}
+            ]
+        ],
+        "results" : [
+            {"Hiking pole", "From hitting the trail to camping out to trying a new hobby, you are ready for it all!", 12},
+            {"Cane", "You are a classic, famous in stage and film.", 8},
+            {"Wooden Staff", "Unique, fantastical, you are unstoppable in what you want to do.", 4},
+            {"Folding Travel Cane", "Compact, portal, there is nothing holding you back from your next adventure.", 0}
+        ]
+    },
+    {
+        "id" : 4,
+        "quizName" : "What animal are you?",
+        "questions" : [
+            "Which fruit do you prefer?",
+            "Which ice cream flavor do you like best?",
+            "What is your favorite meal?",
+            "You have a secret. Who do you tell?",
+            "Which animal do you prefer?"
+        ],
+        "answers" : [
+            [
+                {"Banana", 1},
+                {"Grapes", 3},
+                {"Blueberries", 2},
+                {"Coconut", 0}
+            ],
+            [
+                {"Chocolate", 3},
+                {"Chocolate Chip Cookie Dough", 2},
+                {"Mint Chocolate Chip", 1},
+                {"Coffee", 0}
+            ],
+            [
+                {"Breakfast", 1},
+                {"Lunch", 0},
+                {"Dinner", 3},
+                {"Dessert", 2}
+            ],
+            [
+                {"No one! It's a secret!", 0},
+                {"A family member", 3},
+                {"A friend", 2},
+                {"Everyone. I don't believe in secrets.", 1}
+            ],
+            [
+                {"Hippo", 0},
+                {"Giraffe", 2},
+                {"Monkey", 1},
+                {"Armadillo", 3}
+            ]
+        ],
+        "results" : [
+            {"Hippo", "You are fierce and loyal to those you love. No one should underestimate you.", 12},
+            {"Giraffe", "Fun loving and free are two ways to describe you. Everyone enjoys your company and appreciates your kind and gentle nature.", 8},
+            {"Monkey", "Wow, you are full of energy! You are hilarious, but your brain is no joke.", 4},
+            {"Armadillo", "You're shy and put up a wall at first, but once someone breaks through the wall, you stick with them forever. You're the best friend there is. Never change.", 0}
+        ]
+    },
+    {
+        "id" : 5,
+        "quizName" : "What type of ice are you?",
+        "questions" : [
+            "How much do you like ice?",
+            "When was the last time you used ice?",
+            "Someone takes the last ice cube from the ice tray. What do you do?",
+            "You're at a restaurant and you're served a glass of ice water. What do you do?",
+            "What are your opinions on Winter?"
+        ],
+        "answers" : [
+            [
+                {"I understand the appeal and use it for some things.", 1},
+                {"I hate it.", 0},
+                {"I could eat it constantly for the rest of my life.", 3},
+                {"I think it’s extremely underrated and works as a food as well as a cooler in drinks.", 2}
+            ],
+            [
+                {"How can you possibly expect me to remember that?", 0},
+                {"It’s been awhile.", 1},
+                {"It’s been awhile.", 2},
+                {"I am eating it/drinking something with it now.", 3}
+            ],
+            [
+                {"HOW DARE THEY??? CONFRONT THEM!!", 3},
+                {"Fume inside but don’t say anything and refill it.", 2},
+                {"Bow down to them and thank them for finally finishing the ice so you no longer have to be near that terrible creation.", 0},
+                {"Do nothing. It’s not that important. You can live without ice.", 1}
+            ],
+            [
+                {"Say thank you.", 2},
+                {"Smile politely but secretly wish your water was room temperature instead of nice and cool.", 1},
+                {"Profusely thank them and promise your firstborn to them as repayment for the kind gift.", 3},
+                {"Politely request water without ice.", 0}
+            ],
+            [
+                {"It's the best! I love to do Winter activities and eat the snow around me!", 3},
+                {"I like some Winter activities and snow is fun!", 2},
+                {"It's fine. A little too cold for me.", 1},
+                {"I despise it.", 0}
+            ]
+        ],
+        "results" : [
+            {"Shaved Ice", "You are the shining pearl of ice! Everyone loves you and if they don’t they are just jealous of your flawless taste and amazing personality. Don’t change a thing about yourself. You are perfect the way you are!", 12},
+            {"Crushed Ice", "You are pretty close to perfect. Despite having some faults, you are constantly growing and evolving. You try your best, and, although some people might not be your biggest fan at first, you always win them over eventually. Stay cool!", 8},
+            {"Ice Cubes", "You are perfectly fine. People may not see much of interest when they look at you, but you know what can change that? A love of ice!", 4},
+            {"Slush on the streets 2 months into winter", "Look, your result isn't great, but the good news is that the only way to go is up. Start rethinking your life choices (ice opinions) and whaat you can improve on.", 0}
+        ]
+    }
+]
