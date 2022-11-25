@@ -44,5 +44,6 @@ struct JournalDetail: View {
 struct JournalDetail_Previews: PreviewProvider {
     static var previews: some View {
         JournalDetail(journal: ModelData().journals[0])
+            .environmentObject(ModelData())
     }
 }

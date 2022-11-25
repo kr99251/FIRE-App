@@ -55,5 +55,6 @@ struct JournalList_Previews: PreviewProvider {
 
     static var previews: some View {
         JournalList()
+            .environmentObject(modelData)
     }
 }

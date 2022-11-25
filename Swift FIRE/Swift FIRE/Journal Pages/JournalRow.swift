@@ -31,5 +31,6 @@ struct JournalRow_Previews: PreviewProvider {
             JournalRow(journal: modelData.journals[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
+        .environmentObject(modelData)
     }
 }
