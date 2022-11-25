@@ -4,7 +4,6 @@
 //
 //  Created by Noah on 11/16/22.
 //
-
 import Foundation
 import SwiftUI
 // Idea from https://stackoverflow.com/questions/57727107/how-to-get-the-iphones-screen-width-in-swiftui

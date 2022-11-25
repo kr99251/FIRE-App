@@ -78,8 +78,6 @@ struct Main: View {
                                     .stroke(navy, lineWidth: 5)
                             )
                 }
-                
-                Spacer()
             }
             .buttonStyle(.bordered)
             .font(.title2 .bold())

@@ -48,9 +48,10 @@
             [1, 0]
         ],
         "results" : [
-            ["You may be at risk of falling", "Your risk of falling is higher than the safe level. You may want to consult a doctor or medical professional about ways to mitigate your risk."]
+            ["You may be at risk of falling", "Your risk of falling is higher than the safe level. You may want to consult a doctor or medical professional about ways to mitigate your risk."],
             ["Your risk of falling is relatively low", "You do not seem to have a very high risk of falling, but you should still be conscientous of the risks you do have. If you have concerns, consult a medical professional. "]
-        ]
+        ],
+        "sums" : [4, 0]
     },
     {
         "id" : 2,
@@ -81,7 +82,8 @@
             ["Slippers", "Cozy and comfy, you are up for anything as long as it can be done at home. Be sure you have rubber soles so you stay stable instead of slip sliding."],
             ["Flip flops/Sandals", "Summer fun is your middle name. Before hitting the lake or the beach, make sure your sandals strapped on well."],
             ["Winter Boots", "The snow and mountains call to you so strap on your boots and some extra traction and explore the winter wonderland that is Vermont."]
-        ]
+        ],
+        "sums" : [12, 8, 4, 0]
     },
     {
         "id" : 3,
@@ -112,7 +114,8 @@
             ["Cane", "You are a classic, famous in stage and film."],
             ["Wooden Staff", "Unique, fantastical, you are unstoppable in what you want to do."],
             ["Folding Travel Cane", "Compact, portal, there is nothing holding you back from your next adventure."]
-        ]
+        ],
+        "sums" : [12, 8, 4, 0]
     },
     {
         "id" : 4,
@@ -143,7 +146,8 @@
             ["Giraffe", "Fun loving and free are two ways to describe you. Everyone enjoys your company and appreciates your kind and gentle nature."],
             ["Monkey", "Wow, you are full of energy! You are hilarious, but your brain is no joke."],
             ["Armadillo", "You're shy and put up a wall at first, but once someone breaks through the wall, you stick with them forever. You're the best friend there is. Never change."]
-        ]
+        ],
+        "sums" : [12, 8, 4, 0]
     },
     {
         "id" : 5,
@@ -174,6 +178,7 @@
             ["Crushed Ice", "You are pretty close to perfect. Despite having some faults, you are constantly growing and evolving. You try your best, and, although some people might not be your biggest fan at first, you always win them over eventually. Stay cool!"],
             ["Ice Cubes", "You are perfectly fine. People may not see much of interest when they look at you, but you know what can change that? A love of ice!"],
             ["Slush on the streets 2 months into winter", "Look, your result isn't great, but the good news is that the only way to go is up. Start rethinking your life choices (ice opinions) and whaat you can improve on."]
-        ]
+        ],
+        "sums" : [12, 8, 4, 0]
     }
 ]

@@ -3,7 +3,6 @@
 //  Swift FIRE
 //  Created by Noel Desmarais on 11/9/22.
 //
-
 import SwiftUI
 
 struct JournalList: View {

@@ -13,6 +13,7 @@ import Combine
 final class ModelData: ObservableObject{
     @Published var journals: [Journal] = load("JournalContent.json")
     @Published var checklists: [Checklist] = load("Checklists.json")
+    var quizzes: [Quiz] = load("Quizzes.json")
 }
 
 var journals: [Journal] = load("JournalContent.json")
