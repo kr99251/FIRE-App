@@ -48,27 +48,28 @@ struct ChecklistList: View {
                     }
                     .foregroundColor(Color.white)
                     .padding(20)
-                    Text("Checklists")
-                        .font(.system(size: CGFloat(size + 10)) .bold())
-                        .padding([.leading, .trailing, .top], 10)
-                        .foregroundColor(Color.white)
-                        .offset(y: -10)
                     NavigationView {
-                        List(checklistData.checklists) { checklist in
-                            NavigationLink {
-                                ChecklistDetail(checklist: checklist)
-                            } label: {
-                                HStack {
-                                    Text("\(checklist.checklistName)")
+                        VStack {
+                            Text("Checklists")
+                                .font(.system(size: CGFloat(size + 10)) .bold())
+                                .padding([.leading, .trailing, .top], 10)
+                                .foregroundColor(Color.white)
+                                .offset(y: -10)
+                            List(checklistData.checklists) { checklist in
+                                NavigationLink {
+                                    ChecklistDetail(checklist: checklist)
+                                } label: {
+                                    HStack {
+                                        Text("\(checklist.checklistName)")
+                                    }
                                 }
+                                .padding([.top, .bottom], 20)
                             }
-                            .padding([.top, .bottom], 20)
+                            .listStyle(.insetGrouped)
+                            .background(navy)
+                            .font(.system(size: CGFloat(size)))
+                            .foregroundColor(navy)
                         }
-                        .listStyle(.insetGrouped)
-                        .background(navy)
-                        .font(.system(size: CGFloat(size)))
-                        .foregroundColor(navy)
-                        
                         .background(blue)
                         .navigationBarHidden(true)
                     }
