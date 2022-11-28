@@ -25,7 +25,7 @@ struct QuizList: View {
         ZStack {
             NavigationView {
                 VStack(alignment: .center) {
-                    NavigationLink(destination: Main().navigationBarHidden(true), isActive: $goToHomeView) {
+                    NavigationLink(destination: Main(size: size ).navigationBarHidden(true), isActive: $goToHomeView) {
                         EmptyView()
                     }
                     HStack {
