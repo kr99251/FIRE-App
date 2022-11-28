@@ -8,44 +8,50 @@ import SwiftUI
 struct JournalList: View {
     @EnvironmentObject var modelData: ModelData
 //    @State var journals: [Journal]
-    
+    @State public var size: Double
+    @State private var showPopUp: Bool = false
     
     var body: some View {
-        NavigationView{
-            VStack{
-                HStack {
-                    NavigationLink(destination: Main().navigationBarHidden(true)) {
-                        Text("Home")
-                            .frame(width: 80.0, height: 50)
-                            .foregroundColor(Color.white)
+        ZStack {
+            NavigationView{
+                VStack{
+                    HStack {
+                        NavigationLink(destination: Main().navigationBarHidden(true)) {
+                            Text("Home")
+                                .frame(width: 80.0, height: 50)
+                                .foregroundColor(Color.white)
+                        }
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.white, lineWidth: 3)
+                        )
+                        Spacer()
+                        Button(action: {showPopUp = true}) {
+                            Text("Font Size")
+                                .frame(width: 80.0, height: 50)
+                                .foregroundColor(Color.white)
+                        }
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.white, lineWidth: 3)
+                        )
                     }
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.white, lineWidth: 3)
-                    )
-                    Spacer()
-                    Button(action: {print("")}) {
-                        Text("Font Size")
-                            .frame(width: 80.0, height: 50)
-                            .foregroundColor(Color.white)
+                    .padding()
+                    .background(.blue)
+                    List(modelData.journals) { journal in
+                        NavigationLink {
+                            JournalDetail(size: size, journal: journal)
+                        } label: {
+                            JournalRow(journal: journal)
+                        }
                     }
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.white, lineWidth: 3)
-                    )
+                    .navigationTitle("")
+                    .font(.system(size: CGFloat(size)))
+                    
                 }
-                .padding()
-                .background(.blue)
-                List(modelData.journals) { journal in
-                    NavigationLink {
-                        JournalDetail(journal: journal)
-                    } label: {
-                        JournalRow(journal: journal)
-                    }
-                }
-                .navigationTitle("")
+                .navigationBarHidden(true)
             }
-            .navigationBarHidden(true)
+            PopUpWindow(title: "Font Size", message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
         }
     }
 }
@@ -54,7 +60,7 @@ struct JournalList_Previews: PreviewProvider {
     static let modelData = ModelData()
 
     static var previews: some View {
-        JournalList()
+        JournalList(size: 25.0)
             .environmentObject(modelData)
     }
 }

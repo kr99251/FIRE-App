@@ -7,7 +7,7 @@ struct ModuleListView: View {
     let modules = getModules()
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
-    @Binding var currentState : appState
+    @State var currentState : appState
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
     @State public var size: Double
@@ -76,6 +76,6 @@ struct ModuleListView: View {
 struct ModuleListView_Previews: PreviewProvider {
     static var previews: some View {
         let cState = appState(modNum:0, pageNum:0)
-        ModuleListView(currentState: .constant(cState), size: 25.0)
+        ModuleListView(currentState: cState, size: 25.0)
     }
 }
