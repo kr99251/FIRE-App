@@ -62,12 +62,14 @@ struct ChecklistList: View {
                             }
                         }
                         .padding([.top, .bottom], 20)
-                        .navigationTitle("")
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)
                     .font(.system(size: startFont + CGFloat(increaseAmount)))
                     .foregroundColor(navy)
+                    
+                    .background(blue)
+                    .navigationBarHidden(true)
                 }
             }
             .background(blue)

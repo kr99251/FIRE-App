@@ -27,7 +27,6 @@
 		0ACF22732909C4A000FCE8FB /* Swift_FIRETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22722909C4A000FCE8FB /* Swift_FIRETests.swift */; };
 		0ACF227D2909C4A000FCE8FB /* Swift_FIREUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF227C2909C4A000FCE8FB /* Swift_FIREUITests.swift */; };
 		0ACF227F2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF227E2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift */; };
-		0ACF228C290A0F2D00FCE8FB /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF228B290A0F2D00FCE8FB /* NavView.swift */; };
 		0ACF22A3290A38C200FCE8FB /* ChecklistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22A2290A38C200FCE8FB /* ChecklistRow.swift */; };
 		0ACF22A5290A3D2600FCE8FB /* ChecklistList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22A4290A3D2600FCE8FB /* ChecklistList.swift */; };
 		0ACF22AE290AB4CC00FCE8FB /* ChecklistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22AD290AB4CC00FCE8FB /* ChecklistData.swift */; };
@@ -81,7 +80,6 @@
 		0ACF22782909C4A000FCE8FB /* Swift FIREUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift FIREUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACF227C2909C4A000FCE8FB /* Swift_FIREUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREUITests.swift; sourceTree = "<group>"; };
 		0ACF227E2909C4A000FCE8FB /* Swift_FIREUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0ACF228B290A0F2D00FCE8FB /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		0ACF22A2290A38C200FCE8FB /* ChecklistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistRow.swift; sourceTree = "<group>"; };
 		0ACF22A4290A3D2600FCE8FB /* ChecklistList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistList.swift; sourceTree = "<group>"; };
 		0ACF22AD290AB4CC00FCE8FB /* ChecklistData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistData.swift; sourceTree = "<group>"; };
@@ -167,19 +165,18 @@
 		0ACF22602909C49F00FCE8FB /* Swift FIRE */ = {
 			isa = PBXGroup;
 			children = (
-				0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */,
-				0ACF22A6290AAEAA00FCE8FB /* Checklist Pages */,
-				7233DE942909C61700F87E41 /* ModuleList.swift */,
-				0ACF22632909C49F00FCE8FB /* Module.swift */,
-				0A11D131292EF2CB0096C5B5 /* Journal Pages */,
-				0A11D12D292EF2840096C5B5 /* ModelData.swift */,
-				7233DE922909C60200F87E41 /* Main.swift */,
-				0A11D10D292A94900096C5B5 /* Quiz Pages */,
-				0ACF228B290A0F2D00FCE8FB /* NavView.swift */,
-				0ACF22652909C4A000FCE8FB /* Assets.xcassets */,
-				0ACF22672909C4A000FCE8FB /* Preview Content */,
-				4F4AEA3F2909CFA600F2FD63 /* TestModule.json */,
 				4FAD425E2925C80B00A8696F /* AppData.swift */,
+				0ACF22652909C4A000FCE8FB /* Assets.xcassets */,
+				0ACF22A6290AAEAA00FCE8FB /* Checklist Pages */,
+				0A11D131292EF2CB0096C5B5 /* Journal Pages */,
+				7233DE922909C60200F87E41 /* Main.swift */,
+				0ACF22632909C49F00FCE8FB /* Module.swift */,
+				0A11D12D292EF2840096C5B5 /* ModelData.swift */,
+				7233DE942909C61700F87E41 /* ModuleList.swift */,
+				0ACF22672909C4A000FCE8FB /* Preview Content */,
+				0A11D10D292A94900096C5B5 /* Quiz Pages */,
+				0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */,
+				4F4AEA3F2909CFA600F2FD63 /* TestModule.json */,
 			);
 			path = "Swift FIRE";
 			sourceTree = "<group>";
@@ -373,7 +370,6 @@
 				0A11D10F292A94C20096C5B5 /* Quiz.swift in Sources */,
 				0ACF22642909C49F00FCE8FB /* Module.swift in Sources */,
 				0ACF22B6291AC23000FCE8FB /* ChecklistDetail.swift in Sources */,
-				0ACF228C290A0F2D00FCE8FB /* NavView.swift in Sources */,
 				4FAD425F2925C80B00A8696F /* AppData.swift in Sources */,
 				0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */,
 				0A11D115292ACB710096C5B5 /* QuizList.swift in Sources */,

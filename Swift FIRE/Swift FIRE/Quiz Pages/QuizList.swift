@@ -12,12 +12,15 @@ struct QuizList: View {
     
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
+//    @State var title = "Quizzes"
     @State var increaseAmount: Int = 0
     @State var currentValue = 1
     @State var goToHomeView: Bool = false
+    @State var goToQuizView: Bool = false
     
     var body: some View {
         let startFont: CGFloat = 35
+        var title = "Quizzes"
         
         NavigationView {
             VStack(alignment: .center) {
@@ -47,7 +50,7 @@ struct QuizList: View {
                 }
                 .foregroundColor(Color.white)
                 .padding(20)
-                Text("Quizzes")
+                Text(title)
                     .font(.largeTitle .bold())
                     .padding([.leading, .trailing, .top], 10)
                     .foregroundColor(Color.white)
@@ -62,15 +65,28 @@ struct QuizList: View {
                             }
                         }
                         .padding([.top, .bottom], 20)
-                        .navigationTitle("")
+                        .navigationTitle("Quizzes")
+//                        Button(action: {
+//                            self.goToQuizView = true
+//                        }) {
+//                            Text(quiz.quizName)
+//                        }
+//                        NavigationLink(destination: QuizDetail(quiz: quiz, numQuestions: quiz.questions.count), isActive: $goToQuizView) {
+//                            EmptyView()
+//                        }
+                        
                     }
                     .listStyle(.insetGrouped)
                     .background(navy)
                     .font(.system(size: startFont + CGFloat(increaseAmount)))
                     .foregroundColor(navy)
+                    
+                    .navigationTitle("")
+                    .navigationBarHidden(true)
                 }
             }
             .background(blue)
+            .navigationTitle("")
             .navigationBarHidden(true)
         }
     }
