@@ -76,6 +76,6 @@ struct ModuleListView: View {
 struct ModuleListView_Previews: PreviewProvider {
     static var previews: some View {
         let cState = appState(modNum:0, pageNum:0)
-        ModuleListView(currentState: .constant(cState), size: 20.0)
+        ModuleListView(currentState: .constant(cState), size: 25.0)
     }
 }
