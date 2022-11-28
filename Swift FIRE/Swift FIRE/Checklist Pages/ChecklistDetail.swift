@@ -19,16 +19,17 @@ struct ChecklistDetail: View {
                         ChecklistRow(checklist: checklist, sectionNum: sectionNum, rowNum: rowNum)
                     }
                 }
-                
             }
-            .navigationBarTitle("\(checklist.checklistName)")
+            .navigationBarHidden(true)
         }
+        .navigationTitle(checklist.checklistName)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct ChecklistDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ChecklistDetail(checklist: ModelData().checklists[1])
+        ChecklistDetail(checklist: ModelData().checklists[0])
             .environmentObject(ModelData())
     }
 }
