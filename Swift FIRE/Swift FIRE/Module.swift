@@ -31,7 +31,7 @@ struct ContentView: View {
                 Text("\(module.section[surPage][0])")
                     .multilineTextAlignment(.center)
                     .font(.system(size: CGFloat(size + 10)) .bold())
-                    .frame(height: 4*UIScreen.screenHeight / 15)
+                    //.frame(height: 4*UIScreen.screenHeight / 15)
                     .padding([.leading, .trailing, .top], 5)
                     .foregroundColor(navy)
                     .offset(y: -5)
@@ -42,7 +42,9 @@ struct ContentView: View {
                     Text("\(module.section[surPage][subPage])")
                         .font(.system(size: CGFloat(size)))
                     
-                }.frame(height: 4*UIScreen.main.bounds.height / 10).padding([.leading, .trailing, .bottom], 20)
+                }
+                // .frame(height: 4*UIScreen.main.bounds.height / 10)
+                    .padding([.leading, .trailing, .bottom], 20)
                 HStack{
                     NavigationLink(destination: ModuleListView(currentState:$currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
                         EmptyView()
@@ -54,7 +56,7 @@ struct ContentView: View {
                         presentationMode.wrappedValue.dismiss()
                         self.goToModuleView = true
                     })
-                    .offset(x: 12*UIScreen.screenWidth/32)
+                    .offset(x: 12*UIScreen.screenWidth/32, y: 5)
                     .font(.system(size: CGFloat(7*size/8)))
                     
                     Button("\(next)", action:{
@@ -74,7 +76,7 @@ struct ContentView: View {
                             }
                         }
                     })
-                    .offset(x: 12*UIScreen.screenWidth/32)
+                    .offset(x: 12*UIScreen.screenWidth/32, y: 5)
                     .font(.system(size: CGFloat(7*size/8)))
                     
                     Button("\(prev)", action:{
@@ -94,10 +96,10 @@ struct ContentView: View {
                             }
                         }
                     })
-                    .offset(x: -12*UIScreen.screenWidth/32)
+                    .offset(x: -12*UIScreen.screenWidth/32, y: 5)
                     .font(.system(size: CGFloat(7*size/8)))
                 }.offset(y: -3*UIScreen.screenHeight/60)
-                    .frame(height: 4*UIScreen.screenHeight/30)
+                    // .frame(height: 4*UIScreen.screenHeight/30)
                     .padding(10)
             }
         }
