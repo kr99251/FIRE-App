@@ -12,8 +12,6 @@ struct ChecklistList: View {
     
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
-    @State var increaseAmount: Int = 0
-    @State var currentValue = 1
     @State var goToHomeView: Bool = false
     @State public var size: Double
     @State private var showPopUp: Bool = false
@@ -22,10 +20,12 @@ struct ChecklistList: View {
         ZStack {
             NavigationView {
                 VStack(alignment: .center) {
+                    // Navigation link to go to main menu
                     NavigationLink(destination: Main(size: size).navigationBarHidden(true), isActive: $goToHomeView) {
                         EmptyView()
                     }
                     HStack {
+                        // Navigation link becomes active when home button is pressed
                         Button(action: {self.goToHomeView = true}) {
                             Text("Home")
                                 .frame(width: 80.0, height: 50)
@@ -36,6 +36,7 @@ struct ChecklistList: View {
                                 .stroke(Color.white, lineWidth: 3)
                         )
                         Spacer()
+                        // Font size button
                         Button(action: {showPopUp = true}) {
                             Text("Font Size")
                                 .frame(width: 80.0, height: 50)
@@ -50,11 +51,13 @@ struct ChecklistList: View {
                     .padding(20)
                     NavigationView {
                         VStack {
+                            // Checklists title
                             Text("Checklists")
                                 .font(.system(size: CGFloat(size + 10)) .bold())
                                 .padding([.leading, .trailing, .top], 10)
                                 .foregroundColor(Color.white)
                                 .offset(y: -10)
+                            // List of the checklists where each checklist is a navigation link
                             List(checklistData.checklists) { checklist in
                                 NavigationLink {
                                     ChecklistDetail(checklist: checklist)
@@ -77,6 +80,7 @@ struct ChecklistList: View {
                 .background(blue)
                 .navigationBarHidden(true)
             }
+            // Font size popup window
             PopUpWindow(title: "Font Size", message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
         }
     }

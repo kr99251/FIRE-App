@@ -22,8 +22,10 @@ struct ChecklistRow: View {
 
     var body: some View {
         HStack {
+            // checklist row info
             Text(checklist.sections[sectionNum][rowNum])
             Spacer()
+            // checkmark button
             CheckmarkButton(isChecked: $modelData.checklists[checklistIndex].isChecked[sectionNum][rowNum])
         }
         .padding()
