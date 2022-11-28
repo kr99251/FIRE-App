@@ -102,6 +102,9 @@ struct ContentView: View {
                     // .frame(height: 4*UIScreen.screenHeight/30)
                     .padding(10)
             }
+            
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
     }
     
