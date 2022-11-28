@@ -58,7 +58,10 @@ struct ModuleListView: View {
                             .background(navy)
                             .font(.system(size: CGFloat(size)))
                             .foregroundColor(navy)
-                        }.background(blue)
+                        }
+                        .background(blue)
+                        .navigationTitle("")
+                        .navigationBarHidden(true)
                     }
                     PopUpWindow(title: "Font Size", message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
                 }
