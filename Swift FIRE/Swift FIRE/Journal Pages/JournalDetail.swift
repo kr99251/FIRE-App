@@ -10,6 +10,7 @@ import SwiftUI
 
 struct JournalDetail: View {
     @EnvironmentObject var modelData: ModelData
+    var size: Double
 //    @Binding var content: String
 //    @State private var data = Journal.Journal()
     @State var journal: Journal
@@ -25,15 +26,14 @@ struct JournalDetail: View {
         VStack {
             HStack{
                 TextField(journal.name, text: $modelData.journals[index].name)
-                    .font(.title)
+                    .font(.system(size: CGFloat(size + 10)))
                 Spacer()
                 Text(journal.date)
-                    .font(.subheadline)
+                    .font(.system(size: CGFloat(size - 5)))
             }
             .padding()
             ScrollView{
-                TextEditor(text: $modelData.journals[index].content)
-                    
+                TextEditor(text: $modelData.journals[index].content).font(.system(size: CGFloat(size)))
             }
         }
     }
@@ -43,7 +43,7 @@ struct JournalDetail: View {
 
 struct JournalDetail_Previews: PreviewProvider {
     static var previews: some View {
-        JournalDetail(journal: ModelData().journals[0])
+        JournalDetail(size: 25.0, journal: ModelData().journals[0])
             .environmentObject(ModelData())
     }
 }

@@ -46,7 +46,7 @@ struct ContentView: View {
                 // .frame(height: 4*UIScreen.main.bounds.height / 10)
                     .padding([.leading, .trailing, .bottom], 20)
                 HStack{
-                    NavigationLink(destination: ModuleListView(currentState:$currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
+                    NavigationLink(destination: ModuleListView(currentState: currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
                         EmptyView()
                     }
                     

@@ -26,13 +26,13 @@ struct Main: View {
                     .scaledToFit()
                     .padding()
                 Spacer()
-                NavigationLink(destination: ModuleListView(currentState:$currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
+                NavigationLink(destination: ModuleListView(currentState: currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
                     EmptyView()
                 }
-                NavigationLink(destination: QuizList( size: size).navigationBarHidden(true), isActive: $goToQuizView) {
+                NavigationLink(destination: QuizList(size: size).navigationBarHidden(true), isActive: $goToQuizView) {
                     EmptyView()
                 }
-                NavigationLink(destination: JournalList().navigationBarHidden(true), isActive: $goToJournalView) {
+                NavigationLink(destination: JournalList(size: size).navigationBarHidden(true), isActive: $goToJournalView) {
                     EmptyView()
                 }
                 NavigationLink(destination: ChecklistList(size: size).navigationBarHidden(true), isActive: $goToChecklistView) {
