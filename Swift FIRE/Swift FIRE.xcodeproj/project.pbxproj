@@ -35,6 +35,7 @@
 		0ACF22B6291AC23000FCE8FB /* ChecklistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */; };
 		4F4AEA402909CFA600F2FD63 /* TestModule.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AEA3F2909CFA600F2FD63 /* TestModule.json */; };
 		4FAD425F2925C80B00A8696F /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD425E2925C80B00A8696F /* AppData.swift */; };
+		720E0A982934418F00D7A038 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720E0A972934418F00D7A038 /* FontSize.swift */; };
 		7233DE932909C60200F87E41 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE922909C60200F87E41 /* Main.swift */; };
 		7233DE952909C61700F87E41 /* ModuleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE942909C61700F87E41 /* ModuleList.swift */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDetail.swift; sourceTree = "<group>"; };
 		4F4AEA3F2909CFA600F2FD63 /* TestModule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestModule.json; sourceTree = "<group>"; };
 		4FAD425E2925C80B00A8696F /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		720E0A972934418F00D7A038 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		7233DE922909C60200F87E41 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		7233DE942909C61700F87E41 /* ModuleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +170,9 @@
 				4FAD425E2925C80B00A8696F /* AppData.swift */,
 				0ACF22652909C4A000FCE8FB /* Assets.xcassets */,
 				0ACF22A6290AAEAA00FCE8FB /* Checklist Pages */,
+				7233DE942909C61700F87E41 /* ModuleList.swift */,
+				720E0A972934418F00D7A038 /* FontSize.swift */,
+				0ACF22632909C49F00FCE8FB /* Module.swift */,
 				0A11D131292EF2CB0096C5B5 /* Journal Pages */,
 				7233DE922909C60200F87E41 /* Main.swift */,
 				0ACF22632909C49F00FCE8FB /* Module.swift */,
@@ -369,6 +374,7 @@
 				0A11D113292AAF920096C5B5 /* QuizDetail.swift in Sources */,
 				0A11D10F292A94C20096C5B5 /* Quiz.swift in Sources */,
 				0ACF22642909C49F00FCE8FB /* Module.swift in Sources */,
+				720E0A982934418F00D7A038 /* FontSize.swift in Sources */,
 				0ACF22B6291AC23000FCE8FB /* ChecklistDetail.swift in Sources */,
 				4FAD425F2925C80B00A8696F /* AppData.swift in Sources */,
 				0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */,

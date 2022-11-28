@@ -10,6 +10,7 @@ var modules = getModules()
 
 struct ContentView: View {
     var module: ModuleData
+    var size: Double
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     @State var currentPage = 0
@@ -17,6 +18,7 @@ struct ContentView: View {
     @State var surPage = 0
     @State var currentState = appState(modNum:0, pageNum:0)
     @State var goToModuleView: Bool = false
+    @State public var showPopUp: Bool = false
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         let max = getMax(pg: module.section)
@@ -28,7 +30,7 @@ struct ContentView: View {
             VStack{
                 Text("\(module.section[surPage][0])")
                     .multilineTextAlignment(.center)
-                    .font(.title .bold())
+                    .font(.system(size: CGFloat(size + 10)) .bold())
                     .frame(height: 4*UIScreen.screenHeight / 15)
                     .padding([.leading, .trailing, .top], 5)
                     .foregroundColor(navy)
@@ -38,11 +40,11 @@ struct ContentView: View {
                 }
                 ScrollView(showsIndicators: true) {
                     Text("\(module.section[surPage][subPage])")
-                        .font(.system(size : CGFloat(5 + currentState.increaseAmount)))
+                        .font(.system(size: CGFloat(size)))
                     
                 }.frame(height: 4*UIScreen.main.bounds.height / 10).padding([.leading, .trailing, .bottom], 20)
                 HStack{
-                    NavigationLink(destination: ModuleListView(currentState:$currentState).navigationBarHidden(true), isActive: $goToModuleView) {
+                    NavigationLink(destination: ModuleListView(currentState:$currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
                         EmptyView()
                     }
                     
@@ -53,6 +55,7 @@ struct ContentView: View {
                         self.goToModuleView = true
                     })
                     .offset(x: 12*UIScreen.screenWidth/32)
+                    .font(.system(size: CGFloat(7*size/8)))
                     
                     Button("\(next)", action:{
                         saveData(appData:currentState)
@@ -72,6 +75,7 @@ struct ContentView: View {
                         }
                     })
                     .offset(x: 12*UIScreen.screenWidth/32)
+                    .font(.system(size: CGFloat(7*size/8)))
                     
                     Button("\(prev)", action:{
                         saveData(appData:currentState)
@@ -91,6 +95,7 @@ struct ContentView: View {
                         }
                     })
                     .offset(x: -12*UIScreen.screenWidth/32)
+                    .font(.system(size: CGFloat(7*size/8)))
                 }.offset(y: -3*UIScreen.screenHeight/60)
                     .frame(height: 4*UIScreen.screenHeight/30)
                     .padding(10)
@@ -105,7 +110,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         // let cState = appState(modNum:0, pageNum:0)
         // ContentView(currentState : .constant(cState))
-        ContentView(module: modules.modules[0])
+        ContentView(module: modules.modules[0], size: 20.0)
     }
 }
 

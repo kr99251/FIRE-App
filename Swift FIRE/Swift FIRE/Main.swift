@@ -14,6 +14,7 @@ struct Main: View {
     @State var goToChecklistView: Bool = false
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
     @State var currentState = getStartupData()
+    @State var size = 20.0
     var navy = Color(red: 0, green: 0, blue: 128/255)
     
     var body: some View {
@@ -25,7 +26,7 @@ struct Main: View {
                     .scaledToFit()
                     .padding()
                 Spacer()
-                NavigationLink(destination: ModuleListView(currentState:$currentState).navigationBarHidden(true), isActive: $goToModuleView) {
+                NavigationLink(destination: ModuleListView(currentState:$currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
                     EmptyView()
                 }
                 NavigationLink(destination: QuizList().navigationBarHidden(true), isActive: $goToQuizView) {
