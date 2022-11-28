@@ -18,14 +18,3 @@ struct Quiz: Hashable, Codable, Identifiable {
     var results: [[String]]
     var sums: [Int]
 }
-
-struct Answer: Hashable, Codable {
-    var answer: String
-    var points: Int
-}
-
-struct Result: Hashable, Codable {
-    var result: String
-    var description: String
-    var pointMin: Int
-}

@@ -131,7 +131,7 @@
             ["Banana", "Grapes", "Blueberries", "Coconut"],
             ["Chocolate", "Chocolate Chip Cookie Dough", "Mint Chocolate Chip", "Coffee"],
             ["Breakfast", "Lunch", "Dinner", "Dessert"],
-            ["No one! It's a secret!", "A family member", "A friend", "Everyone. I don't believe in secrets. "],
+            ["No one! It's a secret!", "A family member", "A friend", "Everyone. I don't believe in keeping secrets. "],
             ["Hippo", "Giraffe", "Monkey", "Armadillo"]
         ],
         "points" : [
@@ -161,7 +161,7 @@
         ],
         "answers" : [
             ["I understand the appeal and use it for some things.", "I hate it.", "I could eat it constantly for the rest of my life.", "I think it’s extremely underrated and works as a food as well as a cooler in drinks."],
-            ["How can you possibly expect me to remember that?", "It’s been awhile.", "It’s been awhile.", "I am eating it/drinking something with it now."],
+            ["How can you possibly expect me to remember that?", "It’s been awhile.", "The past couple days.", "I am eating it/drinking something with it now."],
             ["HOW DARE THEY??? CONFRONT THEM!!", "Fume inside but don’t say anything and refill it.", "Bow down to them and thank them for finally finishing the ice so you no longer have to be near that terrible creation. ", "Do nothing. It’s not that important. You can live without ice."],
             ["Say thank you.", "Smile politely but secretly wish your water was room temperature instead of nice and cool.", "Profusely thank them and promise your firstborn to them as repayment for the kind gift.", "Politely request water without ice."],
             ["It's the best! I love to do Winter activities and eat the snow around me!", "I like some Winter activities and snow is fun!", "It's fine. A little too cold for me.", "I despise it."]
