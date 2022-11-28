@@ -15,6 +15,7 @@ struct QuizDetail: View {
     @State var numQuestions: Int
     @State var added: Int = -1
     @State var selectedIndex: Int = -1
+    var size: Double
     
     var body: some View {
         let navy = Color(red: 0, green: 0, blue: 128/255)
@@ -27,7 +28,7 @@ struct QuizDetail: View {
             VStack {
                 Text(currQuestion)
                     .multilineTextAlignment(.center)
-                    .font(.title .bold())
+                    .font(.system(size: CGFloat(size)) .bold())
 //                    .padding([.leading, .trailing, .top], 5)
                     .offset(y: -20)
                 Spacer()
@@ -43,6 +44,7 @@ struct QuizDetail: View {
                         Spacer()
                         Text(selectedIndex == num ? "✅" : "🔲")
                     }
+                    .font(.system(size: CGFloat(size)))
                 }
                 
                 (index + 1 == numQuestions) ?
@@ -72,7 +74,7 @@ struct QuizDetail: View {
                 let result = findResult(options: quiz.results, points: quiz.sums, sum: sum)
                 Text(result[0])
                     .multilineTextAlignment(.center)
-                    .font(.title .bold())
+                    .font(.system(size: CGFloat(size + 10)) .bold())
                     .frame(height: 4*UIScreen.screenHeight / 15)
                     .padding([.leading, .trailing, .top], 5)
                     .foregroundColor(navy)
@@ -96,7 +98,7 @@ struct QuizDetail: View {
 
 struct QuizDetail_Previews: PreviewProvider {
     static var previews: some View {
-        QuizDetail(quiz: ModelData().quizzes[1], numQuestions: ModelData().quizzes[1].questions.count)
+        QuizDetail(quiz: ModelData().quizzes[1], numQuestions: ModelData().quizzes[1].questions.count, size: 20.0)
             .environmentObject(ModelData())
     }
 }

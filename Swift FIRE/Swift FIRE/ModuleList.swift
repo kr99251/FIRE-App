@@ -16,7 +16,7 @@ struct ModuleListView: View {
         let v = modules.modules
         NavigationView {
             VStack(alignment: .center) {
-                NavigationLink(destination: Main().navigationBarHidden(true), isActive: $goToHomeView) {
+                NavigationLink(destination: Main(size: size).navigationBarHidden(true), isActive: $goToHomeView) {
                     EmptyView()
                 }
                 HStack {
@@ -76,6 +76,6 @@ struct ModuleListView: View {
 struct ModuleListView_Previews: PreviewProvider {
     static var previews: some View {
         let cState = appState(modNum:0, pageNum:0)
-        ModuleListView(currentState: .constant(cState), size: 20.0)
+        ModuleListView(currentState: .constant(cState), size: 25.0)
     }
 }

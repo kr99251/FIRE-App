@@ -30,7 +30,7 @@ struct PopUpWindow: View {
                         .font(Font.system(size: 23, weight: .semibold))
                         .foregroundColor(Color.white)
                         .background(blue)
-                    Slider(value: $size, in: 10...60, step: 2) {
+                    Slider(value: $size, in: 25...50, step: 1) {
                         Text("Slider")
                     } minimumValueLabel: {
                         Text("Small").font(.title3).foregroundColor(navy)

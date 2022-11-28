@@ -115,7 +115,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         // let cState = appState(modNum:0, pageNum:0)
         // ContentView(currentState : .constant(cState))
-        ContentView(module: modules.modules[0], size: 20.0)
+        ContentView(module: modules.modules[0], size: 25.0)
     }
 }
 
