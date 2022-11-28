@@ -16,7 +16,7 @@ struct JournalList: View {
             NavigationView{
                 VStack{
                     HStack {
-                        NavigationLink(destination: Main().navigationBarHidden(true)) {
+                        NavigationLink(destination: Main(size: size).navigationBarHidden(true)) {
                             Text("Home")
                                 .frame(width: 80.0, height: 50)
                                 .foregroundColor(Color.white)
