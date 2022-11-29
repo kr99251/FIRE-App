@@ -81,7 +81,7 @@ struct ChecklistList: View {
                 .navigationBarHidden(true)
             }
             // Font size popup window
-            PopUpWindow(title: "Font Size", message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
+            PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
         }
     }
 }

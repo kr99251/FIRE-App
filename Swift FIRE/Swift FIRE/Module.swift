@@ -20,36 +20,42 @@ struct ContentView: View {
     @State var goToModuleView: Bool = false
     @State public var showPopUp: Bool = false
     @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         let max = getMax(pg: module.section)
         var next = hasNext(max: max, current: currentPage) ? "Next": ""
         var prev = hasPrev(current: currentPage) ? "Prev": ""
         var done = isDone(max: max, current: currentPage) ? "Done": ""
-        //var vertOffset = 0
+        
         NavigationView {
             VStack{
+                // Display header
                 Text("\(module.section[surPage][0])")
                     .multilineTextAlignment(.center)
-                    .font(.system(size: CGFloat(size + 10)) .bold())
-                    //.frame(height: 4*UIScreen.screenHeight / 15)
-                    .padding([.leading, .trailing, .top], 5)
+                    .font(.system(size: CGFloat(size + 5)) .bold())
+                    .padding(5)
                     .foregroundColor(navy)
                     .offset(y: -5)
-                if let imageName = currentState.imageName{
-                    Image(imageName)
-                }
+                    .minimumScaleFactor(0.01)
+                // Picture and information
                 ScrollView(showsIndicators: true) {
+                    // Image
+                    if let imageName = currentState.imageName{
+                        Image(imageName)
+                    }
+                    // Information
                     Text("\(module.section[surPage][subPage])")
                         .font(.system(size: CGFloat(size)))
-                    
                 }
-                // .frame(height: 4*UIScreen.main.bounds.height / 10)
-                    .padding([.leading, .trailing, .bottom], 20)
+                .padding([.leading, .trailing, .bottom], 20)
+                
+                // Next, previous, and done buttons
                 HStack{
                     NavigationLink(destination: ModuleListView(currentState: currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
                         EmptyView()
                     }
                     
+                    // Finished with the module
                     Button("\(done)", action:{
                         saveData(appData:currentState)
                         done = "Done"
@@ -62,6 +68,7 @@ struct ContentView: View {
                     Button("\(next)", action:{
                         saveData(appData:currentState)
                         prev = "Prev"
+                        // Make sure there is another page
                         if (surPage < max) {
                             currentPage += 1
                             if (subPage == module.section[surPage].count - 1) {
@@ -82,6 +89,7 @@ struct ContentView: View {
                     Button("\(prev)", action:{
                         saveData(appData:currentState)
                         next = "Next"
+                        // Make sure there is another page
                         currentPage -= 1
                         if (surPage > 0) {
                             if (subPage == 1) {
@@ -99,10 +107,8 @@ struct ContentView: View {
                     .offset(x: -12*UIScreen.screenWidth/32, y: 5)
                     .font(.system(size: CGFloat(7*size/8)))
                 }.offset(y: -3*UIScreen.screenHeight/60)
-                    // .frame(height: 4*UIScreen.screenHeight/30)
                     .padding(10)
             }
-            
             .navigationTitle("")
             .navigationBarHidden(true)
         }
@@ -113,12 +119,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        // let cState = appState(modNum:0, pageNum:0)
-        // ContentView(currentState : .constant(cState))
         ContentView(module: modules.modules[0], size: 25.0)
     }
 }
 
+// Return the number of pages in the module
 func getMax(pg: [[String]]) -> Int {
     var num_pgs = 0
     for c in pg {
@@ -127,6 +132,7 @@ func getMax(pg: [[String]]) -> Int {
     return num_pgs
 }
 
+// See if there is another page
 func hasNext(max: Int, current: Int) -> Bool {
     if (max > current + 1) {
         return true
@@ -134,6 +140,7 @@ func hasNext(max: Int, current: Int) -> Bool {
     return false
 }
 
+// See if there is a previous page
 func hasPrev(current: Int) -> Bool {
     if (current > 0) {
         return true
@@ -141,6 +148,7 @@ func hasPrev(current: Int) -> Bool {
     return false
 }
 
+// See if the module is done
 func isDone(max: Int, current: Int) -> Bool {
     if (current == max - 1) {
         return true

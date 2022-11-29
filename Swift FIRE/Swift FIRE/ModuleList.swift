@@ -8,10 +8,10 @@ struct ModuleListView: View {
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     @State var currentState : appState
-    @State var currentValue = 1
     @State var goToHomeView: Bool = false
     @State public var size: Double
     @State private var showPopUp: Bool = false
+    
     var body: some View {
         let v = modules.modules
         NavigationView {
@@ -19,6 +19,7 @@ struct ModuleListView: View {
                 NavigationLink(destination: Main(size: size).navigationBarHidden(true), isActive: $goToHomeView) {
                     EmptyView()
                 }
+                // Menu and font options
                 HStack {
                     Button(action: {self.goToHomeView = true}) {
                         Text("Home")
@@ -42,6 +43,8 @@ struct ModuleListView: View {
                 }
                 .foregroundColor(Color.white)
                 .padding(20)
+                
+                // Module list
                 ZStack {
                     NavigationView {
                         VStack {
@@ -50,6 +53,7 @@ struct ModuleListView: View {
                                 .padding([.leading, .trailing, .top], 10)
                                 .foregroundColor(Color.white)
                                 .offset(y: -10)
+                            // Print the modules
                             List(0..<v.count, id: \.self) { num in
                                 NavigationLink(v[num].modName, destination: ContentView(module: v[num], size: size))
                                     .padding([.top, .bottom], 20)
@@ -63,7 +67,8 @@ struct ModuleListView: View {
                         .navigationTitle("")
                         .navigationBarHidden(true)
                     }
-                    PopUpWindow(title: "Font Size", message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
+                    // Pop up for the font
+                    PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
                 }
                 }
                 .background(blue)
