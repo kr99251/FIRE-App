@@ -170,13 +170,10 @@
 				720E0A972934418F00D7A038 /* FontSize.swift */,
 				0A11D131292EF2CB0096C5B5 /* Journal Pages */,
 				7233DE922909C60200F87E41 /* Main.swift */,
-				0ACF22632909C49F00FCE8FB /* Module.swift */,
-				0A11D12D292EF2840096C5B5 /* ModelData.swift */,
-				7233DE942909C61700F87E41 /* ModuleList.swift */,
+				72D97A492936C887007B0CE7 /* Module Pages */,
 				0ACF22672909C4A000FCE8FB /* Preview Content */,
 				0A11D10D292A94900096C5B5 /* Quiz Pages */,
 				0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */,
-				4F4AEA3F2909CFA600F2FD63 /* TestModule.json */,
 			);
 			path = "Swift FIRE";
 			sourceTree = "<group>";
@@ -218,6 +215,17 @@
 				0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */,
 			);
 			path = "Checklist Pages";
+			sourceTree = "<group>";
+		};
+		72D97A492936C887007B0CE7 /* Module Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0ACF22632909C49F00FCE8FB /* Module.swift */,
+				0A11D12D292EF2840096C5B5 /* ModelData.swift */,
+				7233DE942909C61700F87E41 /* ModuleList.swift */,
+				4F4AEA3F2909CFA600F2FD63 /* TestModule.json */,
+			);
+			path = "Module Pages";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
