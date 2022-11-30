@@ -60,12 +60,13 @@ struct ChecklistList: View {
                             // List of the checklists where each checklist is a navigation link
                             List(checklistData.checklists) { checklist in
                                 NavigationLink {
-                                    ChecklistDetail(checklist: checklist)
+                                    ChecklistDetail(checklist: checklist, size: size)
                                 } label: {
                                     HStack {
-                                        Text("\(checklist.checklistName)")
+                                        Text("\(checklist.checklistName)").font(.system(size: CGFloat(size)))
                                     }
                                 }
+                                .font(.system(size: CGFloat(size)) .bold())
                                 .padding([.top, .bottom], 20)
                             }
                             .listStyle(.insetGrouped)
