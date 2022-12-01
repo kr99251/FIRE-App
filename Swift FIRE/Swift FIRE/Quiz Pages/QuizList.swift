@@ -13,15 +13,14 @@ struct QuizList: View {
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     @State var goToHomeView: Bool = false
-    @State public var size: Double
     @State private var showPopUp: Bool = false
-    
+    @Binding var currentState : appState
     var body: some View {
         ZStack {
             NavigationView {
                 VStack(alignment: .center) {
                     // Navigation link to go to main menu
-                    NavigationLink(destination: Main(size: size ).navigationBarHidden(true), isActive: $goToHomeView) {
+                    NavigationLink(destination: Main(currentState : $currentState).navigationBarHidden(true), isActive: $goToHomeView) {
                         EmptyView()
                     }
                     HStack {
@@ -52,14 +51,14 @@ struct QuizList: View {
                     NavigationView {
                         VStack {
                             Text("Quizzes")
-                                .font(.system(size: CGFloat(size + 10)))
+                                .font(.largeTitle .bold())
                                 .padding([.leading, .trailing, .top], 10)
                                 .foregroundColor(Color.white)
                                 .offset(y: -10)
                             // List with all the quizzes as navigation links
                             List(quizData.quizzes) { quiz in
                                 NavigationLink {
-                                    QuizDetail(quiz: quiz, numQuestions: quiz.questions.count, size: size)
+                                    QuizDetail(quiz: quiz, numQuestions: quiz.questions.count, size: currentState.size)
                                 } label: {
                                     HStack {
                                         Text("\(quiz.quizName)")
@@ -71,7 +70,7 @@ struct QuizList: View {
                             }
                             .listStyle(.insetGrouped)
                             .background(navy)
-                            .font(.system(size: CGFloat(size)))
+                            .font(.system(size: CGFloat(currentState.size)))
                             .foregroundColor(navy)
                             .navigationTitle("")
                             .navigationBarHidden(true)
@@ -85,14 +84,14 @@ struct QuizList: View {
                 .navigationBarHidden(true)
             }
             // Font size popup window
-            PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
+            PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, currentState: $currentState)
         }
     }
 }
 
 struct QuizList_Previews: PreviewProvider {
     static var previews: some View {
-        QuizList(size: 20.0)
+        QuizList(currentState: .constant(appState()))
             .environmentObject(ModelData())
     }
 }

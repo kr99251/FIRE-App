@@ -8,15 +8,14 @@ import SwiftUI
 struct JournalList: View {
     @EnvironmentObject var modelData: ModelData
 //    @State var journals: [Journal]
-    @State public var size: Double
     @State private var showPopUp: Bool = false
-    
+    @Binding var currentState : appState
     var body: some View {
         ZStack {
             NavigationView{
                 VStack{
                     HStack {
-                        NavigationLink(destination: Main(size: size).navigationBarHidden(true)) {
+                        NavigationLink(destination: Main(currentState: $currentState).navigationBarHidden(true)) {
                             Text("Home")
                                 .frame(width: 80.0, height: 50)
                                 .foregroundColor(Color.white)
@@ -40,18 +39,18 @@ struct JournalList: View {
                     .background(.blue)
                     List(modelData.journals) { journal in
                         NavigationLink {
-                            JournalDetail(size: size, journal: journal)
+                            JournalDetail(size: currentState.size, journal: journal)
                         } label: {
                             JournalRow(journal: journal)
                         }
                     }
                     .navigationTitle("")
-                    .font(.system(size: CGFloat(size)))
+                    .font(.system(size: CGFloat(currentState.size)))
                     
                 }
                 .navigationBarHidden(true)
             }
-            PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
+            PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, currentState: $currentState)
         }
     }
 }
@@ -60,7 +59,7 @@ struct JournalList_Previews: PreviewProvider {
     static let modelData = ModelData()
 
     static var previews: some View {
-        JournalList(size: 25.0)
+        JournalList(currentState: .constant(appState()))
             .environmentObject(modelData)
     }
 }

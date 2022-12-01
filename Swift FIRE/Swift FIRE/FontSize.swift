@@ -14,7 +14,7 @@ struct PopUpWindow: View {
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     @Binding var show: Bool
-    @Binding var size: Double
+    @Binding var currentState: appState
     var body: some View {
         ZStack {
             if show {
@@ -28,7 +28,7 @@ struct PopUpWindow: View {
                         .font(Font.system(size: 23, weight: .semibold))
                         .foregroundColor(Color.white)
                         .background(blue)
-                    Slider(value: $size, in: 25...45, step: 1) {
+                    Slider(value: $currentState.size, in: 25...45, step: 1) {
                         Text("Slider")
                     } minimumValueLabel: {
                         Text("Small").font(.title3).foregroundColor(navy)
@@ -38,7 +38,7 @@ struct PopUpWindow: View {
                 
                      
                     // Exit the popup
-                    Button(action: { show = false }, label: {
+                    Button(action: {saveData(appData: currentState); show = false }, label: {
                         Text(buttonText)
                             .frame(maxWidth: .infinity)
                             .frame(height: 54, alignment: .center)

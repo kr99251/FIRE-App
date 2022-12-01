@@ -13,10 +13,8 @@ struct Main: View {
     @State var goToJournalView: Bool = false
     @State var goToChecklistView: Bool = false
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
-    @State var currentState = getStartupData()
-    @State public var size = 25.0
+    @Binding var currentState : appState
     var navy = Color(red: 0, green: 0, blue: 128/255)
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -26,16 +24,16 @@ struct Main: View {
                     .scaledToFit()
                     .padding()
                 Spacer()
-                NavigationLink(destination: ModuleListView(currentState: currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
+                NavigationLink(destination: ModuleListView(currentState: $currentState).navigationBarHidden(true), isActive: $goToModuleView) {
                     EmptyView()
                 }
-                NavigationLink(destination: QuizList(size: size).navigationBarHidden(true), isActive: $goToQuizView) {
+                NavigationLink(destination: QuizList(currentState: $currentState).navigationBarHidden(true), isActive: $goToQuizView) {
                     EmptyView()
                 }
-                NavigationLink(destination: JournalList(size: size).navigationBarHidden(true), isActive: $goToJournalView) {
+                NavigationLink(destination: JournalList(currentState: $currentState).navigationBarHidden(true), isActive: $goToJournalView) {
                     EmptyView()
                 }
-                NavigationLink(destination: ChecklistList(size: size).navigationBarHidden(true), isActive: $goToChecklistView) {
+                NavigationLink(destination: ChecklistList(currentState: $currentState).navigationBarHidden(true), isActive: $goToChecklistView) {
                     EmptyView()
                 }
                 HStack {
@@ -94,7 +92,7 @@ struct Main: View {
 
 struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {
-        Main()
+        Main(currentState: .constant(appState()))
             .environmentObject(ModelData())
     }
 }
