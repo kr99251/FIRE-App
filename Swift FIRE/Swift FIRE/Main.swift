@@ -25,7 +25,6 @@ struct Main: View {
                     .resizable()
                     .scaledToFit()
                     .padding()
-                Spacer()
                 NavigationLink(destination: ModuleListView(currentState: currentState, size: size).navigationBarHidden(true), isActive: $goToModuleView) {
                     EmptyView()
                 }
@@ -41,7 +40,7 @@ struct Main: View {
                 HStack {
                     Button(action: {self.goToModuleView = true}) {
                         Text("Modules")
-                            .frame(width: UIScreen.screenWidth / 3, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -51,7 +50,7 @@ struct Main: View {
                         .frame(width: UIScreen.screenWidth/24, height: 1)
                     Button(action: {self.goToQuizView = true}) {
                         Text("Quizzes")
-                            .frame(width: UIScreen.screenWidth / 3, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -59,10 +58,11 @@ struct Main: View {
                     )
                 }
                 Spacer()
+                    .frame(width: 1, height: UIScreen.screenHeight / 20)
                 HStack {
                     Button(action: {self.goToJournalView = true}) {
                         Text("Journal")
-                            .frame(width: UIScreen.screenWidth / 3, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
@@ -72,13 +72,14 @@ struct Main: View {
                         .frame(width: UIScreen.screenWidth/24, height: 1)
                     Button(action: {self.goToChecklistView = true}) {
                         Text("Checklists")
-                            .frame(width: UIScreen.screenWidth / 3, height: 150)
+                            .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(navy, lineWidth: 5)
                             )
                 }
+                .padding(.bottom, UIScreen.screenHeight / 20)
             }
             .buttonStyle(.bordered)
             .font(.title2 .bold())

@@ -90,6 +90,9 @@ struct QuizDetail: View {
                     .foregroundColor(navy)
                     .offset(y: -50)
                 Text(result[1])
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: CGFloat(size)))
+                    .padding([.leading, .trailing], 5)
             }
             .padding()
         }
