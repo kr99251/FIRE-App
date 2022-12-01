@@ -15,7 +15,7 @@ struct ChecklistDetail: View {
         // List of all the checklist items
         List(0..<checklist.sections.count, id: \.self) { sectionNum in
             // Display the heading for each section of the checklist
-            Text("\(checklist.sections[sectionNum][0])").font(.system(size: CGFloat(size + 5)) .bold())
+            Text("\(checklist.sections[sectionNum][0])").font(.system(size: CGFloat(size + 5)) .bold()).minimumScaleFactor(0.01)
             if (checklist.sections[sectionNum].count > 1) {
                 // Display the content of each section
                 ForEach(1..<checklist.sections[sectionNum].count-1) { rowNum in

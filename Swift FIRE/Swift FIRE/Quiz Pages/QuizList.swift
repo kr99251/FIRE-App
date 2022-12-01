@@ -52,7 +52,7 @@ struct QuizList: View {
                     NavigationView {
                         VStack {
                             Text("Quizzes")
-                                .font(.largeTitle .bold())
+                                .font(.system(size: CGFloat(size + 10)))
                                 .padding([.leading, .trailing, .top], 10)
                                 .foregroundColor(Color.white)
                                 .offset(y: -10)

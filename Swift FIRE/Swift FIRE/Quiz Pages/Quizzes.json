@@ -3,7 +3,7 @@
         "id" : 1,
         "quizName" : "Falls Risk Self-Assessment Quiz",
         "questions" : [
-            "Have you fallen in the last 6 months",
+            "Have you fallen in the last 6 months?",
             "Do you use, or have you been advised to use, a cane or walker to get around safely?",
             "Do you sometimes feel unsteady when you are walking?",
             "Do you have to steady yourself by holding onto furniture when walking at home?",

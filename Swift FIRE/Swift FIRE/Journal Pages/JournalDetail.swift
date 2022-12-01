@@ -26,7 +26,7 @@ struct JournalDetail: View {
         VStack {
             HStack{
                 TextField(journal.name, text: $modelData.journals[index].name)
-                    .font(.system(size: CGFloat(size + 10)))
+                    .font(.system(size: CGFloat(size + 10))).minimumScaleFactor(0.01)
                 Spacer()
                 Text(journal.date)
                     .font(.system(size: CGFloat(size - 5)))
