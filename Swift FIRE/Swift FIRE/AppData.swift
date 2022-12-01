@@ -24,39 +24,14 @@ struct ModuleDataSet : Codable{
     var modules : Array<ModuleData>
 }
 struct appState : Codable {
-    var modNum : Int
-    var pageNum : Int
-    var increaseAmount : Int
     var modules = getModules()
-    var currentModule : ModuleData
-    var currentSection :  [String]
     var imageName : String?
-    init(modNum : Int, pageNum : Int){
-        self.modNum = modNum
-        self.pageNum = pageNum
-        self.increaseAmount = 10
+    var moduleCompletionArray : Array<Bool>
+    var size : Double
+    init(){
         self.modules = getModules()
-        self.currentModule = modules.modules[modNum]
-        self.currentSection = currentModule.section[pageNum]
-        self.imageName = currentModule.imageName
-    }
-    mutating func nextPage(){
-        if pageNum < currentModule.pageMax - 1{
-            pageNum += 1
-            currentSection = currentModule.section[pageNum]
-        }
-    }
-    mutating func prevPage(){
-        if pageNum > 0{
-            pageNum -= 1
-            currentSection = currentModule.section[pageNum]
-        }
-    }
-    mutating func setModule(modNum : Int){
-        self.modNum = modNum
-        self.currentModule = modules.modules[modNum]
-        self.pageNum = 0
-        self.currentSection = currentModule.section[pageNum]
+        self.moduleCompletionArray = Array<Bool>(repeating: false, count:modules.modules.count)
+        self.size = 11
     }
 }
 
@@ -79,28 +54,30 @@ func getModules() -> ModuleDataSet{
     }
     return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax: -1, section:[])])
 }
-
+//Idea from https://www.hackingwithswift.com/example-code/strings/how-to-save-a-string-to-a-file-on-disk-with-writeto
+func getDocumentsDirectory() -> URL{
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
+}
 func saveData(appData : appState){
-    //Codable JSON Idea from
-    //https://stackoverflow.com/questions/33186051/swift-convert-struct-to-json
+    let encoder = JSONEncoder()
     do {
-        let jsonData = try JSONEncoder().encode(appData)
-        if var url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                url.appendPathComponent("appData.json")
-                try jsonData.write(to: url)
-                print("Saved")
-            }
-    } catch { print(error) }
+        let jsonString = try encoder.encode(appData)
+        let filename = getDocumentsDirectory().appendingPathComponent("appData.json")
+        try jsonString.write(to: filename)
+    }
+    catch{
+        print("unable to encode app data to json format")
+    }
 }
 
 func getStartupData() -> appState{
     let decoder = JSONDecoder()
-    if let json = Bundle.main.url(forResource: "appData", withExtension: "json"){
-        if let data = try?Data(contentsOf: json){
-            if let appData = try?decoder.decode(appState.self, from: data){
-                return appData
-            }
+    let json = getDocumentsDirectory().appendingPathComponent("appData.json")
+    if let data = try?Data(contentsOf: json){
+        if let appData = try?decoder.decode(appState.self, from: data){
+            return appData
         }
     }
-    return appState(modNum: 0, pageNum:0)
+    return appState()
 }

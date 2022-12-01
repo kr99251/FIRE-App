@@ -33,6 +33,7 @@ struct QuizDetail: View {
                     .font(.system(size: CGFloat(size)) .bold())
                     .padding([.leading, .trailing, .top], 5)
                     .offset(y: -20)
+                    .minimumScaleFactor(0.01)
                 Spacer()
                 
                 // Display all the answers

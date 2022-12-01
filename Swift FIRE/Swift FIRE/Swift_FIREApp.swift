@@ -10,10 +10,10 @@ import SwiftUI
 @main
 struct Swift_FIREApp: App {
     @StateObject private var modelData = ModelData()
-    
+    @State var currentState : appState = getStartupData()
     var body: some Scene {
         WindowGroup {
-            Main()
+            Main(currentState: $currentState)
                 .environmentObject(modelData)
         }
     }

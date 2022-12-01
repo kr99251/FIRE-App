@@ -13,15 +13,15 @@ struct ChecklistList: View {
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     @State var goToHomeView: Bool = false
-    @State public var size: Double
+    //@State public var size: Double
     @State private var showPopUp: Bool = false
-    
+    @Binding var currentState : appState
     var body: some View {
         ZStack {
             NavigationView {
                 VStack(alignment: .center) {
                     // Navigation link to go to main menu
-                    NavigationLink(destination: Main(size: size).navigationBarHidden(true), isActive: $goToHomeView) {
+                    NavigationLink(destination: Main(currentState : $currentState).navigationBarHidden(true), isActive: $goToHomeView) {
                         EmptyView()
                     }
                     HStack {
@@ -37,7 +37,7 @@ struct ChecklistList: View {
                         )
                         Spacer()
                         // Font size button
-                        Button(action: {showPopUp = true}) {
+                        Button(action: {showPopUp = true; saveData(appData:currentState)}) {
                             Text("Font Size")
                                 .frame(width: 80.0, height: 50)
                                 .foregroundColor(Color.white)
@@ -53,25 +53,25 @@ struct ChecklistList: View {
                         VStack {
                             // Checklists title
                             Text("Checklists")
-                                .font(.system(size: CGFloat(size + 10)) .bold())
+                                .font(.system(size: CGFloat(currentState.size + 10)) .bold())
                                 .padding([.leading, .trailing, .top], 10)
                                 .foregroundColor(Color.white)
                                 .offset(y: -10)
                             // List of the checklists where each checklist is a navigation link
                             List(checklistData.checklists) { checklist in
                                 NavigationLink {
-                                    ChecklistDetail(checklist: checklist, size: size)
+                                    ChecklistDetail(checklist: checklist, size: currentState.size)
                                 } label: {
                                     HStack {
-                                        Text("\(checklist.checklistName)").font(.system(size: CGFloat(size)))
+                                        Text("\(checklist.checklistName)").font(.system(size: CGFloat(currentState.size)))
                                     }
                                 }
-                                .font(.system(size: CGFloat(size)) .bold())
+                                .font(.system(size: CGFloat(currentState.size)) .bold())
                                 .padding([.top, .bottom], 20)
                             }
                             .listStyle(.insetGrouped)
                             .background(navy)
-                            .font(.system(size: CGFloat(size)))
+                            .font(.system(size: CGFloat(currentState.size)))
                             .foregroundColor(navy)
                         }
                         .background(blue)
@@ -82,14 +82,14 @@ struct ChecklistList: View {
                 .navigationBarHidden(true)
             }
             // Font size popup window
-            PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, size: $size)
+            PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, currentState: $currentState)
         }
     }
 }
 
 struct ChecklistList_Previews: PreviewProvider {
     static var previews: some View {
-        ChecklistList(size: 25.0)
+        ChecklistList(currentState: .constant(appState()))
             .environmentObject(ModelData())
     }
 }
