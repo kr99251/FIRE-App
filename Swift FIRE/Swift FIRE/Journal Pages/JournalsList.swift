@@ -71,7 +71,7 @@ struct JournalsList: View {
                         VStack {
                             List {
                                 ForEach($journals) { $journal in
-                                    NavigationLink(destination: DetailView(journal: $journal)) {
+                                    NavigationLink(destination: DetailView(journal: $journal, currentState: $currentState)) {
                                         CardView(journal: journal)
                                     }
                                 }
@@ -110,13 +110,14 @@ struct JournalsList: View {
                 }
                 .sheet(isPresented: $isPresentingNewJournal) {
                     NavigationView {
-                        DetailEditView(data: $newJournalEntryData)
+                        DetailEditView(data: $newJournalEntryData, currentState: $currentState)
                             .toolbar {
                                 ToolbarItem(placement: .cancellationAction) {
                                     Button("Dismiss") {
                                         isPresentingNewJournal = false
                                         newJournalEntryData = JournalEntry()
-                                    }
+                                    }.font(.system(size: CGFloat(currentState.size)))
+
                                 }
                                 ToolbarItem(placement: .confirmationAction) {
                                     Button("Add") {
@@ -129,7 +130,9 @@ struct JournalsList: View {
                                         journals.append(newJournalEntry)
                                         isPresentingNewJournal = false
                                         newJournalEntryData = JournalEntry()
-                                    }
+                                        saveAction()
+                                    }.font(.system(size: CGFloat(currentState.size)))
+
                                 }
                             }
                     }
