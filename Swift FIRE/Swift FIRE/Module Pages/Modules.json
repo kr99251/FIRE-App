@@ -1,0 +1,277 @@
+{
+"modules" : [
+        {
+            "modId" : 1,
+            "modName" : "What are Falls?",
+            "pageMax" : 2,
+            "section" : [
+                    [
+                        "What are Falls?",
+                        "A fall can be tripping or slipping on something on the ground, on the stairs, or even from a height. While most falls may seem minor, resulting in only scrapes or bruises, they can also be serious. A ground level fall can cause traumatic brain injuries, damage to organs and soft tissue, and broken bones that may require intensive medical treatment and rehabilitation.",
+                        "While falls are often seen as a concern as you age, unintentional falls are a common cause of injury across all age groups. In fact, approximately 2.8 million children are treated in emergency departments for fall-related injuries annually in the US!"
+                    ]
+            ],
+            "images" : [
+                            "nil",
+                            "PatientProvider"
+            ]
+        },
+        {
+            "modId" : 2,
+            "modName" : "Personal Fall Risks",
+            "pageMax" : 13,
+            "section" : [
+                [
+                    "Personal Fall Risks",
+                    "Everyone’s health and lifestyle is different, which means your risk factors for a fall are also unique to you. Risk factors are often talked about as being intrinsic (internal to you) or extrinsic (environmental factors). We will do a quick review of some of these factors now and a deeper dive in later modules. "
+                ],
+                [
+                   "Intrinsic Risk Factors:\nPhysical Health",
+                   "There are a lot of ways physical health can impact your fall risk. Muscle strength and balance play important factors, as does any chronic conditions you might be managing."
+                ],
+                [
+                   "Intrinsic Risk Factors:\nMental Health",
+                   "Research suggests that mental health conditions, like depression, mania and anxiety, and dementia, can increase your risk of falling. It is also suspected that social isolation can have a similar negative impact on falls risks."
+               ],
+               [
+                   "Intrinsic Risk Factors:\nVision",
+                   "Unsurprising, changes in vision can put you at increased risk of falling. If you can’t see the crack in the sidewalk or the cord on the ground, you are at higher risk of tripping over them!"
+               ],
+               [
+                   "Intrinsic Risk Factors:\nHistory of Falling",
+                   "If you’ve fallen before, you are likely to fall again unless the underlying factors have been addressed. It can be hard to figure out those factors by yourself, so talk to your primary care provider about getting an assessment."
+               ],
+               [
+                   "Intrinsic Risk Factors:\nPregnancy",
+                   "Pregnancy can increase your risk of falls, especially in the later trimesters. Pregnancy can change your center of balance as well as make it difficult to see where you are stepping!"
+               ],
+               [
+                   "Intrinsic Risk Factors:\nFear of Falling",
+                   "A fear of falling can cause a change in daily behaviors, unfortunately these changes often end up increasing an individual’s risk of falling rather than reducing it.",
+                   "If you notice you are changing behaviors or activities because you are afraid you will fall, it’s time to ask your primary care provider for a referral to an occupational therapist who can help you reduce fear by addressing the proper way to accomplish daily activities with less risk."
+               ],
+               [
+                   "Intrinsic Risk Factors:\nAge",
+                   "A fall can occur anytime during your life, but adults over the age of 60 are at highest risk for serious injury and fatality. As you get older, you don’t bounce as well as you did when you were young."
+               ],
+               [
+                   "Extrinsic Risk Factors:\nHome Layout \nand Organization",
+                   "From lighting and floor rugs to cords and clutter, the way our living space is organized can have a huge impact on your fall risk. The next module will go into these risks in more detail!"
+               ],
+               [
+                   "Extrinsic Risk Factors:\nWalkability of Your Neighborhood",
+                   "Walkability refers to how easy and safe it is to walk around a neighborhood. Sidewalks can improve walkability in a neighborhood, but if they are in poor condition or not cleaned in the winter, they can also be a fall risk."
+               ],
+               [
+                   "Extrinsic Risk Factors:\nMedications",
+                   "From side effects to interactions between medications, the number and type of prescription and over-the-counter medications you take can impact your risk of falling. The module on Polypharmacy will dive deep into this topic!"
+               ],
+               [
+                   "Extrinsic Risk Factors:\nFootwear",
+                   "This may seem like a no brainer, like platform flip flops increase your risk, but picking out the right footwear for every occasion can help reduce your risks!"
+               ],
+               [
+                    "So how do you prevent falls?",
+                    "There are many factors that can impact your risk of falling, but some of them are modifiable and can be changed to lower your personal risk.",
+                    "In the next few modules, we will talk about how to modify your home and small changes to your lifestyle to lower your risk. You can also talk to your primary care provider about your fall risks or ask for a referral to a falls clinic which will provide you with a personal evaluation and fall reduction plan!"
+               ]
+            ],
+            "images": ["nil",
+                "nil",
+                "nil",
+                "nil",
+                "Fall1",
+                "nil",
+                "Fear",
+                "nil",
+                "nil",
+                "HomeLayout",
+                "Walkability"
+                ]
+        },
+        {
+            "modId" : 3,
+            "modName" : "Home Hazards",
+            "pageMax" : 7,
+            "section" : [
+                    [
+                        "Home Hazards",
+                        "Over half of falls occur at home, unsurprising when you consider how much time is spent at home. While workplaces have OSHA (Occupation Safety and Health Administration) to create safe environments, your home has you!",
+                        "What is a Peter Pan house? The term was coined by Jon Pyoons, Ph.D., Professor at USC Davis School of Gerontology for housing for people who think they are never going to grow up (or grow old). These houses are filled with potential fall risks or set in an environment that isolates the residents from resources.",
+                        "Home modification for falls reduction can be as simple as adding a nightlight to the route between bedrooms and the bathroom or as complicated as a remodel."
+                    ],
+                    [
+                        "What are high risk areas for home hazards?",
+                        "",
+                        "Answer: Bathrooms, kitchens, and bedrooms"
+                    ],
+                    [
+                        "High Risk Areas: Bathroom",
+                        "Used towels on the floor? Water everywhere? Bathrooms are full of potential hazards.",
+                        "Consider adding safety bars for moving around in the shower and for stepping in and out of the tub. Even if you think you don’t need them, the first time you are sick, you will be so grateful for that extra grip.",
+                        "Floor mats can be less slippery then wet tile, but only if they have a nonslip back that keeps them secure and in one place.",
+                        "Consider how everything is organized. If you end up with towels or other products on the bathroom floor, consider what you can do to keep them up and off the floor. Reorganizing is a key part of falls prevention!"
+                    ],
+                    [
+                        "High Risk Areas: Kitchen",
+                        "If you have to stand on a chair to reach something in your kitchen, it’s time to reorganize your kitchen cabinets and get a step stool. Standing on objects that aren’t built for it (like chairs) can result in a fall, either from it or from getting up and down from it.",
+                        "Keep towels and rags close at hand to immediately clean up spills. You might think you’ll get it in a minute or after you finish something, but it’s important to wipe up spills before you wipe out on them."
+                    ],
+                    [
+                        "High Risk Areas: Bedroom",
+                        "Getting up in the middle of the night may seem straight forward, but in the dark, it can become trickier. Consider having a lamp or light switch easily accessible from your bed. Another easy alternative is getting a nightlight to illuminate your path."
+                    ],
+                    [
+                      "Three BIG Tips\n for Home Modification\nfor Falls Prevention",
+                      "1. Keep floor clear.\nIf you find parts of your home tend to accumulate clutter or stuff on the floor, consider what you can do to contain everything so it’s off the floor and no longer a trip hazard. Example: Shoes by the door? A boot mat or shoe rack can keep them from being a tripping hazard as soon as you come in the door.",
+                      "2. High contrast means higher visibility. This is true for stair cases, door frames, counters, and furniture. You can create contrast with your choice of colors but also with textures.",
+                      "3. Light it up."
+                    ],
+                    [
+                        "To Do:",
+                        "Now head over to the Checklists to do a review of your own home. Remember, reducing fall risks in your home protect you, your family, and your visitors, no matter their age or physical ability. "
+                    ]
+            ],
+            "images" : [
+                "nil",
+                "nil",
+                "nil",
+                "nil",
+                "Bathroom"
+            ]
+        },
+        {
+            "modId" : 4,
+            "modName" : "Polypharmacy",
+            "pageMax" : 5,
+            "section" : [
+                    [
+                        "What is polypharmacy?",
+                        "Polypharmacy is the use of multiple drugs by a single person to treat one or more conditions.",
+                        "In the US, 66% percent of adults use prescription drugs. That’s over 131 million people! The number of prescription drugs taken on average increases as individuals get older. For individuals age 18 to 34, the average number of prescriptions filled annually is 3. By age 50-64 that has jumped to 13 and by 80+ the average is 22 prescriptions filled annually."
+                    ],
+                    [
+                        "How do medications impact fall risk?",
+                        "Research suggests that populations taking five more drugs were significantly more likely to fall compared to those using fewer prescription drugs."
+                    ],
+                    [
+                        "Why?",
+                        "Side effects from one medication or an interaction between medications can increase falling. For example, medications that cause light headedness, feeling faint, low blood pressure, drowsiness, can put you at a higher risk of falling because you are less aware of your environment and less stable.",
+                        "Medications that deal with the nervous system can also slow reaction and movement speeds increasing fall risks."
+                    ],
+                    [
+                        "What are some example medications that increase fall risk?",
+                        "- Antihistamines are allergy and cold medications, but can also  be found in over-the-counter sleep aids.\n- Anti-anxiety or antidepressant drugs\n- Prescription sleep drugs\n- Narcotic or opioid pain medications\n- Blood pressure medications"
+                    ],
+                    [
+                        "Polypharmacy",
+                        "While polypharmacy can increase your risk of a fall, that does not mean you should stop taking medications to treat current conditions? No! Do not stop taking your medication. However, if you are concerned about the number or types of medications you are taking, you should…",
+                        "Talk to your doctor or pharmacist about what side effects or interactions are possible so you can be more aware of your personal risk.",
+                        "Discuss if there are better options for managing your conditions and keeping your fall risk low."
+                    ]
+                    
+
+            ]
+        },
+        {
+            "modId" : 5,
+            "modName" : "Seeing Eye to Eye",
+            "pageMax" : 3,
+            "section" : [
+                    [
+                        "Seeing Eye to Eye",
+                        "It’s difficult to avoid what you can’t see. When it comes to fall prevention, staying on top of your eye health is important."
+                    ],
+                    [
+                        "Annual Eye Exam",
+                        "An annual eye exam can reduce the risk of irreversible vision loss and provide you with an up to date prescription for glasses or contacts if needed.",
+                        "Glaucoma and cataracts are both a natural part of getting older and are common in individuals over the age of 60. It’s important to catch both early and have them monitored by a medical professional like an optometrist. Vision loss from cataracts can be reversed by surgery. There is also treatment options for glaucoma to protect your vision."
+                    ],
+                    [
+                        "What kind of glasses do you wear?",
+                        "Bifocals while helpful when going from reading to walking, can also increase risk for falls when walking down the stairs. Why? The lens on the bottom portion is the near view and also the portion people look at when walking down the stairs, instead of the top of the lens for distance.",
+                        "No matter the style, make sure you wear your most recent prescription. An out-of-date prescription can increase your risk for falls."
+                    ]
+            ]
+        },
+        {
+            "modId" : 6,
+            "modName" : "Feet and Footwear",
+            "pageMax" : 5,
+            "section" : [
+                    [
+                        "Feet and Footwear",
+                        "Footwear is an important aspect of falls prevention inside and outside of the home.",
+                        "Inside the home it is common for individuals to be barefoot, wearing socks with no shoes, or slippers.",
+                        "Socks may keep your feet warm, especially during the cold winter months, but they don’t offer traction or friction. Socks are more likely to lead to slips than other type of footwear."
+                    ],
+                    [
+                        "Not all slippers are made equal.",
+                        "If you wear slippers around the house, consider getting a pair that are supportive, have a rubber sole, and completely surround your foot.",
+                        "Avoid slippers with no backs, no traction, and fit on your foot in a way that is less secure (aka loose, too tight, flopping around)."
+                    ],
+                    [
+                        "Barefeet",
+                        "Being barefoot may seem like a safer option than socks or slippers from a traction perspective, but being barefoot puts people at higher risk of falling due to unexpected contact. When you step on something sharp or awkward that makes you quickly pull your foot back, it shifts your balance unexpectedly increasing your risk for a fall."
+                    ],
+                    [
+                        "Feet and Footwear",
+                        "Outside the home you want to match your footwear to where you are going and the weather."
+                    ],
+                    [
+                        "What to look for in a good outdoor shoe:",
+                        "- A snug fit, with bonus points if there are laces, straps, or other fasteners to ensure the best fit possible.\n- Lots of contact with the ground, like a wider heal.",
+                        "- Support! A supportive insole can help gait and balance.\n- A sole with traction. The material for the sole may differ depending on the season, softer rubber soles can be great for winter because they are less likely to harden and slide on ice."
+                    ]
+            ]
+        },
+        {
+            "modId" : 7,
+            "modName" : "Staying Healthy and Active",
+            "pageMax" : 2,
+            "section" : [
+                    [
+                        "Physical Health:",
+                        "Schedule an annual checkup with your primary care provider.\n\nKeeping on top of your physical health is important. Your doctor can help you manage chronic conditions that may impact your risk for falling as well as any new health concerns that may arise, like balance problems or muscle weakness.",
+                        "Keep active or develop a plan to become active.",
+                        "When starting any new exercise or activity, be sure to talk to your primary care provider if you have any concerns.",
+                        "Taking part in strength and balance activities at least 3 times a week has been found to reduce risk of falling.",
+                        "Exercise may also be associated with slowing bone loss from osteoporosis.",
+                        "If you struggle to be self-motivated when it comes to being active or exercising, consider finding a class in your area. Some types of tai chi and yoga have been associated with lowering personal fall risks.",
+                        "Stay Hydrated\n\nDehydration is a common cause of falls as it can lead to dizziness or a drop in blood pressure.",
+                        "It’s important to drink 6-8 glasses of fluids without caffeine or alcohol each day. Try to drink a glass of water before drinking your morning cup of coffee, as many people wake up dehydrated in the morning.",
+                        "Get Enough Sleep"
+                    ],
+                    [
+                        "Social Health",
+                        "Feeling isolated and alone can negatively impact your health and some research suggests that it could increase your risk of falling.",
+                        "There are ways to protect yourself from these negative effects.",
+                        "Talk to your doctor if you are feeling isolated or lonely.",
+                        "Explore activities or hobbies that bring you joy or manage stress. Bonus points if you can connect with people while engaging in them!",
+                        "Find a class on a topic you are interested in either through a local school, club, library, community center, or recreation department.",
+                        "Schedule time to stay in touch with family, friends, and neighbors.",
+                        "Consider adopting a pet or volunteering with animals depending on your ability and lifestyle."
+                    ]
+
+            ],
+            "images" : [
+                "Doctor",
+                "Active",
+                "nil",
+                "nil",
+                "nil",
+                "TaiChi",
+                "nil",
+                "nil",
+                "nil",
+                "Heart",
+                "nil",
+                "nil",
+                "nil",
+                "nil",
+                "nil",
+                "puppy"
+            ]
+        },
+]
+}

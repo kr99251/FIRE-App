@@ -32,7 +32,7 @@
 		0ACF22B0290AB4E200FCE8FB /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22AF290AB4E200FCE8FB /* Checklist.swift */; };
 		0ACF22B4291AACCE00FCE8FB /* Checklists.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF22B3291AACCE00FCE8FB /* Checklists.json */; };
 		0ACF22B6291AC23000FCE8FB /* ChecklistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */; };
-		4F4AEA402909CFA600F2FD63 /* TestModule.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AEA3F2909CFA600F2FD63 /* TestModule.json */; };
+		4F4AEA402909CFA600F2FD63 /* Modules.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4AEA3F2909CFA600F2FD63 /* Modules.json */; };
 		4FAD425F2925C80B00A8696F /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD425E2925C80B00A8696F /* AppData.swift */; };
 		720E0A982934418F00D7A038 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720E0A972934418F00D7A038 /* FontSize.swift */; };
 		7233DE932909C60200F87E41 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233DE922909C60200F87E41 /* Main.swift */; };
@@ -85,7 +85,7 @@
 		0ACF22AF290AB4E200FCE8FB /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		0ACF22B3291AACCE00FCE8FB /* Checklists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Checklists.json; sourceTree = "<group>"; };
 		0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDetail.swift; sourceTree = "<group>"; };
-		4F4AEA3F2909CFA600F2FD63 /* TestModule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestModule.json; sourceTree = "<group>"; };
+		4F4AEA3F2909CFA600F2FD63 /* Modules.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Modules.json; sourceTree = "<group>"; };
 		4FAD425E2925C80B00A8696F /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		720E0A972934418F00D7A038 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		7233DE922909C60200F87E41 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 				0ACF22632909C49F00FCE8FB /* Module.swift */,
 				0A11D12D292EF2840096C5B5 /* ModelData.swift */,
 				7233DE942909C61700F87E41 /* ModuleList.swift */,
-				4F4AEA3F2909CFA600F2FD63 /* TestModule.json */,
+				4F4AEA3F2909CFA600F2FD63 /* Modules.json */,
 			);
 			path = "Module Pages";
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 			files = (
 				0A11D130292EF2B60096C5B5 /* JournalContent.json in Resources */,
 				0ACF22B4291AACCE00FCE8FB /* Checklists.json in Resources */,
-				4F4AEA402909CFA600F2FD63 /* TestModule.json in Resources */,
+				4F4AEA402909CFA600F2FD63 /* Modules.json in Resources */,
 				0A11D126292EF25D0096C5B5 /* Journals.json in Resources */,
 				0ACF22692909C4A000FCE8FB /* Preview Assets.xcassets in Resources */,
 				0ACF22662909C4A000FCE8FB /* Assets.xcassets in Resources */,

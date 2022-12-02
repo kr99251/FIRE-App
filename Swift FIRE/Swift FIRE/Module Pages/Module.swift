@@ -37,8 +37,14 @@ struct ContentView: View {
                 // Picture and information
                 ScrollView(showsIndicators: true) {
                     // Image
-                    if let imageName = module.imageName{
-                        Image(imageName)
+                    if let images = module.images{
+                        if currentPage < images.count{
+                            if let image = images[currentPage]{
+                                Image(image)
+                                    .resizable()
+                                    .frame(width: 15*UIScreen.screenWidth/16, height: UIScreen.screenHeight/3)
+                            }
+                        }
                     }
                     // Information
                     Text("\(module.section[surPage][subPage])")
