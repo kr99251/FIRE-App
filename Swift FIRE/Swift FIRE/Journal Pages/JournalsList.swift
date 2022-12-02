@@ -19,11 +19,8 @@ struct JournalsList: View {
     @State private var showPopUp: Bool = false
     @State var goToHomeView: Bool = false
     var navy = Color(red: 0, green: 0, blue: 128/255)
-
-
-
-
     let saveAction: ()->Void
+    
     
     var body: some View {
         ZStack {
@@ -76,7 +73,6 @@ struct JournalsList: View {
                                     }
                                 }
                             }
-                            .frame(height: 500)
                             .font(.system(size: CGFloat(currentState.size)))
                             
                             .foregroundColor(navy)
