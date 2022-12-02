@@ -17,7 +17,7 @@ struct ModuleData : Codable {
     var modName : String
     var pageMax : Int
     var section : [[String]]
-    var imageName : String?
+    var images : Array<String?>?
 }
 
 struct ModuleDataSet : Codable{
@@ -25,7 +25,6 @@ struct ModuleDataSet : Codable{
 }
 struct appState : Codable {
     var modules = getModules()
-    var imageName : String?
     var moduleCompletionArray : Array<Bool>
     var checklistCompletionArray : Array<Bool>
     var size : Double
@@ -47,14 +46,19 @@ func loadJson(filename: String) -> ModuleDataSet?{
             }
         }
     }
+    print("failed to get data from json")
     return nil
 }
-
 func getModules() -> ModuleDataSet{
-    if let modules = loadJson(filename:"TestModule"){
+    if var modules = loadJson(filename:"Modules"){
+        for imod in 0 ... modules.modules.count - 1{
+            if let images = modules.modules[imod].images{
+                modules.modules[imod].images = images.map({$0 == String?("nil") ? nil : $0})
+            }
+        }
         return modules
     }
-    return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax: -1, section:[])])
+    return ModuleDataSet(modules:[ModuleData(modId:-1, modName:"", pageMax: -1, section:[], images: [""])])
 }
 //Idea from https://www.hackingwithswift.com/example-code/strings/how-to-save-a-string-to-a-file-on-disk-with-writeto
 func getDocumentsDirectory() -> URL{
