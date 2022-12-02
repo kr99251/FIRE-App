@@ -84,16 +84,18 @@ struct QuizDetail: View {
             VStack {
                 // Find and display the result after the quiz is done
                 let result = findResult(options: quiz.results, points: quiz.sums, sum: sum)
-                Text(result[0])
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: CGFloat(size + 10)) .bold())
-                    .padding([.leading, .trailing], 5)
-                    .foregroundColor(navy)
-                    .offset(y: -50)
-                Text(result[1])
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: CGFloat(size)))
-                    .padding([.leading, .trailing], 5)
+                    Text(result[0])
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: CGFloat(size + 10)) .bold())
+                        .padding([.leading, .trailing], 5)
+                        .foregroundColor(navy)
+                        .offset(y: -50)
+                ScrollView {
+                    Text(result[1])
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: CGFloat(size)))
+                        .padding([.leading, .trailing], 5)
+                }
             }
             .padding()
         }

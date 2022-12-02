@@ -84,11 +84,13 @@ struct Main: View {
                     Text("Modules: \n \(100*currentState.moduleCompletionArray.filter{$0 == true}.count/currentState.moduleCompletionArray.count) % Completed")
                         .multilineTextAlignment(.center)
                         .padding(10)
-                        .font(.system(size: CGFloat(currentState.size + 5)))
+                        .font(.system(size: CGFloat(currentState.size - 5)))
+                        .minimumScaleFactor(0.01)
                     Text("Checklists: \n \(100*currentState.checklistCompletionArray.filter{$0 == true}.count/currentState.checklistCompletionArray.count) % Completed")
                         .multilineTextAlignment(.center)
                         .padding(10)
                         .font(.system(size: CGFloat(currentState.size + 5)))
+                        .minimumScaleFactor(0.01)
                 }
             }
             .buttonStyle(.bordered)

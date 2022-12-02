@@ -33,7 +33,7 @@ struct appState : Codable {
         self.modules = getModules()
         self.moduleCompletionArray = Array<Bool>(repeating: false, count:modules.modules.count)
         self.checklistCompletionArray = Array<Bool>(repeating: false, count:modules.modules.count)
-        self.size = 10
+        self.size = 25.0
     }
 }
 
