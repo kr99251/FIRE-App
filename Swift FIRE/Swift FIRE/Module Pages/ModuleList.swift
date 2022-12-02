@@ -7,6 +7,7 @@ struct ModuleListView: View {
     let modules = getModules()
     let navy = Color(red: 0, green: 0, blue: 128/255)
     let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
+    let gray = Color(red: 105/255, green: 105/255, blue: 105/255)
     @Binding var currentState : appState
     @State var goToHomeView: Bool = false
     @State private var showPopUp: Bool = false
@@ -54,13 +55,17 @@ struct ModuleListView: View {
                                 .offset(y: -10)
                             // Print the modules
                             List(0..<v.count, id: \.self) { num in
-                                NavigationLink(v[num].modName, destination: ContentView(module: v[num], currentState: $currentState))
-                                    .padding([.top, .bottom], 20)
+                                NavigationLink { ContentView(module: v[num], currentState: $currentState) } label: {
+                                    HStack {
+                                        Text("\(v[num].modName)")
+                                            .foregroundColor( currentState.moduleCompletionArray[num] == false ? navy : gray)
+                                            .font(.system(size: CGFloat(currentState.size)))
+                                    }
+                                }
+                                .padding([.top, .bottom], 20)
                             }
                             .listStyle(.insetGrouped)
                             .background(navy)
-                            .font(.system(size: CGFloat(currentState.size)))
-                            .foregroundColor(navy)
                         }
                         .background(blue)
                         .navigationTitle("")
