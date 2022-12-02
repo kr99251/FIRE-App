@@ -14,6 +14,8 @@ struct Main: View {
     @State var goToChecklistView: Bool = false
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
     @Binding var currentState : appState
+    @StateObject private var store = JournalStore()
+
     var navy = Color(red: 0, green: 0, blue: 128/255)
     var body: some View {
         NavigationView {
@@ -110,6 +112,16 @@ struct Main: View {
             .tint(.white)
             .navigationTitle("")
             .navigationBarHidden(true)
+        }
+    }
+        .onAppear{
+        JournalStore.load { result in
+            switch result {
+            case .failure(let error):
+                fatalError(error.localizedDescription)
+            case .success(let journals):
+                store.journals = journals
+            }
         }
     }
 }

@@ -4,9 +4,7 @@
 //
 //  Created by Noel Desmarais on 11/30/22.
 //
-/*
-See LICENSE folder for this sample’s licensing information.
-*/
+
 
 import SwiftUI
 
