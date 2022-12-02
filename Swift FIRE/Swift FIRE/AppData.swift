@@ -27,11 +27,13 @@ struct appState : Codable {
     var modules = getModules()
     var imageName : String?
     var moduleCompletionArray : Array<Bool>
+    var checklistCompletionArray : Array<Bool>
     var size : Double
     init(){
         self.modules = getModules()
         self.moduleCompletionArray = Array<Bool>(repeating: false, count:modules.modules.count)
-        self.size = 11
+        self.checklistCompletionArray = Array<Bool>(repeating: false, count:modules.modules.count)
+        self.size = 10
     }
 }
 
@@ -74,9 +76,12 @@ func saveData(appData : appState){
 func getStartupData() -> appState{
     let decoder = JSONDecoder()
     let json = getDocumentsDirectory().appendingPathComponent("appData.json")
-    if let data = try?Data(contentsOf: json){
-        if let appData = try?decoder.decode(appState.self, from: data){
-            return appData
+    let useStoredData : Bool = true
+    if (useStoredData){
+        if let data = try?Data(contentsOf: json){
+            if let appData = try?decoder.decode(appState.self, from: data){
+                return appData
+            }
         }
     }
     return appState()

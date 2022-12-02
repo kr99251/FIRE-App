@@ -23,18 +23,19 @@ struct Main: View {
                     .resizable()
                     .scaledToFit()
                     .padding()
-                Spacer()
-                NavigationLink(destination: ModuleListView(currentState: $currentState).navigationBarHidden(true), isActive: $goToModuleView) {
-                    EmptyView()
-                }
-                NavigationLink(destination: QuizList(currentState: $currentState).navigationBarHidden(true), isActive: $goToQuizView) {
-                    EmptyView()
-                }
-                NavigationLink(destination: JournalList(currentState: $currentState).navigationBarHidden(true), isActive: $goToJournalView) {
-                    EmptyView()
-                }
-                NavigationLink(destination: ChecklistList(currentState: $currentState).navigationBarHidden(true), isActive: $goToChecklistView) {
-                    EmptyView()
+                Group{
+                    NavigationLink(destination: ModuleListView(currentState: $currentState).navigationBarHidden(true), isActive: $goToModuleView) {
+                        EmptyView()
+                    }
+                    NavigationLink(destination: QuizList(currentState: $currentState).navigationBarHidden(true), isActive: $goToQuizView) {
+                        EmptyView()
+                    }
+                    NavigationLink(destination: JournalList(currentState: $currentState).navigationBarHidden(true), isActive: $goToJournalView) {
+                        EmptyView()
+                    }
+                    NavigationLink(destination: ChecklistList(currentState: $currentState).navigationBarHidden(true), isActive: $goToChecklistView) {
+                        EmptyView()
+                    }
                 }
                 HStack {
                     Button(action: {self.goToModuleView = true}) {
@@ -76,6 +77,17 @@ struct Main: View {
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(navy, lineWidth: 5)
                             )
+                }
+                Spacer()
+                HStack{
+                    Text("Modules: \n \(100*currentState.moduleCompletionArray.filter{$0 == true}.count/currentState.moduleCompletionArray.count) % Completed")
+                        .multilineTextAlignment(.center)
+                        .padding(10)
+                        .font(.system(size: CGFloat(currentState.size + 5)))
+                    Text("Checklists: \n \(100*currentState.checklistCompletionArray.filter{$0 == true}.count/currentState.checklistCompletionArray.count) % Completed")
+                        .multilineTextAlignment(.center)
+                        .padding(10)
+                        .font(.system(size: CGFloat(currentState.size + 5)))
                 }
             }
             .buttonStyle(.bordered)

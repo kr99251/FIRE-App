@@ -57,6 +57,8 @@ struct ContentView: View {
                         saveData(appData:currentState)
                         done = "Done"
                         presentationMode.wrappedValue.dismiss()
+                        currentState.moduleCompletionArray[module.modId - 1] = true
+                        print(currentState.moduleCompletionArray)
                         self.goToModuleView = true
                     })
                     .offset(x: 12*UIScreen.screenWidth/32, y: 5)
