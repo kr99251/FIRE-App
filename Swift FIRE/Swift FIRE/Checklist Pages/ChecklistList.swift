@@ -68,6 +68,7 @@ struct ChecklistList: View {
                                 }
                                 .font(.system(size: CGFloat(currentState.size)) .bold())
                                 .padding([.top, .bottom], 20)
+                                .navigationTitle("Checklists")
                             }
                             .listStyle(.insetGrouped)
                             .background(navy)
