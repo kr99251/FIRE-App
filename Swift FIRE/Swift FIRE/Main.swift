@@ -13,8 +13,8 @@ struct Main: View {
     @State var goToJournalView: Bool = false
     @State var goToChecklistView: Bool = false
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
-    @Binding var currentState : appState
     @StateObject private var store = JournalStore()
+    @Binding var currentState : appState
 
     var navy = Color(red: 0, green: 0, blue: 128/255)
     var body: some View {
