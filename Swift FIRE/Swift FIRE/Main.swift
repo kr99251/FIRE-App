@@ -30,9 +30,18 @@ struct Main: View {
                     NavigationLink(destination: QuizList(currentState: $currentState).navigationBarHidden(true), isActive: $goToQuizView) {
                         EmptyView()
                     }
-                    NavigationLink(destination: JournalList(currentState: $currentState).navigationBarHidden(true), isActive: $goToJournalView) {
-                        EmptyView()
+                    NavigationLink(destination: JournalsList(currentState: $currentState, journals: $store.journals){
+                        JournalStore.save(journals: store.journals){ result in
+                            if case .failure(let error) = result {
+                                fatalError(error.localizedDescription)
+                            }
+                        }
+                        
                     }
+                    .navigationBarHidden(true), isActive: $goToJournalView) {
+                    EmptyView()
+                    }
+
                     NavigationLink(destination: ChecklistList(currentState: $currentState).navigationBarHidden(true), isActive: $goToChecklistView) {
                         EmptyView()
                     }
