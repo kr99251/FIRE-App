@@ -32,7 +32,7 @@ struct Main: View {
                     NavigationLink(destination: QuizList(currentState: $currentState).navigationBarHidden(true), isActive: $goToQuizView) {
                         EmptyView()
                     }
-                    NavigationLink(destination: JournalsList(currentState: $currentState, journals: $store.journals){
+                    NavigationLink(destination: JournalsList( journals: $store.journals, currentState: $currentState){
                         JournalStore.save(journals: store.journals){ result in
                             if case .failure(let error) = result {
                                 fatalError(error.localizedDescription)
@@ -113,7 +113,6 @@ struct Main: View {
             .navigationTitle("")
             .navigationBarHidden(true)
         }
-    }
         .onAppear{
         JournalStore.load { result in
             switch result {
@@ -124,7 +123,9 @@ struct Main: View {
             }
         }
     }
-}
+
+    }
+        }
 
 struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {

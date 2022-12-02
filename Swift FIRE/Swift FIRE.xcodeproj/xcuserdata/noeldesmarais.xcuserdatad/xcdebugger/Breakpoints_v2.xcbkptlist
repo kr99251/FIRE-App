@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EFC73641-75B1-47A7-A731-8F46FCAE06FD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Swift FIRE/Journal Pages/JournalEntry.swift"
@@ -18,6 +18,68 @@
             endingLineNumber = "13"
             landmarkName = "JournalEntry"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "EFC73641-75B1-47A7-A731-8F46FCAE06FD - 1a10c83eac832eea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_FIRE.JournalEntry.init(id: Foundation.UUID, title: Swift.String, date: Swift.String, content: Swift.String) -&gt; Swift_FIRE.JournalEntry"
+                  moduleName = "Swift FIRE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noeldesmarais/Downloads/FIRE-App/Swift%20FIRE/Swift%20FIRE/Journal%20Pages/JournalEntry.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "373">
+               </Location>
+               <Location
+                  uuid = "EFC73641-75B1-47A7-A731-8F46FCAE06FD - 2b903920f7a861dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_FIRE.JournalEntry.init(journal: Swift_FIRE.JournalEntry) -&gt; Swift_FIRE.JournalEntry"
+                  moduleName = "Swift FIRE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noeldesmarais/Downloads/FIRE-App/Swift%20FIRE/Swift%20FIRE/Journal%20Pages/JournalEntry.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "EFC73641-75B1-47A7-A731-8F46FCAE06FD - 836a57dc3f37e13f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_FIRE.JournalEntry.init() -&gt; Swift_FIRE.JournalEntry"
+                  moduleName = "Swift FIRE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noeldesmarais/Downloads/FIRE-App/Swift%20FIRE/Swift%20FIRE/Journal%20Pages/JournalEntry.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "199">
+               </Location>
+               <Location
+                  uuid = "EFC73641-75B1-47A7-A731-8F46FCAE06FD - 7fb21a801703d81f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_FIRE.JournalEntry.init(from: Swift.Decoder) throws -&gt; Swift_FIRE.JournalEntry"
+                  moduleName = "Swift FIRE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noeldesmarais/Downloads/FIRE-App/Swift%20FIRE/Swift%20FIRE/Journal%20Pages/JournalEntry.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

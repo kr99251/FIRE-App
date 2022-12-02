@@ -11,12 +11,9 @@ import Combine
 //code adapted from https://developer.apple.com/tutorials/swiftui/handling-user-input
 
 final class ModelData: ObservableObject{
-    @Published var journals: [Journal] = load("JournalContent.json")
     @Published var checklists: [Checklist] = load("Checklists.json")
     var quizzes: [Quiz] = load("Quizzes.json")
 }
-
-var journals: [Journal] = load("JournalContent.json")
 
 
 func load<T: Decodable>(_ filename: String) -> T {
