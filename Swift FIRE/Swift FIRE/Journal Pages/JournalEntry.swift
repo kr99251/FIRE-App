@@ -22,7 +22,10 @@ struct JournalEntry: Codable, Identifiable{
     init(journal: JournalEntry) {
         self.id = journal.id
         self.title = journal.title
-        self.date = journal.date
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        self.date = dateFormatter.string(from: date)
         self.content = journal.content
     }
     init() {
@@ -33,30 +36,6 @@ struct JournalEntry: Codable, Identifiable{
     }
 }
 
-//extension JournalEntry{
-//    struct Data {
-//        var title: String = ""
-//        var date: String = ""
-//        var content: String = ""
-//    }
-//
-//    var data: Data {
-//        Data(title: title, date: date, content: content)
-//    }
-//
-//    mutating func update(from data: Data) {
-//        title = data.title
-//        date = data.date
-//        content = data.content
-//    }
-//
-//    init(data: Data) {
-//        id = UUID()
-//        title = data.title
-//        date = data.date
-//        content = data.content
-//    }
-//}
 extension JournalEntry{
     static let sampleData: [JournalEntry] =
     [

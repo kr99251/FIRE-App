@@ -18,14 +18,10 @@ struct Contact: View {
             Text("Injury Prevention Program\nUniversity of Vermont Medical Center\n111 Colchester Avenue, Smith 240\nBurlington, Vermont 05401")
                 .padding()
                 .font(.system(size: CGFloat(currentState.size)))
-            HStack{
-                Text("InjuryPrevention@UVMHealth.org")
-                Spacer()
-                    .font(.system(size: CGFloat(currentState.size)))
-            }
-            .padding(.leading)
-            
-            Link("Visit our website", destination: URL(string:"UVMHealth.org/InjuryPrevention")!)
+            Text("InjuryPrevention@UVMHealth.org")
+                .font(.system(size: CGFloat(25.0)))
+                .minimumScaleFactor(0.01)
+            Link("Visit our website", destination: URL(string:"https://www.uvmhealth.org/medcenter/wellness-resources/injury-prevention")!)
                 .padding()
                 .font(.system(size: CGFloat(currentState.size)))
         }
