@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuizDetail: View {
     @State var quiz: Quiz
+    @Binding var currentState: appState
     @State var index = 0
     @State var sum: Int = 0
     @State var goToQuizView = false
@@ -104,7 +105,7 @@ struct QuizDetail: View {
 
 struct QuizDetail_Previews: PreviewProvider {
     static var previews: some View {
-        QuizDetail(quiz: ModelData().quizzes[1], numQuestions: ModelData().quizzes[1].questions.count, size: 20.0)
+        QuizDetail(quiz: ModelData().quizzes[1], currentState: .constant(appState()), numQuestions: ModelData().quizzes[1].questions.count, size: 20.0)
             .environmentObject(ModelData())
     }
 }

@@ -53,10 +53,9 @@ struct ChecklistList: View {
                         VStack {
                             // Checklists title
                             Text("Checklists")
-                                .font(.system(size: CGFloat(currentState.size + 10)) .bold())
+                                .font(.system(size: CGFloat(currentState.size + 8)) .bold())
                                 .padding([.leading, .trailing, .top], 10)
                                 .foregroundColor(Color.white)
-                                .offset(y: -10)
                             // List of the checklists where each checklist is a navigation link
                             List(checklistData.checklists) { checklist in
                                 NavigationLink {

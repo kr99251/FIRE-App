@@ -58,7 +58,7 @@ struct QuizList: View {
                             // List with all the quizzes as navigation links
                             List(quizData.quizzes) { quiz in
                                 NavigationLink {
-                                    QuizDetail(quiz: quiz, numQuestions: quiz.questions.count, size: currentState.size)
+                                    QuizDetail(quiz: quiz, currentState: .constant(appState()), numQuestions: quiz.questions.count, size: currentState.size)
                                 } label: {
                                     HStack {
                                         Text("\(quiz.quizName)")

@@ -10,18 +10,19 @@ import SwiftUI
 
 struct CardView: View {
     let journal: JournalEntry
+    @Binding var currentState: appState
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(journal.title)
-                .font(.title)
+                .font(.system(size: CGFloat(currentState.size)))
             Spacer()
             HStack {
                 Label("\(journal.date)", systemImage: "calendar")
                 Spacer()
 
             }
-            .font(.caption)
+            .font(.system(size: CGFloat(currentState.size)))
         }
         .padding()
     }
@@ -30,7 +31,7 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var journal = JournalEntry.sampleData[0]
     static var previews: some View {
-        CardView(journal: journal)
+        CardView(journal: journal, currentState: .constant(appState()))
             .previewLayout(.fixed(width: 400, height: 60))
 
     }

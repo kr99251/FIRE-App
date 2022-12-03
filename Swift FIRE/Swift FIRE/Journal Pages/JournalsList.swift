@@ -68,20 +68,18 @@ struct JournalsList: View {
                         VStack {
                             List {
                                 ForEach($journals) { $journal in
-                                    NavigationLink(destination: DetailView(journal: $journal, currentState: $currentState)) {
-                                        CardView(journal: journal)
+                                    NavigationLink(destination: DetailView(journal: $journal)) {
+                                        CardView(journal: journal, currentState: .constant(appState()))
                                     }
                                 }
                             }
-                            .font(.system(size: CGFloat(currentState.size)))
-                            
                             .foregroundColor(navy)
                             VStack {
                                 Button(action: {
                                     isPresentingNewJournal = true
                                 }) {
                                     Text("New Entry")
-                                        .font(.system(size: CGFloat(currentState.size)))
+                                        .font(.system(size: CGFloat(7*currentState.size/8)))
 
                                 }
                                 .frame(width: .infinity, height: 75)
@@ -106,14 +104,13 @@ struct JournalsList: View {
                 }
                 .sheet(isPresented: $isPresentingNewJournal) {
                     NavigationView {
-                        DetailEditView(data: $newJournalEntryData, currentState: $currentState)
+                        DetailEditView(data: $newJournalEntryData, currentState: .constant(appState()))
                             .toolbar {
                                 ToolbarItem(placement: .cancellationAction) {
                                     Button("Dismiss") {
                                         isPresentingNewJournal = false
                                         newJournalEntryData = JournalEntry()
-                                    }.font(.system(size: CGFloat(currentState.size)))
-
+                                    }.font(.system(size: CGFloat(7*currentState.size/8)))
                                 }
                                 ToolbarItem(placement: .confirmationAction) {
                                     Button("Add") {
@@ -127,7 +124,7 @@ struct JournalsList: View {
                                         isPresentingNewJournal = false
                                         newJournalEntryData = JournalEntry()
                                         saveAction()
-                                    }.font(.system(size: CGFloat(currentState.size)))
+                                    }.font(.system(size: CGFloat(7*currentState.size/8)))
 
                                 }
                             }

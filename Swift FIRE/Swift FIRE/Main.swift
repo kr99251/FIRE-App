@@ -15,7 +15,6 @@ struct Main: View {
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
     @StateObject private var store = JournalStore()
     @Binding var currentState : appState
-
     var navy = Color(red: 0, green: 0, blue: 128/255)
     var body: some View {
         NavigationView {
@@ -92,15 +91,15 @@ struct Main: View {
                 }
                 Spacer()
                 HStack{
-                    Text("Modules: \n \(100*currentState.moduleCompletionArray.filter{$0 == true}.count/currentState.moduleCompletionArray.count) % Completed")
+                    Text("Modules: \n \(100*currentState.moduleCompletionArray.filter{$0 == true}.count/currentState.moduleCompletionArray.count) % \n Complete")
                         .multilineTextAlignment(.center)
                         .padding(10)
                         .font(.system(size: CGFloat(currentState.size - 5)))
                         .minimumScaleFactor(0.01)
-                    Text("Checklists: \n \(100*currentState.checklistCompletionArray.filter{$0 == true}.count/currentState.checklistCompletionArray.count) % Completed")
+                    Text("Checklists: \n \(100*currentState.checklistCompletionArray.filter{$0 == true}.count/currentState.checklistCompletionArray.count) % \n Complete")
                         .multilineTextAlignment(.center)
                         .padding(10)
-                        .font(.system(size: CGFloat(currentState.size + 5)))
+                        .font(.system(size: CGFloat(currentState.size - 5)))
                         .minimumScaleFactor(0.01)
                 }
             }

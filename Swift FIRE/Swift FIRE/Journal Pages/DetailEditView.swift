@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailEditView: View {
     @Binding var data: JournalEntry
+    @Binding var currentState: appState
     @State private var newJournalContent = ""
     @State private var newJournalTitle = ""
     
@@ -16,7 +17,7 @@ struct DetailEditView: View {
         List{
             Section(header: Text("Journal Title")){
                 TextField("Title", text: $data.title)
-                    .font(.title)
+                    .font(.system(size: CGFloat(currentState.size + 10)))
             }
             HStack{
                 Text("Journal - \(data.date)")
@@ -37,7 +38,7 @@ struct DetailEditView: View {
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            DetailEditView(data: .constant(JournalEntry.sampleData[0]))
+            DetailEditView(data: .constant(JournalEntry.sampleData[0]), currentState: .constant(appState()))
         }
     }
 }
