@@ -13,6 +13,7 @@
 		0A11D113292AAF920096C5B5 /* QuizDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D112292AAF920096C5B5 /* QuizDetail.swift */; };
 		0A11D115292ACB710096C5B5 /* QuizList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D114292ACB710096C5B5 /* QuizList.swift */; };
 		0A11D12E292EF2840096C5B5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11D12D292EF2840096C5B5 /* ModelData.swift */; };
+		0A2F8385293BC3F500BC3EA7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2F8384293BC3F500BC3EA7 /* Contact.swift */; };
 		0ACF22622909C49F00FCE8FB /* Swift_FIREApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */; };
 		0ACF22642909C49F00FCE8FB /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACF22632909C49F00FCE8FB /* Module.swift */; };
 		0ACF22662909C4A000FCE8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACF22652909C4A000FCE8FB /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		0A11D112292AAF920096C5B5 /* QuizDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetail.swift; sourceTree = "<group>"; };
 		0A11D114292ACB710096C5B5 /* QuizList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizList.swift; sourceTree = "<group>"; };
 		0A11D12D292EF2840096C5B5 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		0A2F8384293BC3F500BC3EA7 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = "Swift FIRE/Contact.swift"; sourceTree = SOURCE_ROOT; };
 		0ACF225E2909C49F00FCE8FB /* Swift FIRE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift FIRE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACF22612909C49F00FCE8FB /* Swift_FIREApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_FIREApp.swift; sourceTree = "<group>"; };
 		0ACF22632909C49F00FCE8FB /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				0ACF22A4290A3D2600FCE8FB /* ChecklistList.swift */,
 				0ACF22B3291AACCE00FCE8FB /* Checklists.json */,
 				0ACF22AF290AB4E200FCE8FB /* Checklist.swift */,
+				0A2F8384293BC3F500BC3EA7 /* Contact.swift */,
 				0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */,
 			);
 			path = "Checklist Pages";
@@ -365,6 +368,7 @@
 				0ACF22AE290AB4CC00FCE8FB /* ChecklistData.swift in Sources */,
 				0A11D12E292EF2840096C5B5 /* ModelData.swift in Sources */,
 				7233DE932909C60200F87E41 /* Main.swift in Sources */,
+				0A2F8385293BC3F500BC3EA7 /* Contact.swift in Sources */,
 				0A11D10A2925611F0096C5B5 /* CheckmarkButton.swift in Sources */,
 				825465FF293AAC3500A3C899 /* JournalStore.swift in Sources */,
 				7233DE952909C61700F87E41 /* ModuleList.swift in Sources */,
