@@ -168,6 +168,7 @@
 			children = (
 				4FAD425E2925C80B00A8696F /* AppData.swift */,
 				0ACF22652909C4A000FCE8FB /* Assets.xcassets */,
+				0A2F8384293BC3F500BC3EA7 /* Contact.swift */,
 				0ACF22A6290AAEAA00FCE8FB /* Checklist Pages */,
 				720E0A972934418F00D7A038 /* FontSize.swift */,
 				0A11D131292EF2CB0096C5B5 /* Journal Pages */,
@@ -214,7 +215,6 @@
 				0ACF22A4290A3D2600FCE8FB /* ChecklistList.swift */,
 				0ACF22B3291AACCE00FCE8FB /* Checklists.json */,
 				0ACF22AF290AB4E200FCE8FB /* Checklist.swift */,
-				0A2F8384293BC3F500BC3EA7 /* Contact.swift */,
 				0ACF22B5291AC23000FCE8FB /* ChecklistDetail.swift */,
 			);
 			path = "Checklist Pages";
