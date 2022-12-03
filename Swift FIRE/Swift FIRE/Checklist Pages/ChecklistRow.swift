@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ChecklistRow: View {
     @EnvironmentObject var modelData: ModelData
-    
     var checklistIndex: Int {
         modelData.checklists.firstIndex(where: { $0.id == checklist.id })!
     }

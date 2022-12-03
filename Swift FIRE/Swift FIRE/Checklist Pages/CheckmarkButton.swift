@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct CheckmarkButton: View {
+    @EnvironmentObject var modelData: ModelData
     @Binding var isChecked: Bool
     var body: some View {
         Button {
             // change checked status of row
             isChecked.toggle()
+            saveChecklists(checklists: modelData.checklists)
         } label: {
             // check whether the row is checked or not
             isChecked ? Text("✅") : Text("🔲")

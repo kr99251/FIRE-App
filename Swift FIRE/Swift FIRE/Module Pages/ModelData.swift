@@ -7,11 +7,12 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 //code adapted from https://developer.apple.com/tutorials/swiftui/handling-user-input
 
 final class ModelData: ObservableObject{
-    @Published var checklists: [Checklist] = load("Checklists.json")
+    @Published var checklists: [Checklist] = getChecklistData()
     var quizzes: [Quiz] = load("Quizzes.json")
 }
 
@@ -36,4 +37,29 @@ func load<T: Decodable>(_ filename: String) -> T {
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
+}
+
+func saveChecklists(checklists: [Checklist]){
+    let encoder = JSONEncoder()
+    do {
+        let jsonString = try encoder.encode(checklists)
+        let filename = getDocumentsDirectory().appendingPathComponent("ChecklistsData.json")
+        try jsonString.write(to: filename)
+    }
+    catch{
+        print("unable to encode checklists to json format")
+    }
+}
+func getChecklistData() -> [Checklist]{
+    let decoder = JSONDecoder()
+    let json = getDocumentsDirectory().appendingPathComponent("ChecklistsData.json")
+    let useStoredData : Bool = true
+    if (useStoredData){
+        if let data = try?Data(contentsOf: json){
+            if let checklists = try?decoder.decode([Checklist].self, from: data){
+                return checklists
+            }
+        }
+    }
+    return load("Checklists.json")
 }
