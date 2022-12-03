@@ -15,6 +15,8 @@ struct Main: View {
     //https://stackoverflow.com/questions/56437335/go-to-a-new-view-using-swiftui
     @StateObject private var store = JournalStore()
     @Binding var currentState : appState
+    @State private var isPresentingContact = false
+
     var navy = Color(red: 0, green: 0, blue: 128/255)
     var body: some View {
         NavigationView {
@@ -23,7 +25,7 @@ struct Main: View {
                 Image("FIRE-Logo-Medium")
                     .resizable()
                     .scaledToFit()
-                    .padding()
+                    .padding(.bottom, 0)
                 Group{
                     NavigationLink(destination: ModuleListView(currentState: $currentState).navigationBarHidden(true), isActive: $goToModuleView) {
                         EmptyView()
@@ -39,14 +41,15 @@ struct Main: View {
                         }
                         
                     }
-                        .navigationBarHidden(true), isActive: $goToJournalView) {
-                            EmptyView()
-                        }
-                    
+                    .navigationBarHidden(true), isActive: $goToJournalView) {
+                    EmptyView()
+                    }
+
                     NavigationLink(destination: ChecklistList(currentState: $currentState).navigationBarHidden(true), isActive: $goToChecklistView) {
                         EmptyView()
                     }
                 }
+
                 HStack {
                     Button(action: {self.goToModuleView = true}) {
                         Text("Modules")
@@ -67,6 +70,7 @@ struct Main: View {
                             .stroke(navy, lineWidth: 5)
                     )
                 }
+                .padding(.top, 0)
                 Spacer()
                     .frame(width: 1, height: UIScreen.screenHeight / 20)
                 HStack {
@@ -75,9 +79,9 @@ struct Main: View {
                             .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(navy, lineWidth: 5)
-                    )
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(navy, lineWidth: 5)
+                            )
                     Spacer()
                         .frame(width: UIScreen.screenWidth/24, height: 1)
                     Button(action: {self.goToChecklistView = true}) {
@@ -85,23 +89,38 @@ struct Main: View {
                             .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(navy, lineWidth: 5)
-                    )
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(navy, lineWidth: 5)
+                            )
                 }
                 Spacer()
                 HStack{
-                    Text("Modules: \n \(100*currentState.moduleCompletionArray.filter{$0 == true}.count/currentState.moduleCompletionArray.count) % \n Complete")
+                    Text("Modules: \n \(100*currentState.moduleCompletionArray.filter{$0 == true}.count/currentState.moduleCompletionArray.count) % Completed")
                         .multilineTextAlignment(.center)
                         .padding(10)
                         .font(.system(size: CGFloat(currentState.size - 5)))
                         .minimumScaleFactor(0.01)
-                    Text("Checklists: \n \(100*currentState.checklistCompletionArray.filter{$0 == true}.count/currentState.checklistCompletionArray.count) % \n Complete")
+                    Text("Checklists: \n \(100*currentState.checklistCompletionArray.filter{$0 == true}.count/currentState.checklistCompletionArray.count) % Completed")
                         .multilineTextAlignment(.center)
                         .padding(10)
-                        .font(.system(size: CGFloat(currentState.size - 5)))
+                        .font(.system(size: CGFloat(currentState.size + 5)))
                         .minimumScaleFactor(0.01)
                 }
+                Button(action: {
+                    isPresentingContact = true
+                }) {
+                    Text("Contact")
+                        .font(.system(size: CGFloat(currentState.size)))
+
+
+                }
+                .padding()
+                .overlay(RoundedRectangle(cornerRadius: 20)
+                    .stroke(navy, lineWidth: 5)
+                    .frame(width: UIScreen.screenWidth-50)                        )
+                
+                .frame(width: UIScreen.screenWidth, height: 5)
+                .padding(.bottom)
             }
             .buttonStyle(.bordered)
             .font(.title2 .bold())
@@ -112,20 +131,33 @@ struct Main: View {
             .navigationTitle("")
             .navigationBarHidden(true)
         }
-        .onAppear{
-            JournalStore.load { result in
-                switch result {
-                case .failure(let error):
-                    fatalError(error.localizedDescription)
-                case .success(let journals):
-                    store.journals = journals
-                }
+        .sheet(isPresented: $isPresentingContact) {
+            NavigationView {
+                Contact(currentState: $currentState)
+                    .toolbar {
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Exit") {
+                                isPresentingContact = false
+                            }
+                        }
+                    }
             }
         }
+        .onAppear{
+        JournalStore.load { result in
+            switch result {
+            case .failure(let error):
+                fatalError(error.localizedDescription)
+            case .success(let journals):
+                store.journals = journals
+            }
+        }
+        }
         .preferredColorScheme(.light)
-        
+
+
     }
-}
+        }
 
 struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {
