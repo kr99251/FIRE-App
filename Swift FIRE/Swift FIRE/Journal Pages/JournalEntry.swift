@@ -31,7 +31,10 @@ struct JournalEntry: Codable, Identifiable, Equatable{
     init() {
         self.id = UUID()
         self.title = ""
-        self.date = ""
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        self.date = dateFormatter.string(from: date)
         self.content = ""
     }
 }

@@ -120,10 +120,13 @@ struct JournalsList: View {
                                 ToolbarItem(placement: .confirmationAction) {
                                     Button("Add") {
                                         let newJournalEntry = JournalEntry(journal: newJournalEntryData)
-                                        journals.append(newJournalEntry)
+                                        if (newJournalEntry.title != ""){
+                                            journals.append(newJournalEntry)
+                                            newJournalEntryData = JournalEntry()
+                                            saveAction()
+                                        }
                                         isPresentingNewJournal = false
-                                        newJournalEntryData = JournalEntry()
-                                        saveAction()
+
                                     }.font(.system(size: CGFloat(7*currentState.size/8)))
 
                                 }
