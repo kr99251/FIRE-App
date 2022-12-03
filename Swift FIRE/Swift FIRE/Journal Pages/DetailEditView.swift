@@ -28,9 +28,9 @@ struct DetailEditView: View {
                 TextEditor(text: $data.content)
 
             }
-        }
+        }.frame(maxHeight: .infinity)
 
-        .frame(maxHeight: .infinity)
+
     }
 }
 
