@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CheckmarkButton: View {
     @EnvironmentObject var modelData: ModelData
+    @Binding var currentState: appState
     @Binding var isChecked: Bool
     var body: some View {
         Button {
@@ -24,6 +25,6 @@ struct CheckmarkButton: View {
 
 struct CheckmarkButton_Previews: PreviewProvider {
     static var previews: some View {
-        CheckmarkButton(isChecked: .constant(false))
+        CheckmarkButton(currentState: .constant(appState()), isChecked: .constant(false))
     }
 }

@@ -16,7 +16,7 @@ struct Main: View {
     @StateObject private var store = JournalStore()
     @Binding var currentState : appState
     @State private var isPresentingContact = false
-
+    var checklistPercent = getChecklistPercent()
     var navy = Color(red: 0, green: 0, blue: 128/255)
     var body: some View {
         NavigationView {
@@ -70,7 +70,7 @@ struct Main: View {
                         VStack{
                             Text("Checklists")
                                 .padding(.bottom)
-                            Text("\(100*currentState.checklistCompletionArray.filter{$0 == true}.count/currentState.checklistCompletionArray.count)%")
+                            Text("\(checklistPercent)%")
                                 .opacity(0.6)
                         }
                         .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)

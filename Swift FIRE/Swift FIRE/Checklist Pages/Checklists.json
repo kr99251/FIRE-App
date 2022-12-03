@@ -8,7 +8,7 @@
         ],
         "isChecked" : [
             [],
-            [false, false, false]
+            [false, false]
         ]
     },
     {
@@ -23,12 +23,12 @@
             ["Porches and Stoops", "Do you have motion sensor lights for outdoor steps and entries?", "If you have steps, do you have a secure railing?", "Do you keep a deicer, like salt or ash, by your entries to treat winter ice?"]
         ],
         "isChecked" : [
+            [false],
             [false, false],
-            [false, false, false],
+            [false, false, false, false],
+            [false, false],
             [false, false, false, false, false],
-            [false, false, false],
-            [false, false, false, false, false, false],
-            [false, false, false]
+            [false, false]
         ]
     },
     {
@@ -41,10 +41,10 @@
             ["Stairs", "Do you have gates installed at the top and bottom of the staircase?", "Is the gate at the top of the stairs hardware mounted?"]
         ],
         "isChecked" : [
+            [false],
             [false, false],
-            [false, false, false],
-            [false, false],
-            [false, false]
+            [false],
+            [false]
         ]
     }
 ]
