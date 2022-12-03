@@ -19,6 +19,7 @@ struct JournalsList: View {
     @State private var showPopUp: Bool = false
     @State var goToHomeView: Bool = false
     var navy = Color(red: 0, green: 0, blue: 128/255)
+    let blue = Color(red: 50/255, green: 150/255, blue: 255/255)
     let saveAction: ()->Void
     
     
@@ -63,7 +64,7 @@ struct JournalsList: View {
                     }
                     .foregroundColor(Color.white)
                     .padding(20)
-                    .background(.blue)
+                    .background(blue)
                     NavigationView {
                         VStack {
                             List {
@@ -117,7 +118,7 @@ struct JournalsList: View {
                                         let _ = print("ADD")
                                         let date = Date()
                                         let dateFormatter = DateFormatter()
-                                        dateFormatter.dateFormat = "dd/MM/yyyy"
+                                        dateFormatter.dateFormat = "MMM d, yyyy"
                                         
                                         let newJournalEntry = JournalEntry(title: newJournalEntryData.title, date: dateFormatter.string(from: date), content: newJournalEntryData.content)
                                         journals.append(newJournalEntry)
