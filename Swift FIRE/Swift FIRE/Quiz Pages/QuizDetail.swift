@@ -25,7 +25,6 @@ struct QuizDetail: View {
             let currQuestion = quiz.questions[index]
             let currAnswers = quiz.answers[index]
             let currPoints = quiz.points[index]
-//            let colors = initColors(size: currAnswers.count, selectedIndex: selectedIndex)
             
             VStack {
                 // Display the question
@@ -119,14 +118,3 @@ func findResult(options: [[String]], points: [Int], sum: Int) -> [String] {
     }
     return options[options.count-1]
 }
-
-//func initColors(size: Int, selectedIndex: Int) -> [Color]{
-//    var colors: [Color] = []
-//    for _ in 0...size-1 {
-//        colors.append(Color.blue)
-//    }
-//    if (selectedIndex >= 0 && selectedIndex < size) {
-//        colors[selectedIndex] = Color.green
-//    }
-//    return colors
-//}
