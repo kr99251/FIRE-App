@@ -25,7 +25,7 @@ struct ChecklistRow: View {
             Text(checklist.sections[sectionNum][rowNum])
             Spacer()
             // checkmark button
-            CheckmarkButton(isChecked: $modelData.checklists[checklistIndex].isChecked[sectionNum][rowNum])
+            CheckmarkButton(currentState: .constant(appState()), isChecked: $modelData.checklists[checklistIndex].isChecked[sectionNum][rowNum - 1])
         }
         .padding()
     }

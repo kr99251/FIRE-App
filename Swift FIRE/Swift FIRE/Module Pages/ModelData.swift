@@ -63,3 +63,15 @@ func getChecklistData() -> [Checklist]{
     }
     return load("Checklists.json")
 }
+func getChecklistPercent() -> Int{
+    let checklists = getChecklistData()
+    var listSize : Int = 0
+    var completed : Int = 0
+    for list in checklists{
+        for sublist in list.isChecked{
+            listSize += sublist.count
+            completed += sublist.filter{$0 == true}.count
+        }
+    }
+    return 100*completed/listSize
+}

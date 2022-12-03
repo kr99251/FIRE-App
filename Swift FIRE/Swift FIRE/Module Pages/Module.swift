@@ -60,18 +60,16 @@ struct ContentView: View {
                     
                     // Finished with the module
                     Button("\(done)", action:{
-                        saveData(appData:currentState)
                         done = "Done"
                         presentationMode.wrappedValue.dismiss()
                         currentState.moduleCompletionArray[module.modId - 1] = true
-                        print(currentState.moduleCompletionArray)
+                        saveData(appData:currentState)
                         self.goToModuleView = true
                     })
                     .offset(x: 12*UIScreen.screenWidth/32, y: 5)
                     .font(.system(size: CGFloat(7*currentState.size/8)))
                     
                     Button("\(next)", action:{
-                        saveData(appData:currentState)
                         prev = "Prev"
                         // Make sure there is another page
                         if (surPage < max) {
@@ -118,7 +116,6 @@ struct ContentView: View {
             .navigationBarHidden(true)
         }
     }
-    
 }
 
 
