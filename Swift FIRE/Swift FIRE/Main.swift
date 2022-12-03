@@ -39,10 +39,10 @@ struct Main: View {
                         }
                         
                     }
-                    .navigationBarHidden(true), isActive: $goToJournalView) {
-                    EmptyView()
-                    }
-
+                        .navigationBarHidden(true), isActive: $goToJournalView) {
+                            EmptyView()
+                        }
+                    
                     NavigationLink(destination: ChecklistList(currentState: $currentState).navigationBarHidden(true), isActive: $goToChecklistView) {
                         EmptyView()
                     }
@@ -75,9 +75,9 @@ struct Main: View {
                             .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(navy, lineWidth: 5)
-                            )
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(navy, lineWidth: 5)
+                    )
                     Spacer()
                         .frame(width: UIScreen.screenWidth/24, height: 1)
                     Button(action: {self.goToChecklistView = true}) {
@@ -85,9 +85,9 @@ struct Main: View {
                             .frame(width: UIScreen.screenWidth / 3, height: UIScreen.screenHeight / 5)
                     }
                     .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(navy, lineWidth: 5)
-                            )
+                        RoundedRectangle(cornerRadius: 20)
+                            .stroke(navy, lineWidth: 5)
+                    )
                 }
                 Spacer()
                 HStack{
@@ -113,18 +113,19 @@ struct Main: View {
             .navigationBarHidden(true)
         }
         .onAppear{
-        JournalStore.load { result in
-            switch result {
-            case .failure(let error):
-                fatalError(error.localizedDescription)
-            case .success(let journals):
-                store.journals = journals
+            JournalStore.load { result in
+                switch result {
+                case .failure(let error):
+                    fatalError(error.localizedDescription)
+                case .success(let journals):
+                    store.journals = journals
+                }
             }
         }
+        .preferredColorScheme(.light)
+        
     }
-
-    }
-        }
+}
 
 struct Previews_Main_Previews: PreviewProvider {
     static var previews: some View {
