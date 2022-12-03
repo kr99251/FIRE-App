@@ -69,10 +69,14 @@ struct JournalsList: View {
                         VStack {
                             List {
                                 ForEach($journals) { $journal in
-                                    NavigationLink(destination: DetailView(journal: $journal)) {
-                                        CardView(journal: journal, currentState: .constant(appState()))
+                                    NavigationLink(destination: DetailView(journal: $journal, journals: $journals, currentState: $currentState)) {
+                                        CardView(journal: journal, currentState: $currentState)
                                     }
+                                }.onDelete{ (indexSet) in
+                                    journals.remove(atOffsets: indexSet)
+                                    saveAction()
                                 }
+
                             }
                             .foregroundColor(navy)
                             VStack {
@@ -105,7 +109,7 @@ struct JournalsList: View {
                 }
                 .sheet(isPresented: $isPresentingNewJournal) {
                     NavigationView {
-                        DetailEditView(data: $newJournalEntryData, currentState: .constant(appState()))
+                        DetailEditView(data: $newJournalEntryData, currentState: $currentState)
                             .toolbar {
                                 ToolbarItem(placement: .cancellationAction) {
                                     Button("Dismiss") {
@@ -115,19 +119,18 @@ struct JournalsList: View {
                                 }
                                 ToolbarItem(placement: .confirmationAction) {
                                     Button("Add") {
-                                        let _ = print("ADD")
-                                        let date = Date()
-                                        let dateFormatter = DateFormatter()
-                                        dateFormatter.dateFormat = "MMM d, yyyy"
-                                        
-                                        let newJournalEntry = JournalEntry(title: newJournalEntryData.title, date: dateFormatter.string(from: date), content: newJournalEntryData.content)
-                                        journals.append(newJournalEntry)
+                                        let newJournalEntry = JournalEntry(journal: newJournalEntryData)
+                                        if (newJournalEntry.title != ""){
+                                            journals.append(newJournalEntry)
+                                            newJournalEntryData = JournalEntry()
+                                            saveAction()
+                                        }
                                         isPresentingNewJournal = false
-                                        newJournalEntryData = JournalEntry()
-                                        saveAction()
+
                                     }.font(.system(size: CGFloat(7*currentState.size/8)))
 
                                 }
+                                
                             }
                     }
                 }
@@ -143,8 +146,10 @@ struct JournalsList: View {
             PopUpWindow(message: "Choose a font size:", buttonText: "Done", show: $showPopUp, currentState: $currentState)
         }
     }
+    
         
 }
+    
 
 struct JournalsList_Previews: PreviewProvider {
     static var previews: some View {

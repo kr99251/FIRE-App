@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct JournalEntry: Codable, Identifiable{
+struct JournalEntry: Codable, Identifiable, Equatable{
     var id: UUID = UUID()
     var title: String = ""
     var date: String = ""
@@ -31,7 +31,10 @@ struct JournalEntry: Codable, Identifiable{
     init() {
         self.id = UUID()
         self.title = ""
-        self.date = ""
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        self.date = dateFormatter.string(from: date)
         self.content = ""
     }
 }

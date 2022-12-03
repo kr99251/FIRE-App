@@ -9,6 +9,11 @@ import SwiftUI
 
 struct DetailView: View {
     @Binding var journal: JournalEntry
+    @Binding var journals: [JournalEntry]
+    @Binding var currentState : appState
+    @StateObject private var store = JournalStore()
+
+
     
     @State private var newEntry = JournalEntry()
     @State private var isPresentingEditView = false
@@ -33,6 +38,7 @@ struct DetailView: View {
                 Text(journal.content)
                     .frame(height: .infinity, alignment: .leading)
                 Spacer()
+                
             }
             .padding()
         }
@@ -44,7 +50,7 @@ struct DetailView: View {
         }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
-                DetailEditView(data: $newEntry, currentState: .constant(appState()))
+                DetailEditView(data: $newEntry, currentState: $currentState)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
@@ -66,7 +72,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            DetailView(journal: .constant(JournalEntry.sampleData[0]))
+            DetailView(journal: .constant(JournalEntry.sampleData[0]), journals: .constant(JournalEntry.sampleData), currentState: .constant(appState()))
         }
     }
 }
