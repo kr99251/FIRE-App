@@ -78,7 +78,7 @@ func saveData(appData : appState){
 func getStartupData() -> appState{
     let decoder = JSONDecoder()
     let json = getDocumentsDirectory().appendingPathComponent("appData.json")
-    let useStoredData : Bool = false
+    let useStoredData : Bool = true
     if (useStoredData){
         if let data = try?Data(contentsOf: json){
             if let appData = try?decoder.decode(appState.self, from: data){
